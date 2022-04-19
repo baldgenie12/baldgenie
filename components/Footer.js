@@ -36,9 +36,9 @@ function Footer() {
                         {socialMediaIcons.map(item => {
                             return (
 
-                                <div className='' key={item.name}>
+                                <div className='rounded-full bg-white' key={item.name}>
                                     <img
-                                    className='p-3  rounded-2xl bg-white'
+                                    className='p-3  '
                                         src={item.url}
                                         alt=''
                                     >
