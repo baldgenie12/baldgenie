@@ -5,6 +5,7 @@ import { signOut, getSession } from "next-auth/react"
 import { Router, useRouter } from "next/router";
 import { useState } from "react";
 import Head from 'next/head'
+import { BeatLoader } from 'react-spinners';
 
 
 export default function SignIn({ csrfToken, providers }) {
@@ -15,11 +16,14 @@ export default function SignIn({ csrfToken, providers }) {
     const [email, setemail] = useState('')
     const [password, setpassword] = useState('')
     const [message, setmessage] = useState(null)
+    const [loading, setloading] = useState(false)
 
     const [account_type, setaccount_type] = useState('User')
 
     const signInUser = async (e) => {
         e.preventDefault();
+        setloading(true)
+
         let options = { redirect: false, email, password, account_type }
         const res = await signIn('credentials', options)
         const data = await res.json
@@ -30,7 +34,7 @@ export default function SignIn({ csrfToken, providers }) {
             router.push('/')
         }
 
-
+        setloading(false)
     }
 
 
@@ -81,7 +85,7 @@ export default function SignIn({ csrfToken, providers }) {
 
                     </div>
 
-                  
+
 
                     <htmlForm className="mt-8 space-y-6" action="#" method="POST">
                         <input type="hidden" name="remember" value="true" />
@@ -98,13 +102,13 @@ export default function SignIn({ csrfToken, providers }) {
                         </div>
 
                         <div className="flex">
-                        {/* <h1 className="text-red-500 font-semibold mr-2">Signup As</h1> */}
-                        <select className='grow  py-2 px-4 text-sm scrollbar-hide  outline-none border-2 font-bold border-gray-300 rounded' value={account_type} onChange={e => { setaccount_type(e.target.value) }} >
-                            <option className='font-semibold py-4'>User</option>
-                            <option className='font-semibold py-4'>Merchant</option>
+                            {/* <h1 className="text-red-500 font-semibold mr-2">Signup As</h1> */}
+                            <select className='grow  py-2 px-4 text-sm scrollbar-hide  outline-none border-2 font-bold border-gray-300 rounded' value={account_type} onChange={e => { setaccount_type(e.target.value) }} >
+                                <option className='font-semibold py-4'>User</option>
+                                <option className='font-semibold py-4'>Merchant</option>
 
-                        </select>
-                    </div>
+                            </select>
+                        </div>
 
                         <div className="flex items-center justify-between">
                             <div className="flex items-center">
@@ -128,8 +132,15 @@ export default function SignIn({ csrfToken, providers }) {
                                 Sign in
                             </button>
 
-                            <p className="text-red font-semibold m-3 text-red-500 text-center ">{message}</p>
 
+                            {!loading && message &&
+                                < p className="text-red font-semibold m-3 text-red-500 text-center ">{message}</p>
+                            }
+
+
+                            <div className={`${loading ? "" : "hidden"} w-20 mx-auto my-2 `}>
+                                <BeatLoader loading size={10} color={'blue'} />
+                            </div>
 
 
 
@@ -138,10 +149,10 @@ export default function SignIn({ csrfToken, providers }) {
                         </div>
                     </htmlForm>
                 </div>
-            </div>
+            </div >
 
 
-        </div>
+        </div >
     )
 }
 

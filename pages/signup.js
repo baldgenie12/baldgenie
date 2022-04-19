@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { getCsrfToken } from "next-auth/react"
 import { getProviders, signIn } from "next-auth/react"
 import { signOut, getSession } from "next-auth/react"
-import {  useRouter } from "next/router";
+import { useRouter } from "next/router";
 import Head from 'next/head'
+import { BeatLoader } from 'react-spinners';
 import Link from 'next/link'
 function SingUp() {
 
@@ -14,6 +15,8 @@ function SingUp() {
     const [confirmPassword, setconfirmPassword] = useState('')
     const [name, setname] = useState('second')
     const [message, setmessage] = useState(null)
+    const [loading, setloading] = useState(false)
+
 
     const [account_type, setaccount_type] = useState('User')
     console.log(account_type);
@@ -21,6 +24,8 @@ function SingUp() {
 
     const signUpUser = async (e) => {
         e.preventDefault()
+        setloading(true)
+
         let options = { redirect: false, email, password, account_type }
         setmessage(null)
         const res = await fetch('/api/auth/register', {
@@ -49,6 +54,8 @@ function SingUp() {
             setmessage('Already Resgistered, Go to Login page')
             // router.push('/signin')
         }
+        setloading(false)
+
     }
 
     return (
@@ -133,8 +140,14 @@ function SingUp() {
                             Sign Up
                         </button>
 
-                        <p className="text-red font-semibold m-3 text-red-500 text-center ">{message}</p>
+                        {!loading && message &&
+                            < p className="text-red font-semibold m-3 text-red-500 text-center ">{message}</p>
+                        }
 
+
+                        <div className={`${loading ? "" : "hidden"} w-20 mx-auto my-2 `}>
+                            <BeatLoader loading size={10} color={'blue'} />
+                        </div>
 
 
                         <div className="text-grey-dark mt-6">
