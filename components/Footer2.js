@@ -22,7 +22,7 @@ function Footer() {
     return (
 
         <footer className={``}>
-            <div className='flex bg-gray-700 p-6 flex-col md:flex-row items-center justify-center space-y-4 md:justify-around '>
+            <div className='flex bg-gray-900 p-6 flex-col md:flex-row items-center justify-center space-y-4 md:justify-around '>
 
                 <div>
                     <div className='w-40 mx-auto m-2 my-4'>
