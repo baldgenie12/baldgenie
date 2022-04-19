@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </SessionProvider>
         <hr />
-        {/* <Footer /> */}
+        <Footer />
       </VideoState>
       </>
   )

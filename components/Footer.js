@@ -22,10 +22,10 @@ function Footer() {
     return (
 
         <footer className={``}>
-            <div className='flex bg-gray-700 p-6 flex-col md:flex-row items-center justify-center space-y-4 md:justify-around '>
+            <div className='flex bg-gray-800 p-6 flex-col md:flex-row items-center justify-center space-y-4 md:justify-around '>
 
                 <div>
-                    <div className='w-40 mx-auto m-2 my-4'>
+                    <div className='w-40 mx-auto m-2 my-4 '>
                         <img
                             className=''
                             alt='loading'
@@ -36,8 +36,9 @@ function Footer() {
                         {socialMediaIcons.map(item => {
                             return (
 
-                                <div className='w-6' key={item.name}>
+                                <div className=' ' key={item.name}>
                                     <img
+                                    className='p-2 w-8 rounded-full bg-white'
                                         src={item.url}
                                         alt=''
                                     >
