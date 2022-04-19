@@ -68,7 +68,7 @@ export const ServicesLists = () => {
     }, [])
 
     return (
-        <div className='sm:mx-auto text-gray-600 lg:ml-10 lg:mr-32   '>
+        <div className='sm:mx-auto text-gray-600 lg:ml-6 lg:mr-32   '>
 
             <div className='flex space-x-4  m-4  overflow-x-scroll scrollbar-hide items-center   lg:w-fit ml-3 lg:ml-2.5  '>
                 {categories.map(item => {
@@ -111,8 +111,8 @@ export const ServicesLists = () => {
                     <div key={item.description} className='border-2 border-gray-200 m-2 my-6 rounded-lg hover:bg-slate-200 p-2'>
 
                         <div className='flex items-center justify-between pb-2 border-b-2 border-gray-200  '>
-                            <img className='sm:m-4 sm:mx-16' src='/services/logo1.png' alt='loading' width={100} ></img>
-                            <p className='text-xs sm:text-lg p-2 mb-1 '>{widthState < 500 ? item.description.slice(0, 150) + '...' : item.description}</p>
+                            <img className='lg:m-4 lg:mx-12' src='/services/logo1.png' alt='loading' width={100} ></img>
+                            <p className='text-xs lg:text-lg p-2 mb-1 '>{widthState < 500 ? item.description.slice(0, 150) + '...' : item.description}</p>
                             <img className='sm:m-4 sm:mx-6' src='/services/logo2.png' alt='loading' width={80}></img>
 
                         </div>
