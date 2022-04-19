@@ -43,7 +43,7 @@ export const FilterSidebar = () => {
 
 
     return (
-        <div className='md:mr-10 ml-10 lg:ml-16'>
+        <div className=' lg:mr-10 ml-4 lg:ml-16'>
 
 
             <div onClick={() => openFilterBar ? setopenFilterBar(false) : setopenFilterBar(true)} 
@@ -55,7 +55,7 @@ export const FilterSidebar = () => {
 
             {openFilterBar &&
 
-                <div className='h-2/5 right-0 left-0 fixed md:h-fit  md:relative  -bottom-5 overflow-y-scroll z-40   scrollbar-hide p-4  border-2 border-b-0 border-theme rounded-lg shadow-inner bg-blue-100 md:bg-white md:border-0  '>
+                <div className='h-2/5 right-0 left-0 fixed md:h-fit  md:relative  -bottom-5 md:bottom-0 overflow-y-scroll z-40   scrollbar-hide p-4  border-2 border-b-0 border-theme rounded-lg shadow-inner bg-blue-100 md:bg-white md:border-0  '>
 
                     <div className='  grid grid-cols-2     space-y-4  md:flex md:flex-col mb-4 '>
 
