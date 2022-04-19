@@ -1,0 +1,600 @@
+{
+    "plus_code": {
+        "compound_code": "2V7J+8CJ Birgunj, Nepal",
+        "global_code": "7MV62V7J+8CJ"
+    },
+    "results": [
+        {
+            "address_components": [
+                {
+                    "long_name": "2V7J+45W",
+                    "short_name": "2V7J+45W",
+                    "types": [
+                        "plus_code"
+                    ]
+                },
+                {
+                    "long_name": "Birgunj",
+                    "short_name": "Birgunj",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Parsa",
+                    "short_name": "Parsa",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Province No. 2",
+                    "short_name": "Province No. 2",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Nepal",
+                    "short_name": "NP",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "44300",
+                    "short_name": "44300",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "2V7J+45W, Birgunj 44300, Nepal",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 27.0129355,
+                        "lng": 84.8804753
+                    },
+                    "southwest": {
+                        "lat": 27.0128455,
+                        "lng": 84.8803904
+                    }
+                },
+                "location": {
+                    "lat": 27.012883,
+                    "lng": 84.8804377
+                },
+                "location_type": "ROOFTOP",
+                "viewport": {
+                    "northeast": {
+                        "lat": 27.0142394802915,
+                        "lng": 84.8817818302915
+                    },
+                    "southwest": {
+                        "lat": 27.01154151970849,
+                        "lng": 84.8790838697085
+                    }
+                }
+            },
+            "place_id": "ChIJJZauq0FUkzkRG3fp0TtYqsg",
+            "types": [
+                "premise"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Birganj Inner Bypass Road",
+                    "short_name": "Birganj Inner Bypass Rd",
+                    "types": [
+                        "route"
+                    ]
+                },
+                {
+                    "long_name": "Birgunj",
+                    "short_name": "Birgunj",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Parsa",
+                    "short_name": "Parsa",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Province No. 2",
+                    "short_name": "Province No. 2",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Nepal",
+                    "short_name": "NP",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "44300",
+                    "short_name": "44300",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "Birganj Inner Bypass Rd, Birgunj 44300, Nepal",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 27.0136314,
+                        "lng": 84.881075
+                    },
+                    "southwest": {
+                        "lat": 27.0133157,
+                        "lng": 84.8804863
+                    }
+                },
+                "location": {
+                    "lat": 27.013487,
+                    "lng": 84.88079049999999
+                },
+                "location_type": "GEOMETRIC_CENTER",
+                "viewport": {
+                    "northeast": {
+                        "lat": 27.0148225302915,
+                        "lng": 84.88212963029152
+                    },
+                    "southwest": {
+                        "lat": 27.0121245697085,
+                        "lng": 84.8794316697085
+                    }
+                }
+            },
+            "place_id": "ChIJt_vXBUFUkzkRlGQa9Wsbx1w",
+            "types": [
+                "route"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "2V7J+8C",
+                    "short_name": "2V7J+8C",
+                    "types": [
+                        "plus_code"
+                    ]
+                },
+                {
+                    "long_name": "Birgunj",
+                    "short_name": "Birgunj",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Parsa",
+                    "short_name": "Parsa",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Province No. 2",
+                    "short_name": "Province No. 2",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Nepal",
+                    "short_name": "NP",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "2V7J+8C Birgunj, Nepal",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 27.013375,
+                        "lng": 84.881125
+                    },
+                    "southwest": {
+                        "lat": 27.01325,
+                        "lng": 84.881
+                    }
+                },
+                "location": {
+                    "lat": 27.0133314,
+                    "lng": 84.881011
+                },
+                "location_type": "GEOMETRIC_CENTER",
+                "viewport": {
+                    "northeast": {
+                        "lat": 27.0146614802915,
+                        "lng": 84.88241148029151
+                    },
+                    "southwest": {
+                        "lat": 27.0119635197085,
+                        "lng": 84.8797135197085
+                    }
+                }
+            },
+            "place_id": "GhIJiQLHr2kDO0ARpBr2e2I4VUA",
+            "plus_code": {
+                "compound_code": "2V7J+8C Birgunj, Nepal",
+                "global_code": "7MV62V7J+8C"
+            },
+            "types": [
+                "plus_code"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Birgunj",
+                    "short_name": "Birgunj",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Parsa",
+                    "short_name": "Parsa",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Province No. 2",
+                    "short_name": "Province No. 2",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Nepal",
+                    "short_name": "NP",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Birgunj, Nepal",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 27.1110898,
+                        "lng": 84.9360123
+                    },
+                    "southwest": {
+                        "lat": 26.9838021,
+                        "lng": 84.8100115
+                    }
+                },
+                "location": {
+                    "lat": 27.0449005,
+                    "lng": 84.86721709999999
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 27.1110898,
+                        "lng": 84.9360123
+                    },
+                    "southwest": {
+                        "lat": 26.9838021,
+                        "lng": 84.8100115
+                    }
+                }
+            },
+            "place_id": "ChIJy5gcskZUkzkRtWxP_zCOk0I",
+            "types": [
+                "locality",
+                "political"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Birgunj",
+                    "short_name": "Birgunj",
+                    "types": [
+                        "administrative_area_level_3",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Parsa",
+                    "short_name": "Parsa",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Province No. 2",
+                    "short_name": "Province No. 2",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Nepal",
+                    "short_name": "NP",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Birgunj, Nepal",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 27.2326012,
+                        "lng": 84.9644792
+                    },
+                    "southwest": {
+                        "lat": 26.9837386,
+                        "lng": 84.80968349999999
+                    }
+                },
+                "location": {
+                    "lat": 27.0438895,
+                    "lng": 84.86700359999999
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 27.2326012,
+                        "lng": 84.9644792
+                    },
+                    "southwest": {
+                        "lat": 26.9837386,
+                        "lng": 84.80968349999999
+                    }
+                }
+            },
+            "place_id": "ChIJi1l_PEOqlDkRJFfppmo-Ro8",
+            "types": [
+                "administrative_area_level_3",
+                "political"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "44300",
+                    "short_name": "44300",
+                    "types": [
+                        "postal_code"
+                    ]
+                },
+                {
+                    "long_name": "Nepal",
+                    "short_name": "NP",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "44300, Nepal",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 27.4500949,
+                        "lng": 84.969635
+                    },
+                    "southwest": {
+                        "lat": 26.9820525,
+                        "lng": 84.48795319999999
+                    }
+                },
+                "location": {
+                    "lat": 27.218968,
+                    "lng": 84.8150781
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 27.4500949,
+                        "lng": 84.969635
+                    },
+                    "southwest": {
+                        "lat": 26.9820525,
+                        "lng": 84.48795319999999
+                    }
+                }
+            },
+            "place_id": "ChIJQzomf_-klDkRvYKVAu4GE_c",
+            "types": [
+                "postal_code"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Parsa",
+                    "short_name": "Parsa",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Province No. 2",
+                    "short_name": "Province No. 2",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Nepal",
+                    "short_name": "NP",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Parsa, Nepal",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 27.4631048,
+                        "lng": 84.9730811
+                    },
+                    "southwest": {
+                        "lat": 26.9837386,
+                        "lng": 84.483778
+                    }
+                },
+                "location": {
+                    "lat": 27.218968,
+                    "lng": 84.8150781
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 27.4631048,
+                        "lng": 84.9730811
+                    },
+                    "southwest": {
+                        "lat": 26.9837386,
+                        "lng": 84.483778
+                    }
+                }
+            },
+            "place_id": "ChIJw7hUcqSllDkRpMkI9s05B-g",
+            "types": [
+                "administrative_area_level_2",
+                "political"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Province No. 2",
+                    "short_name": "Province No. 2",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Nepal",
+                    "short_name": "NP",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Province No. 2, Nepal",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 27.4631048,
+                        "lng": 87.0144821
+                    },
+                    "southwest": {
+                        "lat": 26.4226471,
+                        "lng": 84.483778
+                    }
+                },
+                "location": {
+                    "lat": 27.0135298,
+                    "lng": 85.684578
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 27.4631048,
+                        "lng": 87.0144821
+                    },
+                    "southwest": {
+                        "lat": 26.4226471,
+                        "lng": 84.483778
+                    }
+                }
+            },
+            "place_id": "ChIJ3VcY0zB-7DkR4ZeNT1Gt-QQ",
+            "types": [
+                "administrative_area_level_1",
+                "political"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Nepal",
+                    "short_name": "NP",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Nepal",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 30.4473898,
+                        "lng": 88.20182969999999
+                    },
+                    "southwest": {
+                        "lat": 26.3473741,
+                        "lng": 80.05846980000001
+                    }
+                },
+                "location": {
+                    "lat": 28.394857,
+                    "lng": 84.12400799999999
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 30.4473898,
+                        "lng": 88.20182969999999
+                    },
+                    "southwest": {
+                        "lat": 26.3473741,
+                        "lng": 80.05846980000001
+                    }
+                }
+            },
+            "place_id": "ChIJz2gufcfolTkR3obM0LyaojQ",
+            "types": [
+                "country",
+                "political"
+            ]
+        }
+    ],
+    "status": "OK"
+}

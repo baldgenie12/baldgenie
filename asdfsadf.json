@@ -1,0 +1,40 @@
+{
+    "zip_code": "10001",
+    "lat": 40.75065,
+    "lng": -73.996924,
+    "city": "New York",
+    "state": "NY",
+    "timezone": {
+        "timezone_identifier": "America/New_York",
+        "timezone_abbr": "EDT",
+        "utc_offset_sec": -14400,
+        "is_dst": "T"
+    },
+    "acceptable_city_names": [
+        {
+            "city": "Empire State",
+            "state": "NY"
+        },
+        {
+            "city": "G P O",
+            "state": "NY"
+        },
+        {
+            "city": "Greeley Square",
+            "state": "NY"
+        },
+        {
+            "city": "Macys Finance",
+            "state": "NY"
+        },
+        {
+            "city": "Manhattan",
+            "state": "NY"
+        }
+    ],
+    "area_codes": [
+        212,
+        646,
+        917
+    ]
+}
