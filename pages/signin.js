@@ -80,7 +80,7 @@ export default function SignIn({ csrfToken, providers }) {
                         <h2 className="mt-6 text-center text-2xl font-bold text-gray-900">Sign in to your account</h2>
                         <p className="mt-2 text-center text-sm text-gray-600">
                             Or
-                            <a onClick={e => router.push('/signup')} href="#" className="font-medium text-theme hover:text-indigo-500"> Sign Up </a>
+                            <a onClick={e => router.push('/signup/user')} href="#" className="font-medium text-theme hover:text-indigo-500"> Sign Up </a>
                         </p>
 
                     </div>

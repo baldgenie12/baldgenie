@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { getCsrfToken } from "next-auth/react"
 import { getProviders, signIn } from "next-auth/react"
 import { signOut, getSession } from "next-auth/react"
@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import Head from 'next/head'
 import { BeatLoader } from 'react-spinners';
 import Link from 'next/link'
-function SingUp() {
+function SingUp({ accounttype }) {
 
     const router = useRouter()
 
@@ -16,10 +16,23 @@ function SingUp() {
     const [name, setname] = useState('second')
     const [message, setmessage] = useState(null)
     const [loading, setloading] = useState(false)
+    const [account_type, setaccount_type] = useState(null)
 
 
-    const [account_type, setaccount_type] = useState('User')
-    console.log(account_type);
+
+    useEffect(() => {
+        if (accounttype === 'merchant') {
+            setaccount_type('Merchant')
+        } else {
+            setaccount_type('User')
+
+        }
+    }, [])
+
+
+
+
+
 
 
     const signUpUser = async (e) => {
@@ -104,14 +117,16 @@ function SingUp() {
                             <input onChange={e => setconfirmPassword(e.target.value)} id="confirmPassword" name="confirmPassword" type="password" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Confirm Password" />
                         </div>
                     </div>
-                    <div className="flex">
-                        {/* <h1 className="text-red-500 font-semibold mr-2">Signup As</h1> */}
-                        <select className='grow  py-2 px-4 text-sm scrollbar-hide  outline-none border-2 font-bold border-gray-300 rounded' value={account_type} onChange={e => { setaccount_type(e.target.value) }} >
-                            <option className='font-semibold py-4'>User</option>
-                            <option className='font-semibold py-4'>Merchant</option>
 
-                        </select>
-                    </div>
+                    {account_type &&
+                        <div className="flex">
+                            {/* <h1 className="text-red-500 font-semibold mr-2">Signup As</h1> */}
+                            <select className='grow  py-2 px-4 text-sm scrollbar-hide  outline-none border-2 font-bold border-gray-300 rounded' value={account_type} onChange={e => { setaccount_type(e.target.value) }} >
+                                <option className='font-semibold py-4'>User</option>
+                                <option className='font-semibold py-4'>Merchant</option>
+
+                            </select>
+                        </div>}
 
                     <div>
 
@@ -167,3 +182,12 @@ function SingUp() {
     )
 }
 export default SingUp
+
+
+export async function getServerSideProps(context) {
+    const { signup } = context.params
+
+    return {
+        props: { accounttype: signup }, // will be passed to the page component as props
+    }
+}
