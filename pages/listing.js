@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar'
 import Head from 'next/head'
 import { ServicesLists } from '../components/ServicesLists'
 import {
-    FilterIcon, SortAscendingIcon, SortDescendingIcon, XCircleIcon
+    FilterIcon, SortAscendingIcon, XCircleIcon
 } from '@heroicons/react/outline';
 
 const categories = [
