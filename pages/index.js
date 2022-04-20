@@ -83,7 +83,7 @@ export default function Home() {
           </p>
 
 
-          <div className=' flex flex-wrap justify-around  mt-6 space-r-2  lg:grid lg:grid-cols-4 lg:space-x-0 lg:gap-x-16 '>
+          <div className=' flex flex-wrap justify-between  mt-6   lg:grid lg:grid-cols-4 lg:space-x-0 lg:gap-x-16 '>
 
 
             <Link href='/listing'>
@@ -92,7 +92,7 @@ export default function Home() {
                   <img
                     src={categories[0].url}
                   ></img>
-                  <p className={`absolute ${categories[0].color} opacity-75 text-9xl rounded-full -right-3 -top-14`}>.</p>
+                  <p className={`absolute ${categories[0].color} opacity-75 text-9xl rounded-full -right-0 -top-16`}>.</p>
                 </div>
                 <h2 className='text-center mt-1 text-xs md:text-sm font-semibold'>{categories[0].name}</h2>
               </a>

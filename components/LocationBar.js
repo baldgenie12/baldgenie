@@ -138,7 +138,7 @@ export const LocationBar = () => {
         fetchData()
     }
     return (
-        <div className='lg:w-4/5 lg:mx-auto font-theme mx-2 '>  {/* Location and Search Services  */}
+        <div className='lg:w-4/5 lg:mx-auto font-theme  '>  {/* Location and Search Services  */}
 
 
 
