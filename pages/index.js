@@ -196,7 +196,7 @@ export default function Home() {
         {/* What our customer says */}
         <div className='my-8'>
           <h1 className='font-semibold text-xl md:text-3xl'>What our customer&apos; says</h1>
-          <h2 className=' text-md'>Proin consequat integer venenatis maximus litora ornare integer penatibus. Natoque cras turpis iaculis ligula</h2>
+          <h2 className=' text-sm'>Proin consequat integer venenatis maximus litora ornare integer penatibus. Natoque cras turpis iaculis ligula</h2>
 
           <div className='md:flex'></div>
 
