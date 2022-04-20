@@ -50,7 +50,7 @@ const Homepage = () => {
                 </div>
             </div>
            
-            <div className='w-full flex flex-col md:flex-row '>
+            <div className='w-full flex flex-col md:flex-row font-theme '>
                 <FilterSidebar />
                 <div className='grow '>
                     <ServicesLists />

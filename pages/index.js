@@ -54,7 +54,7 @@ export default function Home() {
       </Head>
 
 
-      <main className='m-4 sm:w-4/5  sm:mx-auto text-gray-600  '>
+      <main className='m-4 sm:w-4/5  sm:mx-auto text-gray-600 font-theme  '>
         <Navbar />
 
         <div className='w-3/5  sm:w-2/5 md:w-1/5 mx-auto m-2 my-4'>
@@ -85,21 +85,102 @@ export default function Home() {
 
           <div className='flex flex-wrap items-center justify-center mx-auto lg:grid lg:grid-cols-4   my-5  '>
 
-            {categories.map(category => {
+            {/* {categories.map(category => {
               return (
-                <Link key={category.name} href='/listing'>
-                  <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:m-8 xl:m-6  border-2   rounded-lg shadow-xl  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
-                    <div className='w-16 relative'>
-                      <img
-                        src={category.url}
-                      ></img>
-                      <p className={`absolute ${category.color} opacity-75 text-9xl rounded-full -right-3 -top-14`}>.</p>
-                    </div>
-                    <h2 className='text-center mt-1 text-sm font-semibold'>{category.name}</h2>
-                  </a>
-                </Link>
+              
               )
-            })}
+            })} */}
+
+            <Link href='/listing'>
+              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+                <div className='w-16 relative'>
+                  <img
+                    src={categories[0].url}
+                  ></img>
+                  <p className={`absolute ${categories[0].color} opacity-75 text-9xl rounded-full -right-0 -top-14`}>.</p>
+                </div>
+                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[0].name}</h2>
+              </a>
+            </Link>
+            <Link href='/listing'>
+              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+                <div className='w-16 relative'>
+                  <img
+                    src={categories[1].url}
+                  ></img>
+                  <p className={`absolute ${categories[1].color} opacity-75 text-9xl rounded-full -right-3 -top-14`}>.</p>
+                </div>
+                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[1].name}</h2>
+              </a>
+            </Link>
+            <Link href='/listing'>
+              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+                <div className='w-16 relative'>
+                  <img
+                    src={categories[2].url}
+                  ></img>
+                  <p className={`absolute ${categories[2].color} opacity-75 text-9xl rounded-full -right-3 -top-14`}>.</p>
+                </div>
+                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[2].name}</h2>
+              </a>
+            </Link>
+            <Link href='/listing'>
+              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+                <div className='w-16 relative'>
+                  <img
+                  className='mx-auto'
+                    src={categories[3].url}
+                  ></img>
+                  <p className={`absolute ${categories[3].color} opacity-75 text-9xl rounded-full -right-1 -top-14`}>.</p>
+                </div>
+                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[3].name}</h2>
+              </a>
+            </Link>
+            <Link href='/listing'>
+              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+                <div className='w-16 relative'>
+                  <img
+                    src={categories[4].url}
+                  ></img>
+                  <p className={`absolute ${categories[4].color} opacity-75 text-9xl rounded-full -right-3 -top-14`}>.</p>
+                </div>
+                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[4].name}</h2>
+              </a>
+            </Link>
+            <Link href='/listing'>
+              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+                <div className='w-16 relative'>
+                  <img
+                    src={categories[5].url}
+                  ></img>
+                  <p className={`absolute ${categories[5].color} opacity-75 text-9xl rounded-full -right-1 -top-12`}>.</p>
+                </div>
+                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[5].name}</h2>
+              </a>
+            </Link>
+            <Link href='/listing'>
+              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+                <div className='w-16 relative'>
+                  <img
+                    src={categories[6].url}
+                  ></img>
+                  <p className={`absolute ${categories[6].color} opacity-75 text-9xl rounded-full -right-3 -top-14`}>.</p>
+                </div>
+                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[6].name}</h2>
+              </a>
+            </Link>
+            <Link href='/listing'>
+              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+                <div className='w-16 relative'>
+                  <img
+                    src={categories[7].url}
+                  ></img>
+                  <p className={`absolute ${categories[7].color} opacity-75 text-9xl rounded-full -right-2 -top-14`}>.</p>
+                </div>
+                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[7].name}</h2>
+              </a>
+            </Link>
+     
           </div>
         </div>
 
@@ -107,10 +188,10 @@ export default function Home() {
         <div className='my-4'>
 
           <h1 className='font-semibold text-lg'>Popular Search Terms</h1>
-          <div className='flex flex-wrap bg-gray-200'>
+          <div className='flex flex-wrap bg-gray-200 my-4'>
             {serachTerms.map(tag => {
               return (
-                <p key={tag} className='m-1'>{`.  ${tag}`}</p>
+                <p key={tag} className='m-1 text-sm'>{`.  ${tag}`}</p>
               )
             })}
           </div>
@@ -118,7 +199,7 @@ export default function Home() {
 
 
         {/* What our customer says */}
-        <div className='my-6'>
+        <div className='my-8'>
           <h1 className='font-semibold text-xl md:text-3xl'>What our customer&apos; says</h1>
           <h2 className=' text-md'>Proin consequat integer venenatis maximus litora ornare integer penatibus. Natoque cras turpis iaculis ligula</h2>
 

@@ -28,7 +28,8 @@ module.exports = {
       },
       fontFamily: {
         body: ['Pushster'],
-        footer: ['Tinos']
+        footer: ['Inter'],
+        theme:['Poppins'],
 
       }
     },

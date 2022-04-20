@@ -77,7 +77,7 @@ export const LocationBar = () => {
                     console.log(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${coordinates.latitude},${coordinates.longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`);
                     setlocation(location)
                     console.log(JSON.stringify(location));
-                    setlocationstate(location.results[1].address_components[0].long_name)
+                    setlocationstate(location.results[1].formatted_address)
                     setloading(false)
 
                 } catch (error) {
@@ -137,11 +137,11 @@ export const LocationBar = () => {
         fetchData()
     }
     return (
-        <div>  {/* Location and Search Services  */}
+        <div className='lg:w-3/5 lg:mx-auto font-theme'>  {/* Location and Search Services  */}
 
 
 
-            <div className=' flex flex-col sm:mx-6 md:flex-row border-2 border-gray-200   my-2  rounded shadow-xl   md:mx-auto   md:justify-between lg:w-3/5   '>
+            <div className=' flex flex-col sm:mx-6 md:flex-row border-2 border-gray-200   my-2  rounded shadow-xl   md:mx-auto   md:justify-between     '>
 
                 <div className=' h-6 flex items-center     space-x-1  p-1  my-2 md:border-r-2 border-gray-400 pr-2  '>
                     <LocationMarkerIcon className='h-6 text-red-600' />
@@ -163,7 +163,7 @@ export const LocationBar = () => {
                             <p onClick={getLocationHnadler} className={`whitespace-nowrap    hover:text-red-400 font-semibold text-xs ${loading ? "hidden" : ''} cursor-pointer border-r-2 border-gray-400 pr-2 `}>Detect my location </p>
 
 
-                            <input onChange={e => setzipcodeState(e.target.value)} className={`grow md:grow-0 md:w-20 text-xs outline-none ${loading ? "hidden" : ""} `} type="number" id="fname" name="fname" placeholder='Enter Zipcode' maxLength="6" />
+                            <input onChange={e => setzipcodeState(e.target.value)} className={`grow md:grow-0 md:w-24 text-xs outline-none ${loading ? "hidden" : ""} `} type="number" id="fname" name="fname" placeholder='Enter Zipcode' maxLength="6" />
 
                             <button onClick={() => { zipcodeHandler(zipcodeState) }} className={`text-xs p-1 px-4 bg-theme border-2 rounded-lg  hover:bg-blue-600 text-white ${loading ? "hidden" : ""} `}>Go</button>
                         </div>
