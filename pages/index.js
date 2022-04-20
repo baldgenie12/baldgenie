@@ -206,7 +206,7 @@ export default function Home() {
 
         {/* Customer reviews  */}
 
-        <div className='md:flex font-footer'>
+        <div className='md:flex font-footer mb-6 '>
 
 
           <div className='m-4 p-4 rounded-lg shadow-xl border-2   border-gray-300 shadow-blue-200'>
