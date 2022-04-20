@@ -1,247 +1,359 @@
 {
     "plus_code": {
-        "compound_code": "2V7J+8CJ Birgunj, Nepal",
-        "global_code": "7MV62V7J+8CJ"
+        "compound_code": "H4VQ+J2P Patna, Bihar, India",
+        "global_code": "7MQ7H4VQ+J2P"
     },
     "results": [
         {
             "address_components": [
                 {
-                    "long_name": "2V7J+45W",
-                    "short_name": "2V7J+45W",
+                    "long_name": "H4VQ+J2M",
+                    "short_name": "H4VQ+J2M",
                     "types": [
                         "plus_code"
                     ]
                 },
                 {
-                    "long_name": "Birgunj",
-                    "short_name": "Birgunj",
+                    "long_name": "Danapur Nizamat",
+                    "short_name": "Danapur Nizamat",
+                    "types": [
+                        "neighborhood",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Mithapur",
+                    "short_name": "Mithapur",
+                    "types": [
+                        "political",
+                        "sublocality",
+                        "sublocality_level_1"
+                    ]
+                },
+                {
+                    "long_name": "Patna",
+                    "short_name": "Patna",
                     "types": [
                         "locality",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Parsa",
-                    "short_name": "Parsa",
+                    "long_name": "Patna",
+                    "short_name": "Patna",
                     "types": [
                         "administrative_area_level_2",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Province No. 2",
-                    "short_name": "Province No. 2",
+                    "long_name": "Bihar",
+                    "short_name": "BR",
                     "types": [
                         "administrative_area_level_1",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Nepal",
-                    "short_name": "NP",
+                    "long_name": "India",
+                    "short_name": "IN",
                     "types": [
                         "country",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "44300",
-                    "short_name": "44300",
+                    "long_name": "800001",
+                    "short_name": "800001",
                     "types": [
                         "postal_code"
                     ]
                 }
             ],
-            "formatted_address": "2V7J+45W, Birgunj 44300, Nepal",
+            "formatted_address": "H4VQ+J2M, Danapur Nizamat, Mithapur, Patna, Bihar 800001, India",
             "geometry": {
-                "bounds": {
+                "location": {
+                    "lat": 25.594096,
+                    "lng": 85.13754100000001
+                },
+                "location_type": "GEOMETRIC_CENTER",
+                "viewport": {
                     "northeast": {
-                        "lat": 27.0129355,
-                        "lng": 84.8804753
+                        "lat": 25.5954449802915,
+                        "lng": 85.13888998029152
                     },
                     "southwest": {
-                        "lat": 27.0128455,
-                        "lng": 84.8803904
+                        "lat": 25.5927470197085,
+                        "lng": 85.13619201970852
                     }
+                }
+            },
+            "place_id": "ChIJrYQXpAlZ7TkRlaZLbDPZL8I",
+            "types": [
+                "establishment",
+                "point_of_interest"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Jai Prakash Narayan",
+                    "short_name": "Jai Prakash Narayan",
+                    "types": [
+                        "airport",
+                        "establishment",
+                        "point_of_interest"
+                    ]
                 },
+                {
+                    "long_name": "H4VQ+J2P",
+                    "short_name": "H4VQ+J2P",
+                    "types": [
+                        "plus_code"
+                    ]
+                },
+                {
+                    "long_name": "Danapur Nizamat",
+                    "short_name": "Danapur Nizamat",
+                    "types": [
+                        "neighborhood",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Mithapur",
+                    "short_name": "Mithapur",
+                    "types": [
+                        "political",
+                        "sublocality",
+                        "sublocality_level_1"
+                    ]
+                },
+                {
+                    "long_name": "Patna",
+                    "short_name": "Patna",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Patna",
+                    "short_name": "Patna",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Bihar",
+                    "short_name": "BR",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "India",
+                    "short_name": "IN",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "800001",
+                    "short_name": "800001",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "H4VQ+J2P Jai Prakash Narayan, Danapur Nizamat, Mithapur, Patna, Bihar 800001, India",
+            "geometry": {
                 "location": {
-                    "lat": 27.012883,
-                    "lng": 84.8804377
+                    "lat": 25.5940947,
+                    "lng": 85.1375645
+                },
+                "location_type": "GEOMETRIC_CENTER",
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.59544368029151,
+                        "lng": 85.1389134802915
+                    },
+                    "southwest": {
+                        "lat": 25.5927457197085,
+                        "lng": 85.13621551970849
+                    }
+                }
+            },
+            "place_id": "ChIJi-7F7_9Z7TkRARQTY2O237I",
+            "types": [
+                "airport",
+                "establishment",
+                "point_of_interest"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Puri",
+                    "short_name": "Puri",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Danapur Nizamat",
+                    "short_name": "Danapur Nizamat",
+                    "types": [
+                        "neighborhood",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Mithapur",
+                    "short_name": "Mithapur",
+                    "types": [
+                        "political",
+                        "sublocality",
+                        "sublocality_level_1"
+                    ]
+                },
+                {
+                    "long_name": "Patna",
+                    "short_name": "Patna",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Bihar",
+                    "short_name": "BR",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "India",
+                    "short_name": "IN",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "800001",
+                    "short_name": "800001",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "171-C, S K, Danapur Nizamat, Mithapur, Puri, Bihar 800001, India",
+            "geometry": {
+                "location": {
+                    "lat": 25.594088,
+                    "lng": 85.1375391
                 },
                 "location_type": "ROOFTOP",
                 "viewport": {
                     "northeast": {
-                        "lat": 27.0142394802915,
-                        "lng": 84.8817818302915
+                        "lat": 25.5954369802915,
+                        "lng": 85.13888808029151
                     },
                     "southwest": {
-                        "lat": 27.01154151970849,
-                        "lng": 84.8790838697085
+                        "lat": 25.5927390197085,
+                        "lng": 85.13619011970849
                     }
                 }
             },
-            "place_id": "ChIJJZauq0FUkzkRG3fp0TtYqsg",
+            "place_id": "ChIJodh2UXpZ7TkRFgVoi3iKvxw",
+            "plus_code": {
+                "compound_code": "H4VQ+J2 Patna, Bihar, India",
+                "global_code": "7MQ7H4VQ+J2"
+            },
             "types": [
-                "premise"
+                "street_address"
             ]
         },
         {
             "address_components": [
                 {
-                    "long_name": "Birganj Inner Bypass Road",
-                    "short_name": "Birganj Inner Bypass Rd",
-                    "types": [
-                        "route"
-                    ]
-                },
-                {
-                    "long_name": "Birgunj",
-                    "short_name": "Birgunj",
-                    "types": [
-                        "locality",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Parsa",
-                    "short_name": "Parsa",
-                    "types": [
-                        "administrative_area_level_2",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Province No. 2",
-                    "short_name": "Province No. 2",
-                    "types": [
-                        "administrative_area_level_1",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Nepal",
-                    "short_name": "NP",
-                    "types": [
-                        "country",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "44300",
-                    "short_name": "44300",
-                    "types": [
-                        "postal_code"
-                    ]
-                }
-            ],
-            "formatted_address": "Birganj Inner Bypass Rd, Birgunj 44300, Nepal",
-            "geometry": {
-                "bounds": {
-                    "northeast": {
-                        "lat": 27.0136314,
-                        "lng": 84.881075
-                    },
-                    "southwest": {
-                        "lat": 27.0133157,
-                        "lng": 84.8804863
-                    }
-                },
-                "location": {
-                    "lat": 27.013487,
-                    "lng": 84.88079049999999
-                },
-                "location_type": "GEOMETRIC_CENTER",
-                "viewport": {
-                    "northeast": {
-                        "lat": 27.0148225302915,
-                        "lng": 84.88212963029152
-                    },
-                    "southwest": {
-                        "lat": 27.0121245697085,
-                        "lng": 84.8794316697085
-                    }
-                }
-            },
-            "place_id": "ChIJt_vXBUFUkzkRlGQa9Wsbx1w",
-            "types": [
-                "route"
-            ]
-        },
-        {
-            "address_components": [
-                {
-                    "long_name": "2V7J+8C",
-                    "short_name": "2V7J+8C",
+                    "long_name": "H4VQ+J2",
+                    "short_name": "H4VQ+J2",
                     "types": [
                         "plus_code"
                     ]
                 },
                 {
-                    "long_name": "Birgunj",
-                    "short_name": "Birgunj",
+                    "long_name": "Patna",
+                    "short_name": "Patna",
                     "types": [
                         "locality",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Parsa",
-                    "short_name": "Parsa",
+                    "long_name": "Patna",
+                    "short_name": "Patna",
                     "types": [
                         "administrative_area_level_2",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Province No. 2",
-                    "short_name": "Province No. 2",
+                    "long_name": "Bihar",
+                    "short_name": "BR",
                     "types": [
                         "administrative_area_level_1",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Nepal",
-                    "short_name": "NP",
+                    "long_name": "India",
+                    "short_name": "IN",
                     "types": [
                         "country",
                         "political"
                     ]
                 }
             ],
-            "formatted_address": "2V7J+8C Birgunj, Nepal",
+            "formatted_address": "H4VQ+J2 Patna, Bihar, India",
             "geometry": {
                 "bounds": {
                     "northeast": {
-                        "lat": 27.013375,
-                        "lng": 84.881125
+                        "lat": 25.594125,
+                        "lng": 85.13762500000001
                     },
                     "southwest": {
-                        "lat": 27.01325,
-                        "lng": 84.881
+                        "lat": 25.594,
+                        "lng": 85.1375
                     }
                 },
                 "location": {
-                    "lat": 27.0133314,
-                    "lng": 84.881011
+                    "lat": 25.5940947,
+                    "lng": 85.1375645
                 },
                 "location_type": "GEOMETRIC_CENTER",
                 "viewport": {
                     "northeast": {
-                        "lat": 27.0146614802915,
-                        "lng": 84.88241148029151
+                        "lat": 25.5954114802915,
+                        "lng": 85.13891148029153
                     },
                     "southwest": {
-                        "lat": 27.0119635197085,
-                        "lng": 84.8797135197085
+                        "lat": 25.5927135197085,
+                        "lng": 85.1362135197085
                     }
                 }
             },
-            "place_id": "GhIJiQLHr2kDO0ARpBr2e2I4VUA",
+            "place_id": "GhIJGToblxaYOUARzCVV281IVUA",
             "plus_code": {
-                "compound_code": "2V7J+8C Birgunj, Nepal",
-                "global_code": "7MV62V7J+8C"
+                "compound_code": "H4VQ+J2 Patna, Bihar, India",
+                "global_code": "7MQ7H4VQ+J2"
             },
             "types": [
                 "plus_code"
@@ -250,67 +362,397 @@
         {
             "address_components": [
                 {
-                    "long_name": "Birgunj",
-                    "short_name": "Birgunj",
+                    "long_name": "Samta Path",
+                    "short_name": "Samta Path",
+                    "types": [
+                        "route"
+                    ]
+                },
+                {
+                    "long_name": "Mithapur",
+                    "short_name": "Mithapur",
+                    "types": [
+                        "political",
+                        "sublocality",
+                        "sublocality_level_1"
+                    ]
+                },
+                {
+                    "long_name": "Patna",
+                    "short_name": "Patna",
                     "types": [
                         "locality",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Parsa",
-                    "short_name": "Parsa",
+                    "long_name": "Patna",
+                    "short_name": "Patna",
                     "types": [
                         "administrative_area_level_2",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Province No. 2",
-                    "short_name": "Province No. 2",
+                    "long_name": "Bihar",
+                    "short_name": "BR",
                     "types": [
                         "administrative_area_level_1",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Nepal",
-                    "short_name": "NP",
+                    "long_name": "India",
+                    "short_name": "IN",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "800001",
+                    "short_name": "800001",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "Samta Path, Mithapur, Patna, Bihar 800001, India",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 25.5940352,
+                        "lng": 85.1373598
+                    },
+                    "southwest": {
+                        "lat": 25.5937518,
+                        "lng": 85.1373428
+                    }
+                },
+                "location": {
+                    "lat": 25.5938935,
+                    "lng": 85.1373513
+                },
+                "location_type": "GEOMETRIC_CENTER",
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.5952424802915,
+                        "lng": 85.1387002802915
+                    },
+                    "southwest": {
+                        "lat": 25.5925445197085,
+                        "lng": 85.1360023197085
+                    }
+                }
+            },
+            "place_id": "ChIJm9M7AXBY7TkRxupF0Kt2ggM",
+            "types": [
+                "route"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Danapur Nizamat",
+                    "short_name": "Danapur Nizamat",
+                    "types": [
+                        "neighborhood",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Mithapur",
+                    "short_name": "Mithapur",
+                    "types": [
+                        "political",
+                        "sublocality",
+                        "sublocality_level_1"
+                    ]
+                },
+                {
+                    "long_name": "Patna",
+                    "short_name": "Patna",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Patna",
+                    "short_name": "Patna",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Bihar",
+                    "short_name": "BR",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "India",
+                    "short_name": "IN",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "800001",
+                    "short_name": "800001",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "Danapur Nizamat, Mithapur, Patna, Bihar 800001, India",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 25.5943194,
+                        "lng": 85.1378201
+                    },
+                    "southwest": {
+                        "lat": 25.59387,
+                        "lng": 85.1373153
+                    }
+                },
+                "location": {
+                    "lat": 25.5940499,
+                    "lng": 85.1376051
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.5954436802915,
+                        "lng": 85.13891668029152
+                    },
+                    "southwest": {
+                        "lat": 25.5927457197085,
+                        "lng": 85.1362187197085
+                    }
+                }
+            },
+            "place_id": "ChIJ1bKqqnpY7TkR6yQQFjzAsnA",
+            "types": [
+                "neighborhood",
+                "political"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Mithapur",
+                    "short_name": "Mithapur",
+                    "types": [
+                        "political",
+                        "sublocality",
+                        "sublocality_level_1"
+                    ]
+                },
+                {
+                    "long_name": "Patna",
+                    "short_name": "Patna",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Patna",
+                    "short_name": "Patna",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Bihar",
+                    "short_name": "BR",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "India",
+                    "short_name": "IN",
                     "types": [
                         "country",
                         "political"
                     ]
                 }
             ],
-            "formatted_address": "Birgunj, Nepal",
+            "formatted_address": "Mithapur, Patna, Bihar, India",
             "geometry": {
                 "bounds": {
                     "northeast": {
-                        "lat": 27.1110898,
-                        "lng": 84.9360123
+                        "lat": 25.6041649,
+                        "lng": 85.1484301
                     },
                     "southwest": {
-                        "lat": 26.9838021,
-                        "lng": 84.8100115
+                        "lat": 25.5840678,
+                        "lng": 85.129166
                     }
                 },
                 "location": {
-                    "lat": 27.0449005,
-                    "lng": 84.86721709999999
+                    "lat": 25.5955281,
+                    "lng": 85.1368911
                 },
                 "location_type": "APPROXIMATE",
                 "viewport": {
                     "northeast": {
-                        "lat": 27.1110898,
-                        "lng": 84.9360123
+                        "lat": 25.6041649,
+                        "lng": 85.1484301
                     },
                     "southwest": {
-                        "lat": 26.9838021,
-                        "lng": 84.8100115
+                        "lat": 25.5840678,
+                        "lng": 85.129166
                     }
                 }
             },
-            "place_id": "ChIJy5gcskZUkzkRtWxP_zCOk0I",
+            "place_id": "ChIJBzqsrG9Y7TkRWiQnulrj-U8",
+            "types": [
+                "political",
+                "sublocality",
+                "sublocality_level_1"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "800001",
+                    "short_name": "800001",
+                    "types": [
+                        "postal_code"
+                    ]
+                },
+                {
+                    "long_name": "Patna",
+                    "short_name": "Patna",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Bihar",
+                    "short_name": "BR",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "India",
+                    "short_name": "IN",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Patna, Bihar 800001, India",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 25.6489202,
+                        "lng": 85.1540576
+                    },
+                    "southwest": {
+                        "lat": 25.5844046,
+                        "lng": 85.101383
+                    }
+                },
+                "location": {
+                    "lat": 25.6234486,
+                    "lng": 85.1323779
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.6489202,
+                        "lng": 85.1540576
+                    },
+                    "southwest": {
+                        "lat": 25.5844046,
+                        "lng": 85.101383
+                    }
+                }
+            },
+            "place_id": "ChIJLRdw8EdY7TkR8SxhNYGkvuA",
+            "types": [
+                "postal_code"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Patna",
+                    "short_name": "Patna",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Patna",
+                    "short_name": "Patna",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Bihar",
+                    "short_name": "BR",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "India",
+                    "short_name": "IN",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Patna, Bihar, India",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 25.6564425,
+                        "lng": 85.2687289
+                    },
+                    "southwest": {
+                        "lat": 25.5596324,
+                        "lng": 85.01735699999999
+                    }
+                },
+                "location": {
+                    "lat": 25.5940947,
+                    "lng": 85.1375645
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.6564425,
+                        "lng": 85.2687289
+                    },
+                    "southwest": {
+                        "lat": 25.5596324,
+                        "lng": 85.01735699999999
+                    }
+                }
+            },
+            "place_id": "ChIJBU8txTeZ8jkRcLIH9gUOGoM",
             "types": [
                 "locality",
                 "political"
@@ -319,179 +761,59 @@
         {
             "address_components": [
                 {
-                    "long_name": "Birgunj",
-                    "short_name": "Birgunj",
-                    "types": [
-                        "administrative_area_level_3",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Parsa",
-                    "short_name": "Parsa",
+                    "long_name": "Patna",
+                    "short_name": "Patna",
                     "types": [
                         "administrative_area_level_2",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Province No. 2",
-                    "short_name": "Province No. 2",
+                    "long_name": "Bihar",
+                    "short_name": "BR",
                     "types": [
                         "administrative_area_level_1",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Nepal",
-                    "short_name": "NP",
+                    "long_name": "India",
+                    "short_name": "IN",
                     "types": [
                         "country",
                         "political"
                     ]
                 }
             ],
-            "formatted_address": "Birgunj, Nepal",
+            "formatted_address": "Patna, Bihar, India",
             "geometry": {
                 "bounds": {
                     "northeast": {
-                        "lat": 27.2326012,
-                        "lng": 84.9644792
+                        "lat": 25.7325916,
+                        "lng": 86.0706482
                     },
                     "southwest": {
-                        "lat": 26.9837386,
-                        "lng": 84.80968349999999
+                        "lat": 25.2031706,
+                        "lng": 84.689453
                     }
                 },
                 "location": {
-                    "lat": 27.0438895,
-                    "lng": 84.86700359999999
+                    "lat": 25.4839571,
+                    "lng": 85.02334599999999
                 },
                 "location_type": "APPROXIMATE",
                 "viewport": {
                     "northeast": {
-                        "lat": 27.2326012,
-                        "lng": 84.9644792
+                        "lat": 25.7325916,
+                        "lng": 86.0706482
                     },
                     "southwest": {
-                        "lat": 26.9837386,
-                        "lng": 84.80968349999999
+                        "lat": 25.2031706,
+                        "lng": 84.689453
                     }
                 }
             },
-            "place_id": "ChIJi1l_PEOqlDkRJFfppmo-Ro8",
-            "types": [
-                "administrative_area_level_3",
-                "political"
-            ]
-        },
-        {
-            "address_components": [
-                {
-                    "long_name": "44300",
-                    "short_name": "44300",
-                    "types": [
-                        "postal_code"
-                    ]
-                },
-                {
-                    "long_name": "Nepal",
-                    "short_name": "NP",
-                    "types": [
-                        "country",
-                        "political"
-                    ]
-                }
-            ],
-            "formatted_address": "44300, Nepal",
-            "geometry": {
-                "bounds": {
-                    "northeast": {
-                        "lat": 27.4500949,
-                        "lng": 84.969635
-                    },
-                    "southwest": {
-                        "lat": 26.9820525,
-                        "lng": 84.48795319999999
-                    }
-                },
-                "location": {
-                    "lat": 27.218968,
-                    "lng": 84.8150781
-                },
-                "location_type": "APPROXIMATE",
-                "viewport": {
-                    "northeast": {
-                        "lat": 27.4500949,
-                        "lng": 84.969635
-                    },
-                    "southwest": {
-                        "lat": 26.9820525,
-                        "lng": 84.48795319999999
-                    }
-                }
-            },
-            "place_id": "ChIJQzomf_-klDkRvYKVAu4GE_c",
-            "types": [
-                "postal_code"
-            ]
-        },
-        {
-            "address_components": [
-                {
-                    "long_name": "Parsa",
-                    "short_name": "Parsa",
-                    "types": [
-                        "administrative_area_level_2",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Province No. 2",
-                    "short_name": "Province No. 2",
-                    "types": [
-                        "administrative_area_level_1",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Nepal",
-                    "short_name": "NP",
-                    "types": [
-                        "country",
-                        "political"
-                    ]
-                }
-            ],
-            "formatted_address": "Parsa, Nepal",
-            "geometry": {
-                "bounds": {
-                    "northeast": {
-                        "lat": 27.4631048,
-                        "lng": 84.9730811
-                    },
-                    "southwest": {
-                        "lat": 26.9837386,
-                        "lng": 84.483778
-                    }
-                },
-                "location": {
-                    "lat": 27.218968,
-                    "lng": 84.8150781
-                },
-                "location_type": "APPROXIMATE",
-                "viewport": {
-                    "northeast": {
-                        "lat": 27.4631048,
-                        "lng": 84.9730811
-                    },
-                    "southwest": {
-                        "lat": 26.9837386,
-                        "lng": 84.483778
-                    }
-                }
-            },
-            "place_id": "ChIJw7hUcqSllDkRpMkI9s05B-g",
+            "place_id": "ChIJhcUL3FxY7TkR12odS4Hj43E",
             "types": [
                 "administrative_area_level_2",
                 "political"
@@ -500,51 +822,51 @@
         {
             "address_components": [
                 {
-                    "long_name": "Province No. 2",
-                    "short_name": "Province No. 2",
+                    "long_name": "Bihar",
+                    "short_name": "BR",
                     "types": [
                         "administrative_area_level_1",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Nepal",
-                    "short_name": "NP",
+                    "long_name": "India",
+                    "short_name": "IN",
                     "types": [
                         "country",
                         "political"
                     ]
                 }
             ],
-            "formatted_address": "Province No. 2, Nepal",
+            "formatted_address": "Bihar, India",
             "geometry": {
                 "bounds": {
                     "northeast": {
-                        "lat": 27.4631048,
-                        "lng": 87.0144821
+                        "lat": 27.5218326,
+                        "lng": 88.289752
                     },
                     "southwest": {
-                        "lat": 26.4226471,
-                        "lng": 84.483778
+                        "lat": 24.286278,
+                        "lng": 83.31486509999999
                     }
                 },
                 "location": {
-                    "lat": 27.0135298,
-                    "lng": 85.684578
+                    "lat": 25.0960742,
+                    "lng": 85.31311939999999
                 },
                 "location_type": "APPROXIMATE",
                 "viewport": {
                     "northeast": {
-                        "lat": 27.4631048,
-                        "lng": 87.0144821
+                        "lat": 27.5218326,
+                        "lng": 88.289752
                     },
                     "southwest": {
-                        "lat": 26.4226471,
-                        "lng": 84.483778
+                        "lat": 24.286278,
+                        "lng": 83.31486509999999
                     }
                 }
             },
-            "place_id": "ChIJ3VcY0zB-7DkR4ZeNT1Gt-QQ",
+            "place_id": "ChIJA2m78ERY7TkRJeO6G-0_rVc",
             "types": [
                 "administrative_area_level_1",
                 "political"
@@ -553,43 +875,43 @@
         {
             "address_components": [
                 {
-                    "long_name": "Nepal",
-                    "short_name": "NP",
+                    "long_name": "India",
+                    "short_name": "IN",
                     "types": [
                         "country",
                         "political"
                     ]
                 }
             ],
-            "formatted_address": "Nepal",
+            "formatted_address": "India",
             "geometry": {
                 "bounds": {
                     "northeast": {
-                        "lat": 30.4473898,
-                        "lng": 88.20182969999999
+                        "lat": 35.513327,
+                        "lng": 97.39535869999999
                     },
                     "southwest": {
-                        "lat": 26.3473741,
-                        "lng": 80.05846980000001
+                        "lat": 6.4626999,
+                        "lng": 68.1097
                     }
                 },
                 "location": {
-                    "lat": 28.394857,
-                    "lng": 84.12400799999999
+                    "lat": 20.593684,
+                    "lng": 78.96288
                 },
                 "location_type": "APPROXIMATE",
                 "viewport": {
                     "northeast": {
-                        "lat": 30.4473898,
-                        "lng": 88.20182969999999
+                        "lat": 35.513327,
+                        "lng": 97.39535869999999
                     },
                     "southwest": {
-                        "lat": 26.3473741,
-                        "lng": 80.05846980000001
+                        "lat": 6.4626999,
+                        "lng": 68.1097
                     }
                 }
             },
-            "place_id": "ChIJz2gufcfolTkR3obM0LyaojQ",
+            "place_id": "ChIJkbeSa_BfYzARphNChaFPjNc",
             "types": [
                 "country",
                 "political"
