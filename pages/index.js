@@ -54,8 +54,8 @@ export default function Home() {
       </Head>
 
 
-      <main className='m-4 sm:w-4/5    sm:mx-auto  text-gray-600 font-theme  '>
-        <Navbar />
+      <Navbar />
+      <main className=' sm:w-4/5    sm:mx-auto  text-gray-600 font-theme  '>
 
         <div className='w-3/5  sm:w-2/5 md:w-1/5 mx-auto m-2 my-4'>
 
@@ -75,7 +75,7 @@ export default function Home() {
 
         {/* All categories */}
 
-        <div className=' my-10 '>
+        <div className=' my-10   '>
           <h1 className='font-semibold text-lg'>All Categories</h1>
           <p className='text-sm'>
             {/* <LoremIpsum p={1} /> */}
@@ -83,12 +83,12 @@ export default function Home() {
           </p>
 
 
-          <div className='mx-auto flex flex-wrap items-center justify-center    lg:grid lg:grid-cols-4 lg:justify-between    mt-8  '>
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8    '>
 
 
 
             <Link href='/listing'>
-              <a className='w-40 h-36 p-4 mr-4 mb-6 lg:w-44 xl:w-56 lg:py-6 lg:px-8    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className='w-40 h-36 p-4  mb-6 lg:w-44 xl:w-56 lg:py-6 lg:px-8    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                     src={categories[0].url}
@@ -99,7 +99,7 @@ export default function Home() {
               </a>
             </Link>
             <Link href='/listing'>
-              <a className='w-40 h-36 p-4 mr-4 mb-6 lg:w-44 xl:w-56 lg:py-6 lg:px-8    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className='w-40 h-36 p-4  mb-6 lg:w-44 xl:w-56 lg:py-6 lg:px-8    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                     src={categories[1].url}
@@ -110,7 +110,7 @@ export default function Home() {
               </a>
             </Link>
             <Link href='/listing'>
-              <a className='w-40 h-36 p-4 mr-4 mb-6 lg:w-44 xl:w-56 lg:py-6 lg:px-8    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className='w-40 h-36 p-4  mb-6 lg:w-44 xl:w-56 lg:py-6 lg:px-8    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                     src={categories[2].url}
@@ -121,7 +121,7 @@ export default function Home() {
               </a>
             </Link>
             <Link href='/listing'>
-              <a className='w-40 h-36 p-4  mb-6 lg:w-44 xl:w-56 lg:py-6 lg:px-8    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className='w-40 h-36 p-4   mb-6 lg:w-44 xl:w-56 lg:py-6 lg:px-8    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                     className='mx-auto'
@@ -133,7 +133,7 @@ export default function Home() {
               </a>
             </Link>
             <Link href='/listing'>
-              <a className='w-40 h-36 p-4 mr-4 mb-6 lg:w-44 xl:w-56 lg:py-6 lg:px-8    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className='w-40 h-36 p-4  mb-6 lg:w-44 xl:w-56 lg:py-6 lg:px-8    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                     src={categories[4].url}
@@ -144,7 +144,7 @@ export default function Home() {
               </a>
             </Link>
             <Link href='/listing'>
-              <a className='w-40 h-36 p-4 mr-4 mb-6 lg:w-44 xl:w-56 lg:py-6 lg:px-8    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className='w-40 h-36 p-4  mb-6 lg:w-44 xl:w-56 lg:py-6 lg:px-8    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                     src={categories[5].url}
@@ -155,7 +155,7 @@ export default function Home() {
               </a>
             </Link>
             <Link href='/listing'>
-              <a className='w-40 h-36 p-4 mr-4 mb-6 lg:w-44 xl:w-56 lg:py-6 lg:px-8    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className='w-40 h-36 p-4  mb-6 lg:w-44 xl:w-56 lg:py-6 lg:px-8    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                     src={categories[6].url}
