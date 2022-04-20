@@ -15,7 +15,7 @@ function Navbar() {
 
     if (status === "authenticated") {
         return (
-            <div className='flex items-center justify-between text-white'>
+            <div className='m-1 flex items-center justify-end text-white'>
                 <p className='p-1 px-4 font-semibold bg-theme border-2 rounded-lg text-xs md:text-md'  >
                     {session.user.name}</p >
                 <Link href='/api/auth/signout'>
