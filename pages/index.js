@@ -92,7 +92,7 @@ export default function Home() {
             })} */}
 
             <Link href='/listing'>
-              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className=' w-40 h-36 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                     src={categories[0].url}
@@ -103,7 +103,7 @@ export default function Home() {
               </a>
             </Link>
             <Link href='/listing'>
-              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className='w-40 h-36 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                     src={categories[1].url}
@@ -114,7 +114,7 @@ export default function Home() {
               </a>
             </Link>
             <Link href='/listing'>
-              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className='w-40 h-36 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                     src={categories[2].url}
@@ -125,7 +125,7 @@ export default function Home() {
               </a>
             </Link>
             <Link href='/listing'>
-              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className='w-40 h-36 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                   className='mx-auto'
@@ -137,7 +137,7 @@ export default function Home() {
               </a>
             </Link>
             <Link href='/listing'>
-              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className='w-40 h-36 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                     src={categories[4].url}
@@ -148,7 +148,7 @@ export default function Home() {
               </a>
             </Link>
             <Link href='/listing'>
-              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className='w-40 h-36 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                     src={categories[5].url}
@@ -159,7 +159,7 @@ export default function Home() {
               </a>
             </Link>
             <Link href='/listing'>
-              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className='w-40 h-36 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                     src={categories[6].url}
@@ -170,7 +170,7 @@ export default function Home() {
               </a>
             </Link>
             <Link href='/listing'>
-              <a className='w-40 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
+              <a className='w-40 h-36 p-4 lg:w-44 xl:w-56 lg:py-6 lg:px-8 m-3  md:m-4  lg:mx-8 xl:mx-6    rounded-lg shadow-lg border-2  flex flex-col items-center justify-center space-y-2  aspect-video hover:scale-105 hover:bg-slate-200 transition cursor-pointer'>
                 <div className='w-16 relative'>
                   <img
                     src={categories[7].url}
