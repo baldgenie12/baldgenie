@@ -99,7 +99,7 @@ export default function Home() {
                   ></img>
                   <p className={`absolute ${categories[0].color} opacity-75 text-9xl rounded-full -right-0 -top-14`}>.</p>
                 </div>
-                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[0].name}</h2>
+                <h2 className='text-center mt-1 text-xs md:text-sm font-semibold'>{categories[0].name}</h2>
               </a>
             </Link>
             <Link href='/listing'>
@@ -110,7 +110,7 @@ export default function Home() {
                   ></img>
                   <p className={`absolute ${categories[1].color} opacity-75 text-9xl rounded-full -right-3 -top-14`}>.</p>
                 </div>
-                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[1].name}</h2>
+                <h2 className='text-center mt-1 text-xs md:text-sm font-semibold'>{categories[1].name}</h2>
               </a>
             </Link>
             <Link href='/listing'>
@@ -121,7 +121,7 @@ export default function Home() {
                   ></img>
                   <p className={`absolute ${categories[2].color} opacity-75 text-9xl rounded-full -right-3 -top-14`}>.</p>
                 </div>
-                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[2].name}</h2>
+                <h2 className='text-center mt-1 text-xs md:text-sm font-semibold'>{categories[2].name}</h2>
               </a>
             </Link>
             <Link href='/listing'>
@@ -133,7 +133,7 @@ export default function Home() {
                   ></img>
                   <p className={`absolute ${categories[3].color} opacity-75 text-9xl rounded-full -right-1 -top-14`}>.</p>
                 </div>
-                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[3].name}</h2>
+                <h2 className='text-center mt-1 text-xs md:text-sm font-semibold'>{categories[3].name}</h2>
               </a>
             </Link>
             <Link href='/listing'>
@@ -144,7 +144,7 @@ export default function Home() {
                   ></img>
                   <p className={`absolute ${categories[4].color} opacity-75 text-9xl rounded-full -right-3 -top-14`}>.</p>
                 </div>
-                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[4].name}</h2>
+                <h2 className='text-center mt-1 text-xs md:text-sm font-semibold'>{categories[4].name}</h2>
               </a>
             </Link>
             <Link href='/listing'>
@@ -155,7 +155,7 @@ export default function Home() {
                   ></img>
                   <p className={`absolute ${categories[5].color} opacity-75 text-9xl rounded-full -right-1 -top-12`}>.</p>
                 </div>
-                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[5].name}</h2>
+                <h2 className='text-center mt-1 text-xs md:text-sm font-semibold'>{categories[5].name}</h2>
               </a>
             </Link>
             <Link href='/listing'>
@@ -166,7 +166,7 @@ export default function Home() {
                   ></img>
                   <p className={`absolute ${categories[6].color} opacity-75 text-9xl rounded-full -right-3 -top-14`}>.</p>
                 </div>
-                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[6].name}</h2>
+                <h2 className='text-center mt-1 text-xs md:text-sm font-semibold'>{categories[6].name}</h2>
               </a>
             </Link>
             <Link href='/listing'>
@@ -177,7 +177,7 @@ export default function Home() {
                   ></img>
                   <p className={`absolute ${categories[7].color} opacity-75 text-9xl rounded-full -right-2 -top-14`}>.</p>
                 </div>
-                <h2 className='text-center mt-1 text-sm font-semibold'>{categories[7].name}</h2>
+                <h2 className='text-center mt-1 text-xs md:text-sm font-semibold'>{categories[7].name}</h2>
               </a>
             </Link>
      
