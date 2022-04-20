@@ -138,11 +138,11 @@ export const LocationBar = () => {
         fetchData()
     }
     return (
-        <div className='lg:w-4/5 lg:mx-auto font-theme '>  {/* Location and Search Services  */}
+        <div className='lg:w-4/5 lg:mx-auto font-theme mx-2 '>  {/* Location and Search Services  */}
 
 
 
-            <div className=' flex flex-col  md:flex-row border-2 border-gray-200   my-2  rounded shadow-xl   md:mx-auto   md:justify-between     '>
+            <div className=' flex flex-col  md:flex-row border-2 border-gray-200   my-2  rounded shadow-xl   md:mx-auto   md:justify-between text-xs    '>
 
                 <div className=' h-6 flex items-center     space-x-1  p-1  my-2 md:border-r-2 border-gray-400 pr-2  '>
                     <LocationMarkerIcon className='h-6 text-red-600' />
@@ -164,9 +164,9 @@ export const LocationBar = () => {
                             <p onClick={getLocationHnadler} className={`whitespace-nowrap    hover:text-red-400 font-semibold text-xs ${loading ? "hidden" : ''} cursor-pointer border-r-2 border-gray-400 pr-2 `}>Detect my location </p>
 
 
-                            <input onChange={e => setzipcodeState(e.target.value)} className={`grow  lg:w-20 xl:w-24 text-xs outline-none ${loading ? "hidden" : ""} `} type="number" id="fname" name="fname" placeholder='Enter Zipcode' maxLength="6" />
+                            <input onChange={e => setzipcodeState(e.target.value)} className={`w-24 xl:w-24 text-xs outline-none ${loading ? "hidden" : ""} `} type="number" id="fname" name="fname" placeholder='Enter Zipcode' maxLength="6" />
 
-                            <button onClick={() => { zipcodeHandler(zipcodeState) }} className={`text-xs p-1 px-4 bg-theme border-2 rounded-lg  hover:bg-blue-600 text-white ${loading ? "hidden" : ""} `}>Go</button>
+                            <button onClick={() => { zipcodeHandler(zipcodeState) }} className={`text-xs p-1 px-4 bg-theme border-2 rounded-lg  w-full lg:w-fit  hover:bg-blue-600 text-white ${loading ? "hidden" : ""} `}>Go</button>
                         </div>
                     }
 
@@ -175,7 +175,7 @@ export const LocationBar = () => {
 
                 <div className='grow flex items-center justify-start  space-x-2  p-1 '>
                     <SearchIcon className='h-6 text-gray-500' />
-                    <input className='outline-0  text-sm sm:text-md grow' type="text" id="fname" name="fname" placeholder='Search for services' />
+                    <input className='outline-0  text sm:text-md grow' type="text" id="fname" name="fname" placeholder='Search for services' />
                 </div>
             </div>
         </div>

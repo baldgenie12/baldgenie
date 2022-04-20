@@ -55,7 +55,7 @@ export default function Home() {
 
 
       <Navbar />
-      <main className=' sm:w-4/5    sm:mx-auto  text-gray-600 font-theme  '>
+      <main className='mx-2 sm:w-4/5    sm:mx-auto  text-gray-600 font-theme  '>
 
         <div className='w-3/5  sm:w-2/5 md:w-1/5 mx-auto m-2 my-4'>
 
@@ -75,7 +75,7 @@ export default function Home() {
 
         {/* All categories */}
 
-        <div className=' my-10   '>
+        <div className=' my-10 mx-2 md:mx-0  '>
           <h1 className='font-semibold text-lg'>All Categories</h1>
           <p className='text-sm'>
             {/* <LoremIpsum p={1} /> */}
@@ -83,7 +83,7 @@ export default function Home() {
           </p>
 
 
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8    '>
+          <div className='flex flex-wrap justify-center  mt-6 space-x-4  lg:grid lg:grid-cols-4 lg:space-x-0 gap-x-12'>
 
 
 
