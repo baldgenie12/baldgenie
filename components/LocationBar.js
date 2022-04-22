@@ -78,8 +78,11 @@ export const LocationBar = () => {
                     console.log(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${coordinates.latitude},${coordinates.longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`);
                     setlocation(location)
                 
+                    const part=location.plus_code.compound_code.trim()
+                    const index= part.indexOf(" ")
+                    const part2 = part.substring(index,part.length)
 
-                    setlocationstate(`${location.plus_code.compound_code}`)
+                    setlocationstate(`${part2}`)
 
                     setloading(false)
 
