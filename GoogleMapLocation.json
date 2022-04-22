@@ -1,280 +1,206 @@
 {
     "plus_code": {
-        "compound_code": "H4VQ+J2P Patna, Bihar, India",
-        "global_code": "7MQ7H4VQ+J2P"
+        "compound_code": "682P+QMM McCook, NE, USA",
+        "global_code": "85GX682P+QMM"
     },
     "results": [
         {
             "address_components": [
                 {
-                    "long_name": "H4VQ+J2M",
-                    "short_name": "H4VQ+J2M",
+                    "long_name": "5",
+                    "short_name": "5",
                     "types": [
-                        "plus_code"
+                        "street_number"
                     ]
                 },
                 {
-                    "long_name": "Danapur Nizamat",
-                    "short_name": "Danapur Nizamat",
+                    "long_name": "Spyglass Street",
+                    "short_name": "Spyglass St",
                     "types": [
-                        "neighborhood",
-                        "political"
+                        "route"
                     ]
                 },
                 {
-                    "long_name": "Mithapur",
-                    "short_name": "Mithapur",
-                    "types": [
-                        "political",
-                        "sublocality",
-                        "sublocality_level_1"
-                    ]
-                },
-                {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
+                    "long_name": "McCook",
+                    "short_name": "McCook",
                     "types": [
                         "locality",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
+                    "long_name": "Perry",
+                    "short_name": "Perry",
+                    "types": [
+                        "administrative_area_level_3",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Red Willow County",
+                    "short_name": "Red Willow County",
                     "types": [
                         "administrative_area_level_2",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Bihar",
-                    "short_name": "BR",
+                    "long_name": "Nebraska",
+                    "short_name": "NE",
                     "types": [
                         "administrative_area_level_1",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "India",
-                    "short_name": "IN",
+                    "long_name": "United States",
+                    "short_name": "US",
                     "types": [
                         "country",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "800001",
-                    "short_name": "800001",
+                    "long_name": "69001",
+                    "short_name": "69001",
                     "types": [
                         "postal_code"
                     ]
+                },
+                {
+                    "long_name": "4600",
+                    "short_name": "4600",
+                    "types": [
+                        "postal_code_suffix"
+                    ]
                 }
             ],
-            "formatted_address": "H4VQ+J2M, Danapur Nizamat, Mithapur, Patna, Bihar 800001, India",
+            "formatted_address": "5 Spyglass St, McCook, NE 69001, USA",
             "geometry": {
-                "location": {
-                    "lat": 25.594096,
-                    "lng": 85.13754100000001
-                },
-                "location_type": "GEOMETRIC_CENTER",
-                "viewport": {
+                "bounds": {
                     "northeast": {
-                        "lat": 25.5954449802915,
-                        "lng": 85.13888998029152
+                        "lat": 40.2018422,
+                        "lng": -100.6632826
                     },
                     "southwest": {
-                        "lat": 25.5927470197085,
-                        "lng": 85.13619201970852
+                        "lat": 40.2016201,
+                        "lng": -100.6635106
                     }
-                }
-            },
-            "place_id": "ChIJrYQXpAlZ7TkRlaZLbDPZL8I",
-            "types": [
-                "establishment",
-                "point_of_interest"
-            ]
-        },
-        {
-            "address_components": [
-                {
-                    "long_name": "Jai Prakash Narayan",
-                    "short_name": "Jai Prakash Narayan",
-                    "types": [
-                        "airport",
-                        "establishment",
-                        "point_of_interest"
-                    ]
                 },
-                {
-                    "long_name": "H4VQ+J2P",
-                    "short_name": "H4VQ+J2P",
-                    "types": [
-                        "plus_code"
-                    ]
-                },
-                {
-                    "long_name": "Danapur Nizamat",
-                    "short_name": "Danapur Nizamat",
-                    "types": [
-                        "neighborhood",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Mithapur",
-                    "short_name": "Mithapur",
-                    "types": [
-                        "political",
-                        "sublocality",
-                        "sublocality_level_1"
-                    ]
-                },
-                {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
-                    "types": [
-                        "locality",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
-                    "types": [
-                        "administrative_area_level_2",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Bihar",
-                    "short_name": "BR",
-                    "types": [
-                        "administrative_area_level_1",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "India",
-                    "short_name": "IN",
-                    "types": [
-                        "country",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "800001",
-                    "short_name": "800001",
-                    "types": [
-                        "postal_code"
-                    ]
-                }
-            ],
-            "formatted_address": "H4VQ+J2P Jai Prakash Narayan, Danapur Nizamat, Mithapur, Patna, Bihar 800001, India",
-            "geometry": {
                 "location": {
-                    "lat": 25.5940947,
-                    "lng": 85.1375645
-                },
-                "location_type": "GEOMETRIC_CENTER",
-                "viewport": {
-                    "northeast": {
-                        "lat": 25.59544368029151,
-                        "lng": 85.1389134802915
-                    },
-                    "southwest": {
-                        "lat": 25.5927457197085,
-                        "lng": 85.13621551970849
-                    }
-                }
-            },
-            "place_id": "ChIJi-7F7_9Z7TkRARQTY2O237I",
-            "types": [
-                "airport",
-                "establishment",
-                "point_of_interest"
-            ]
-        },
-        {
-            "address_components": [
-                {
-                    "long_name": "Puri",
-                    "short_name": "Puri",
-                    "types": [
-                        "locality",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Danapur Nizamat",
-                    "short_name": "Danapur Nizamat",
-                    "types": [
-                        "neighborhood",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Mithapur",
-                    "short_name": "Mithapur",
-                    "types": [
-                        "political",
-                        "sublocality",
-                        "sublocality_level_1"
-                    ]
-                },
-                {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
-                    "types": [
-                        "administrative_area_level_2",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Bihar",
-                    "short_name": "BR",
-                    "types": [
-                        "administrative_area_level_1",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "India",
-                    "short_name": "IN",
-                    "types": [
-                        "country",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "800001",
-                    "short_name": "800001",
-                    "types": [
-                        "postal_code"
-                    ]
-                }
-            ],
-            "formatted_address": "171-C, S K, Danapur Nizamat, Mithapur, Puri, Bihar 800001, India",
-            "geometry": {
-                "location": {
-                    "lat": 25.594088,
-                    "lng": 85.1375391
+                    "lat": 40.2017405,
+                    "lng": -100.6634118
                 },
                 "location_type": "ROOFTOP",
                 "viewport": {
                     "northeast": {
-                        "lat": 25.5954369802915,
-                        "lng": 85.13888808029151
+                        "lat": 40.2030801302915,
+                        "lng": -100.6620476197085
                     },
                     "southwest": {
-                        "lat": 25.5927390197085,
-                        "lng": 85.13619011970849
+                        "lat": 40.2003821697085,
+                        "lng": -100.6647455802915
                     }
                 }
             },
-            "place_id": "ChIJodh2UXpZ7TkRFgVoi3iKvxw",
+            "place_id": "ChIJP6PgFOCAdYcRD-UW3_bFQyc",
+            "types": [
+                "premise"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "13",
+                    "short_name": "13",
+                    "types": [
+                        "street_number"
+                    ]
+                },
+                {
+                    "long_name": "Sandpiper Street",
+                    "short_name": "Sandpiper St",
+                    "types": [
+                        "route"
+                    ]
+                },
+                {
+                    "long_name": "McCook",
+                    "short_name": "McCook",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Perry",
+                    "short_name": "Perry",
+                    "types": [
+                        "administrative_area_level_3",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Red Willow County",
+                    "short_name": "Red Willow County",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Nebraska",
+                    "short_name": "NE",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "United States",
+                    "short_name": "US",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "69001",
+                    "short_name": "69001",
+                    "types": [
+                        "postal_code"
+                    ]
+                },
+                {
+                    "long_name": "4601",
+                    "short_name": "4601",
+                    "types": [
+                        "postal_code_suffix"
+                    ]
+                }
+            ],
+            "formatted_address": "13 Sandpiper St, McCook, NE 69001, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.2026575,
+                    "lng": -100.6627311
+                },
+                "location_type": "ROOFTOP",
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.2040064802915,
+                        "lng": -100.6613821197085
+                    },
+                    "southwest": {
+                        "lat": 40.2013085197085,
+                        "lng": -100.6640800802915
+                    }
+                }
+            },
+            "place_id": "ChIJV_cKd-CAdYcR8Fz2LYzwSVw",
             "plus_code": {
-                "compound_code": "H4VQ+J2 Patna, Bihar, India",
-                "global_code": "7MQ7H4VQ+J2"
+                "compound_code": "683P+3W McCook, NE, USA",
+                "global_code": "85GX683P+3W"
             },
             "types": [
                 "street_address"
@@ -283,77 +209,92 @@
         {
             "address_components": [
                 {
-                    "long_name": "H4VQ+J2",
-                    "short_name": "H4VQ+J2",
+                    "long_name": "682P+QM",
+                    "short_name": "682P+QM",
                     "types": [
                         "plus_code"
                     ]
                 },
                 {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
+                    "long_name": "McCook",
+                    "short_name": "McCook",
                     "types": [
                         "locality",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
+                    "long_name": "Willow Grove",
+                    "short_name": "Willow Grove",
+                    "types": [
+                        "administrative_area_level_3",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Red Willow County",
+                    "short_name": "Red Willow County",
                     "types": [
                         "administrative_area_level_2",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Bihar",
-                    "short_name": "BR",
+                    "long_name": "Nebraska",
+                    "short_name": "NE",
                     "types": [
                         "administrative_area_level_1",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "India",
-                    "short_name": "IN",
+                    "long_name": "United States",
+                    "short_name": "US",
                     "types": [
                         "country",
                         "political"
                     ]
+                },
+                {
+                    "long_name": "69001",
+                    "short_name": "69001",
+                    "types": [
+                        "postal_code"
+                    ]
                 }
             ],
-            "formatted_address": "H4VQ+J2 Patna, Bihar, India",
+            "formatted_address": "682P+QM McCook, NE, USA",
             "geometry": {
                 "bounds": {
                     "northeast": {
-                        "lat": 25.594125,
-                        "lng": 85.13762500000001
+                        "lat": 40.202,
+                        "lng": -100.66325
                     },
                     "southwest": {
-                        "lat": 25.594,
-                        "lng": 85.1375
+                        "lat": 40.201875,
+                        "lng": -100.663375
                     }
                 },
                 "location": {
-                    "lat": 25.5940947,
-                    "lng": 85.1375645
+                    "lat": 40.2019713,
+                    "lng": -100.6633126
                 },
                 "location_type": "GEOMETRIC_CENTER",
                 "viewport": {
                     "northeast": {
-                        "lat": 25.5954114802915,
-                        "lng": 85.13891148029153
+                        "lat": 40.2032864802915,
+                        "lng": -100.6619635197085
                     },
                     "southwest": {
-                        "lat": 25.5927135197085,
-                        "lng": 85.1362135197085
+                        "lat": 40.2005885197085,
+                        "lng": -100.6646614802915
                     }
                 }
             },
-            "place_id": "GhIJGToblxaYOUARzCVV281IVUA",
+            "place_id": "GhIJhR0QMtoZREARlQGxtnMqWcA",
             "plus_code": {
-                "compound_code": "H4VQ+J2 Patna, Bihar, India",
-                "global_code": "7MQ7H4VQ+J2"
+                "compound_code": "682P+QM McCook, NE, USA",
+                "global_code": "85GX682P+QM"
             },
             "types": [
                 "plus_code"
@@ -362,90 +303,89 @@
         {
             "address_components": [
                 {
-                    "long_name": "Samta Path",
-                    "short_name": "Samta Path",
+                    "long_name": "Spyglass Street",
+                    "short_name": "Spyglass St",
                     "types": [
                         "route"
                     ]
                 },
                 {
-                    "long_name": "Mithapur",
-                    "short_name": "Mithapur",
-                    "types": [
-                        "political",
-                        "sublocality",
-                        "sublocality_level_1"
-                    ]
-                },
-                {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
+                    "long_name": "McCook",
+                    "short_name": "McCook",
                     "types": [
                         "locality",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
+                    "long_name": "Perry",
+                    "short_name": "Perry",
+                    "types": [
+                        "administrative_area_level_3",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Red Willow County",
+                    "short_name": "Red Willow County",
                     "types": [
                         "administrative_area_level_2",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Bihar",
-                    "short_name": "BR",
+                    "long_name": "Nebraska",
+                    "short_name": "NE",
                     "types": [
                         "administrative_area_level_1",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "India",
-                    "short_name": "IN",
+                    "long_name": "United States",
+                    "short_name": "US",
                     "types": [
                         "country",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "800001",
-                    "short_name": "800001",
+                    "long_name": "69001",
+                    "short_name": "69001",
                     "types": [
                         "postal_code"
                     ]
                 }
             ],
-            "formatted_address": "Samta Path, Mithapur, Patna, Bihar 800001, India",
+            "formatted_address": "Spyglass St, McCook, NE 69001, USA",
             "geometry": {
                 "bounds": {
                     "northeast": {
-                        "lat": 25.5940352,
-                        "lng": 85.1373598
+                        "lat": 40.202442,
+                        "lng": -100.663756
                     },
                     "southwest": {
-                        "lat": 25.5937518,
-                        "lng": 85.1373428
+                        "lat": 40.201813,
+                        "lng": -100.66385
                     }
                 },
                 "location": {
-                    "lat": 25.5938935,
-                    "lng": 85.1373513
+                    "lat": 40.2021275,
+                    "lng": -100.663803
                 },
                 "location_type": "GEOMETRIC_CENTER",
                 "viewport": {
                     "northeast": {
-                        "lat": 25.5952424802915,
-                        "lng": 85.1387002802915
+                        "lat": 40.20347648029149,
+                        "lng": -100.6624540197085
                     },
                     "southwest": {
-                        "lat": 25.5925445197085,
-                        "lng": 85.1360023197085
+                        "lat": 40.2007785197085,
+                        "lng": -100.6651519802915
                     }
                 }
             },
-            "place_id": "ChIJm9M7AXBY7TkRxupF0Kt2ggM",
+            "place_id": "ChIJ2ZjREeCAdYcRzipJwqdZo6w",
             "types": [
                 "route"
             ]
@@ -453,238 +393,142 @@
         {
             "address_components": [
                 {
-                    "long_name": "Danapur Nizamat",
-                    "short_name": "Danapur Nizamat",
+                    "long_name": "Perry",
+                    "short_name": "Perry",
                     "types": [
-                        "neighborhood",
+                        "administrative_area_level_3",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Mithapur",
-                    "short_name": "Mithapur",
-                    "types": [
-                        "political",
-                        "sublocality",
-                        "sublocality_level_1"
-                    ]
-                },
-                {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
-                    "types": [
-                        "locality",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
+                    "long_name": "Red Willow County",
+                    "short_name": "Red Willow County",
                     "types": [
                         "administrative_area_level_2",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Bihar",
-                    "short_name": "BR",
+                    "long_name": "Nebraska",
+                    "short_name": "NE",
                     "types": [
                         "administrative_area_level_1",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "India",
-                    "short_name": "IN",
+                    "long_name": "United States",
+                    "short_name": "US",
                     "types": [
                         "country",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "800001",
-                    "short_name": "800001",
+                    "long_name": "69001",
+                    "short_name": "69001",
                     "types": [
                         "postal_code"
                     ]
                 }
             ],
-            "formatted_address": "Danapur Nizamat, Mithapur, Patna, Bihar 800001, India",
+            "formatted_address": "Perry, NE 69001, USA",
             "geometry": {
                 "bounds": {
                     "northeast": {
-                        "lat": 25.5943194,
-                        "lng": 85.1378201
+                        "lat": 40.2664419,
+                        "lng": -100.648954
                     },
                     "southwest": {
-                        "lat": 25.59387,
-                        "lng": 85.1373153
+                        "lat": 40.174924,
+                        "lng": -100.7610191
                     }
                 },
                 "location": {
-                    "lat": 25.5940499,
-                    "lng": 85.1376051
+                    "lat": 40.2006121,
+                    "lng": -100.6872457
                 },
                 "location_type": "APPROXIMATE",
                 "viewport": {
                     "northeast": {
-                        "lat": 25.5954436802915,
-                        "lng": 85.13891668029152
+                        "lat": 40.2664419,
+                        "lng": -100.648954
                     },
                     "southwest": {
-                        "lat": 25.5927457197085,
-                        "lng": 85.1362187197085
+                        "lat": 40.174924,
+                        "lng": -100.7610191
                     }
                 }
             },
-            "place_id": "ChIJ1bKqqnpY7TkR6yQQFjzAsnA",
+            "place_id": "ChIJiS1DaauGdYcRlqcQTMREd5Y",
             "types": [
-                "neighborhood",
+                "administrative_area_level_3",
                 "political"
             ]
         },
         {
             "address_components": [
                 {
-                    "long_name": "Mithapur",
-                    "short_name": "Mithapur",
-                    "types": [
-                        "political",
-                        "sublocality",
-                        "sublocality_level_1"
-                    ]
-                },
-                {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
-                    "types": [
-                        "locality",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
-                    "types": [
-                        "administrative_area_level_2",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Bihar",
-                    "short_name": "BR",
-                    "types": [
-                        "administrative_area_level_1",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "India",
-                    "short_name": "IN",
-                    "types": [
-                        "country",
-                        "political"
-                    ]
-                }
-            ],
-            "formatted_address": "Mithapur, Patna, Bihar, India",
-            "geometry": {
-                "bounds": {
-                    "northeast": {
-                        "lat": 25.6041649,
-                        "lng": 85.1484301
-                    },
-                    "southwest": {
-                        "lat": 25.5840678,
-                        "lng": 85.129166
-                    }
-                },
-                "location": {
-                    "lat": 25.5955281,
-                    "lng": 85.1368911
-                },
-                "location_type": "APPROXIMATE",
-                "viewport": {
-                    "northeast": {
-                        "lat": 25.6041649,
-                        "lng": 85.1484301
-                    },
-                    "southwest": {
-                        "lat": 25.5840678,
-                        "lng": 85.129166
-                    }
-                }
-            },
-            "place_id": "ChIJBzqsrG9Y7TkRWiQnulrj-U8",
-            "types": [
-                "political",
-                "sublocality",
-                "sublocality_level_1"
-            ]
-        },
-        {
-            "address_components": [
-                {
-                    "long_name": "800001",
-                    "short_name": "800001",
+                    "long_name": "69001",
+                    "short_name": "69001",
                     "types": [
                         "postal_code"
                     ]
                 },
                 {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
+                    "long_name": "McCook",
+                    "short_name": "McCook",
                     "types": [
                         "locality",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Bihar",
-                    "short_name": "BR",
+                    "long_name": "Nebraska",
+                    "short_name": "NE",
                     "types": [
                         "administrative_area_level_1",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "India",
-                    "short_name": "IN",
+                    "long_name": "United States",
+                    "short_name": "US",
                     "types": [
                         "country",
                         "political"
                     ]
                 }
             ],
-            "formatted_address": "Patna, Bihar 800001, India",
+            "formatted_address": "McCook, NE 69001, USA",
             "geometry": {
                 "bounds": {
                     "northeast": {
-                        "lat": 25.6489202,
-                        "lng": 85.1540576
+                        "lat": 40.5403329,
+                        "lng": -100.4769028
                     },
                     "southwest": {
-                        "lat": 25.5844046,
-                        "lng": 85.101383
+                        "lat": 40.0017939,
+                        "lng": -100.8729019
                     }
                 },
                 "location": {
-                    "lat": 25.6234486,
-                    "lng": 85.1323779
+                    "lat": 40.2633657,
+                    "lng": -100.6647101
                 },
                 "location_type": "APPROXIMATE",
                 "viewport": {
                     "northeast": {
-                        "lat": 25.6489202,
-                        "lng": 85.1540576
+                        "lat": 40.5403329,
+                        "lng": -100.4769028
                     },
                     "southwest": {
-                        "lat": 25.5844046,
-                        "lng": 85.101383
+                        "lat": 40.0017939,
+                        "lng": -100.8729019
                     }
                 }
             },
-            "place_id": "ChIJLRdw8EdY7TkR8SxhNYGkvuA",
+            "place_id": "ChIJJ3N9uBeHdYcRgp5lkUfOtB4",
             "types": [
                 "postal_code"
             ]
@@ -692,128 +536,59 @@
         {
             "address_components": [
                 {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
-                    "types": [
-                        "locality",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
+                    "long_name": "Red Willow County",
+                    "short_name": "Red Willow County",
                     "types": [
                         "administrative_area_level_2",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "Bihar",
-                    "short_name": "BR",
+                    "long_name": "Nebraska",
+                    "short_name": "NE",
                     "types": [
                         "administrative_area_level_1",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "India",
-                    "short_name": "IN",
+                    "long_name": "United States",
+                    "short_name": "US",
                     "types": [
                         "country",
                         "political"
                     ]
                 }
             ],
-            "formatted_address": "Patna, Bihar, India",
+            "formatted_address": "Red Willow County, NE, USA",
             "geometry": {
                 "bounds": {
                     "northeast": {
-                        "lat": 25.6564425,
-                        "lng": 85.2687289
+                        "lat": 40.35152,
+                        "lng": -100.1931801
                     },
                     "southwest": {
-                        "lat": 25.5596324,
-                        "lng": 85.01735699999999
+                        "lat": 40.001604,
+                        "lng": -100.7610191
                     }
                 },
                 "location": {
-                    "lat": 25.5940947,
-                    "lng": 85.1375645
+                    "lat": 40.2353963,
+                    "lng": -100.5296115
                 },
                 "location_type": "APPROXIMATE",
                 "viewport": {
                     "northeast": {
-                        "lat": 25.6564425,
-                        "lng": 85.2687289
+                        "lat": 40.35152,
+                        "lng": -100.1931801
                     },
                     "southwest": {
-                        "lat": 25.5596324,
-                        "lng": 85.01735699999999
+                        "lat": 40.001604,
+                        "lng": -100.7610191
                     }
                 }
             },
-            "place_id": "ChIJBU8txTeZ8jkRcLIH9gUOGoM",
-            "types": [
-                "locality",
-                "political"
-            ]
-        },
-        {
-            "address_components": [
-                {
-                    "long_name": "Patna",
-                    "short_name": "Patna",
-                    "types": [
-                        "administrative_area_level_2",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Bihar",
-                    "short_name": "BR",
-                    "types": [
-                        "administrative_area_level_1",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "India",
-                    "short_name": "IN",
-                    "types": [
-                        "country",
-                        "political"
-                    ]
-                }
-            ],
-            "formatted_address": "Patna, Bihar, India",
-            "geometry": {
-                "bounds": {
-                    "northeast": {
-                        "lat": 25.7325916,
-                        "lng": 86.0706482
-                    },
-                    "southwest": {
-                        "lat": 25.2031706,
-                        "lng": 84.689453
-                    }
-                },
-                "location": {
-                    "lat": 25.4839571,
-                    "lng": 85.02334599999999
-                },
-                "location_type": "APPROXIMATE",
-                "viewport": {
-                    "northeast": {
-                        "lat": 25.7325916,
-                        "lng": 86.0706482
-                    },
-                    "southwest": {
-                        "lat": 25.2031706,
-                        "lng": 84.689453
-                    }
-                }
-            },
-            "place_id": "ChIJhcUL3FxY7TkR12odS4Hj43E",
+            "place_id": "ChIJz4I9sO4unocRAyPKuLP5_IY",
             "types": [
                 "administrative_area_level_2",
                 "political"
@@ -822,51 +597,51 @@
         {
             "address_components": [
                 {
-                    "long_name": "Bihar",
-                    "short_name": "BR",
+                    "long_name": "Nebraska",
+                    "short_name": "NE",
                     "types": [
                         "administrative_area_level_1",
                         "political"
                     ]
                 },
                 {
-                    "long_name": "India",
-                    "short_name": "IN",
+                    "long_name": "United States",
+                    "short_name": "US",
                     "types": [
                         "country",
                         "political"
                     ]
                 }
             ],
-            "formatted_address": "Bihar, India",
+            "formatted_address": "Nebraska, USA",
             "geometry": {
                 "bounds": {
                     "northeast": {
-                        "lat": 27.5218326,
-                        "lng": 88.289752
+                        "lat": 43.00170689999999,
+                        "lng": -95.30829000000001
                     },
                     "southwest": {
-                        "lat": 24.286278,
-                        "lng": 83.31486509999999
+                        "lat": 39.999932,
+                        "lng": -104.053514
                     }
                 },
                 "location": {
-                    "lat": 25.0960742,
-                    "lng": 85.31311939999999
+                    "lat": 41.4925374,
+                    "lng": -99.9018131
                 },
                 "location_type": "APPROXIMATE",
                 "viewport": {
                     "northeast": {
-                        "lat": 27.5218326,
-                        "lng": 88.289752
+                        "lat": 43.00170689999999,
+                        "lng": -95.30829000000001
                     },
                     "southwest": {
-                        "lat": 24.286278,
-                        "lng": 83.31486509999999
+                        "lat": 39.999932,
+                        "lng": -104.053514
                     }
                 }
             },
-            "place_id": "ChIJA2m78ERY7TkRJeO6G-0_rVc",
+            "place_id": "ChIJ7fwMtciNk4cRxArzDwyQJ6E",
             "types": [
                 "administrative_area_level_1",
                 "political"
@@ -875,43 +650,43 @@
         {
             "address_components": [
                 {
-                    "long_name": "India",
-                    "short_name": "IN",
+                    "long_name": "United States",
+                    "short_name": "US",
                     "types": [
                         "country",
                         "political"
                     ]
                 }
             ],
-            "formatted_address": "India",
+            "formatted_address": "United States",
             "geometry": {
                 "bounds": {
                     "northeast": {
-                        "lat": 35.513327,
-                        "lng": 97.39535869999999
+                        "lat": 71.5388001,
+                        "lng": -66.885417
                     },
                     "southwest": {
-                        "lat": 6.4626999,
-                        "lng": 68.1097
+                        "lat": 18.7763,
+                        "lng": 170.5957
                     }
                 },
                 "location": {
-                    "lat": 20.593684,
-                    "lng": 78.96288
+                    "lat": 37.09024,
+                    "lng": -95.712891
                 },
                 "location_type": "APPROXIMATE",
                 "viewport": {
                     "northeast": {
-                        "lat": 35.513327,
-                        "lng": 97.39535869999999
+                        "lat": 71.5388001,
+                        "lng": -66.885417
                     },
                     "southwest": {
-                        "lat": 6.4626999,
-                        "lng": 68.1097
+                        "lat": 18.7763,
+                        "lng": 170.5957
                     }
                 }
             },
-            "place_id": "ChIJkbeSa_BfYzARphNChaFPjNc",
+            "place_id": "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
             "types": [
                 "country",
                 "political"

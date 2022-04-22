@@ -40,6 +40,11 @@
     {
         @apply pb-3
     }
+
+    .dot{
+        @apply w-3 h-3 bg-gray-600 rounded-full mr-4
+
+    }
      
  
 

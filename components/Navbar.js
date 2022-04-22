@@ -32,7 +32,7 @@ function Navbar() {
             {!session &&
                 <div className=' m-1 md:mr-6 flex items-center justify-end text-white font-semibold' >
 
-                    <h2 onClick={() => router.push('/signup/merchant')} className='cursor-pointer p-1 px-4 bg-theme border-2 rounded-lg text-xs md:text-md  hover:bg-blue-600'>
+                    <h2 onClick={() => router.push('/partner_with_us')} className='cursor-pointer p-1 px-4 bg-theme border-2 rounded-lg text-xs md:text-md  hover:bg-blue-600'>
                         List your bussiness
                     </h2>
                     <h2 onClick={() => signIn()} className='cursor-pointer p-1 px-4 bg-theme border-2 rounded-lg text-xs md:text-md  hover:bg-blue-600'>
