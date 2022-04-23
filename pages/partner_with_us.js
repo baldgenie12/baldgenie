@@ -135,7 +135,7 @@ const MerchantSignUP = () => {
 
 
     return (
-        <div className=' m-16 ml-28'>
+        <div className=' m-16 ml-28 font-footer'>
             {/* Primary Contact  */}
 
             <Head>
@@ -147,7 +147,7 @@ const MerchantSignUP = () => {
             <div className='flex items-center justify-start my-4 m-2'>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>*Primary Contact Name</h1>
-                <select className='p-1 text-sm w-18 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={nameTitle} onChange={e => { setnameTitle(e.target.value) }} >
+                <select className='shadow-lg p-1 text-sm w-18 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={nameTitle} onChange={e => { setnameTitle(e.target.value) }} >
                     <option className='px-2 py-4'>Mr.</option>
                     <option className='px-2 py-4'>Mrs.</option>
                     <option className='px-2 py-4'>Ms.</option>
@@ -161,7 +161,7 @@ const MerchantSignUP = () => {
             <div className='flex items-center justify-start my-4 m-2 '>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>*Gender</h1>
-                <select className='p-1 text-sm w-22 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={gender} onChange={e => { setgender(e.target.value) }} >
+                <select className='shadow-lg p-1 text-sm w-22 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={gender} onChange={e => { setgender(e.target.value) }} >
                     <option className='px-2 py-4'>Male</option>
                     <option className='px-2 py-4'>Female</option>
                 </select>
@@ -186,7 +186,7 @@ const MerchantSignUP = () => {
             <div className='flex items-center justify-start my-4 m-2'>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>*Alternate Contact Name</h1>
-                <select className='p-1 text-sm w-18 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={alternate_nameTitle} onChange={e => { set_alternate__nameTitle(e.target.value) }} >
+                <select className='shadow-lg p-1 text-sm w-18 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={alternate_nameTitle} onChange={e => { set_alternate__nameTitle(e.target.value) }} >
                     <option className='px-2 py-4'>Mr.</option>
                     <option className='px-2 py-4'>Mrs.</option>
                     <option className='px-2 py-4'>Ms.</option>
@@ -201,7 +201,7 @@ const MerchantSignUP = () => {
             <div className='flex items-center justify-start my-4 m-2 '>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>*Gender</h1>
-                <select className='p-1 text-sm w-22 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={alternate_gender} onChange={e => { set_alternate_gender(e.target.value) }} >
+                <select className='shadow-lg p-1 text-sm w-22 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={alternate_gender} onChange={e => { set_alternate_gender(e.target.value) }} >
                     <option className='px-2 py-4'>Male</option>
                     <option className='px-2 py-4'>Female</option>
                 </select>
@@ -256,7 +256,7 @@ const MerchantSignUP = () => {
             <div className='flex items-center justify-start my-4 m-2'>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>*Service Radius</h1>
-                <select className='p-1 px-2 text-sm w-16 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={serviceRadiusFrom} onChange={e => { setserviceRadiusFrom(e.target.value) }} >
+                <select className='shadow-lg p-1 px-2 text-sm w-16 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={serviceRadiusFrom} onChange={e => { setserviceRadiusFrom(e.target.value) }} >
                     {serviceRadiusMenu.map(item => {
                         return (
 
@@ -266,7 +266,7 @@ const MerchantSignUP = () => {
 
                 </select>
                 <h2 className='ml-2'>Miles</h2>
-                <select className='ml-6 p-1 text-sm w-16 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={serviceRadiusTo} onChange={e => { setserviceRadiusTo(e.target.value) }} >
+                <select className='shadow-lg ml-6 p-1 text-sm w-16 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={serviceRadiusTo} onChange={e => { setserviceRadiusTo(e.target.value) }} >
                     <option className='px-2 py-4'>25+</option>
                 </select>
                 <h2 className='ml-2'>Miles</h2>
@@ -297,7 +297,7 @@ const MerchantSignUP = () => {
                 <div className='flex flex-col space-y-4'>
                     <div>
 
-                        <select className='p-1 px-2 text-sm w-22 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={workingdays} onChange={e => { setworkingdays(e.target.value) }} >
+                        <select className='shadow-lg p-1 px-2 text-sm w-22 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={workingdays} onChange={e => { setworkingdays(e.target.value) }} >
                             {bussinessHoursMenu.map(item => {
                                 return (
 
@@ -314,7 +314,7 @@ const MerchantSignUP = () => {
                     </div>
                     <div>
 
-                        <select className='p-1 px-2 text-sm w-22 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={serviceRadiusFrom} onChange={e => { setserviceRadiusFrom(e.target.value) }} >
+                        <select className='shadow-lg p-1 px-2 text-sm w-22 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={serviceRadiusFrom} onChange={e => { setserviceRadiusFrom(e.target.value) }} >
                             {bussinessHoursMenu.map(item => {
                                 return (
 
@@ -338,7 +338,7 @@ const MerchantSignUP = () => {
             <div className='flex items-center justify-start my-4 m-2'>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>Time Zone</h1>
-                <select className='p-1 px-3 text-sm w-22 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={serviceRadiusFrom} onChange={e => { setserviceRadiusFrom(e.target.value) }} >
+                <select className='shadow-lg p-1 px-3 text-sm w-22 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={serviceRadiusFrom} onChange={e => { setserviceRadiusFrom(e.target.value) }} >
                     {timezoneMenu.map(item => {
                         return (
 
@@ -353,7 +353,7 @@ const MerchantSignUP = () => {
             <div className='flex items-center justify-start my-4 m-2'>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>Years in Bussiness</h1>
-                <select className='p-1 px-2 text-sm w-16 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={yearsinbusuiness} onChange={e => { setyearsinbusuiness(e.target.value) }} >
+                <select className='shadow-lg p-1 px-2 text-sm w-16 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={yearsinbusuiness} onChange={e => { setyearsinbusuiness(e.target.value) }} >
                     {yearsinBussinessMenu.map(item => {
                         return (
 
@@ -362,7 +362,7 @@ const MerchantSignUP = () => {
                     })}
                 </select>
                 <h2 className='ml-2'>Years</h2>
-                <select className='ml-6 p-1 text-sm w-16 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={monthsinbusiness} onChange={e => { setmonthsinbusiness(e.target.value) }} >
+                <select className='shadow-lg ml-6 p-1 text-sm w-16 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={monthsinbusiness} onChange={e => { setmonthsinbusiness(e.target.value) }} >
                     {monthsinBussinessMenu.map(item => {
                         return (
 
@@ -376,7 +376,7 @@ const MerchantSignUP = () => {
             <div className='flex items-center justify-start my-4 m-2'>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>Employee Strength</h1>
-                <select className='p-1 px-3 text-sm w-22 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={employees} onChange={e => { setemployees(e.target.value) }} >
+                <select className='shadow-lg p-1 px-3 text-sm w-22 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={employees} onChange={e => { setemployees(e.target.value) }} >
                     {employeeStrengthMenu.map(item => {
                         return (
 
