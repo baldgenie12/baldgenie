@@ -260,7 +260,7 @@ const MerchantSignUP = () => {
                     {serviceRadiusMenu.map(item => {
                         return (
 
-                            <option key={item} className='font-semibold py-4'>{item}</option>
+                            <option key={item} className='px-2 py-4'>{item}</option>
                         )
                     })}
 
@@ -301,7 +301,7 @@ const MerchantSignUP = () => {
                             {bussinessHoursMenu.map(item => {
                                 return (
 
-                                    <option key={item} className='font-semibold py-4'>{item}</option>
+                                    <option key={item} className='px-2 py-4'>{item}</option>
                                 )
                             })}
                         </select>
@@ -318,7 +318,7 @@ const MerchantSignUP = () => {
                             {bussinessHoursMenu.map(item => {
                                 return (
 
-                                    <option key={item} className='font-semibold py-4'>{item}</option>
+                                    <option key={item} className='px-2 py-4'>{item}</option>
                                 )
                             })}
                         </select>
@@ -342,7 +342,7 @@ const MerchantSignUP = () => {
                     {timezoneMenu.map(item => {
                         return (
 
-                            <option key={item} className='font-semibold py-4'>{item}</option>
+                            <option key={item} className='px-2 py-4'>{item}</option>
                         )
                     })}
                 </select>
@@ -357,7 +357,7 @@ const MerchantSignUP = () => {
                     {yearsinBussinessMenu.map(item => {
                         return (
 
-                            <option key={item} className='font-semibold py-4'>{item}</option>
+                            <option key={item} className='px-2 py-4'>{item}</option>
                         )
                     })}
                 </select>
@@ -366,7 +366,7 @@ const MerchantSignUP = () => {
                     {monthsinBussinessMenu.map(item => {
                         return (
 
-                            <option key={item} className='font-semibold py-4'>{item}</option>
+                            <option key={item} className='px-2 py-4'>{item}</option>
                         )
                     })}
                 </select>
@@ -380,7 +380,7 @@ const MerchantSignUP = () => {
                     {employeeStrengthMenu.map(item => {
                         return (
 
-                            <option key={item} className='font-semibold py-4'>{item}</option>
+                            <option key={item} className='px-2 py-4'>{item}</option>
                         )
                     })}
                 </select>
