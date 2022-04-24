@@ -65,16 +65,16 @@ export const FilterSidebar = () => {
                             <h1 className='font-semibold'>Availability</h1>
 
                             <div className='flex items-center  space-x-1'>
-                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="Availability" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                                 <label className='text-sm ' htmlFor="html">Show Online</label>
                             </div>
 
                             <div className='flex items-center  space-x-1'>
-                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="Availability" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                                 <label className='text-sm ' htmlFor="html">24/7 Support</label>
                             </div>
                             <div className='flex items-center  space-x-1'>
-                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="Availability" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                                 <label className='text-sm ' htmlFor="html">By Appointment</label>
                             </div>
                         </div>
@@ -256,27 +256,27 @@ export const FilterSidebar = () => {
 
 
                             <div className='flex items-center  space-x-1 '>
-                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="Employee Strength" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                                 <label className='text-sm ' htmlFor="html">Solo</label>
                             </div>
                             <div className='flex items-center  space-x-1 '>
-                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="Employee Strength" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                                 <label className='text-sm ' htmlFor="html">2 - 5</label>
                             </div>
                             <div className='flex items-center  space-x-1 '>
-                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="Employee Strength" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                                 <label className='text-sm ' htmlFor="html">6 - 10</label>
                             </div>
                             <div className='flex items-center  space-x-1 '>
-                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="Employee Strength" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                                 <label className='text-sm ' htmlFor="html">11 - 20</label>
                             </div>
                             <div className='flex items-center  space-x-1 '>
-                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="Employee Strength" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                                 <label className='text-sm ' htmlFor="html">20 - 50</label>
                             </div>
                             <div className='flex items-center  space-x-1 '>
-                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                                <input className='bg-theme text-theme ' type="radio" id="javascript" name="Employee Strength" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                                 <label className='text-sm ' htmlFor="html">50+</label>
                             </div>
 
