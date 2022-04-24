@@ -266,6 +266,16 @@ const MerchantSignUP = () => {
                     <input className="placeholder-gray-400 shadow-lg w-[250px]  p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => set_alternate_phone(e.target.value)} type="text" required placeholder="Enter Name" />
                 </div>
 
+                <div className='flex items-center justify-start my-4 m-2 '>
+                    <span className="dot"></span>
+                    <h1 className='w-[230px] mr-3'>*Business Logo</h1>
+                    <input className="placeholder-gray-400 shadow-lg w-[250px]  p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => set_alternate_phone(e.target.value)} type="file" required placeholder="Enter Name" />
+                    <CheckIcon className={`${isUrlValid(website) ? "" : "hidden"} icon ml-2 text-green-500`} />
+                    <XIcon className={`${isUrlValid(website) ? "hidden" : website.length > 5 ? "" : "hidden"} icon ml-2 text-red-500`} />
+                    <p className='ml-2 text-sm text-gray-600'>(200px x 200px logo image size required)</p>
+
+                </div>
+
 
                 <div className='flex items-center justify-start my-4 m-2'>
                     <span className="dot"></span>
@@ -404,7 +414,7 @@ const MerchantSignUP = () => {
                             <button onClick={() => {
                                 var array = [];
                                 array.push({ days: workingdays, from_hours: workingHoursFrom, to_hours: workingHoursTO })
-                                setbussinessHoursCreated([...bussinessHoursCreated,...array])
+                                setbussinessHoursCreated([...bussinessHoursCreated, ...array])
                             }} className='text-blue-500 font-bold text-left w-fit '>ADD</button>
                         </div>
                     </div>
