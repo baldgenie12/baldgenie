@@ -23,7 +23,7 @@ export const AllCategories = () => {
                 <div className='mt-[30px] pl-1'>
                     {Computer_SoftWare_Support.map(item => {
                         return (
-                            <h2 key={item} className='my-3 text-category text-[20px]'>{item}</h2>
+                            <h2 key={item} className='my-3 text-category text-[20px] hover:text-red-500 cursor-pointer'>{item}</h2>
                         )
                     })}
                 </div>
@@ -31,7 +31,7 @@ export const AllCategories = () => {
                 <div className='mt-[30px] pl-1'>
                     {Computer_Hardware_Support.map(item => {
                         return (
-                            <h2 key={item} className='my-3 text-category text-[20px]'>{item}</h2>
+                            <h2 key={item} className='my-3 text-category text-[20px] hover:text-red-500 cursor-pointer'>{item}</h2>
                         )
                     })}
                 </div>
@@ -44,7 +44,7 @@ export const AllCategories = () => {
                     <div className='mt-[30px] pl-1'>
                         {Printers.map(item => {
                             return (
-                                <h2 key={item} className='my-3 text-category text-[20px]'>{item}</h2>
+                                <h2 key={item} className='my-3 text-category text-[20px] hover:text-red-500 cursor-pointer'>{item}</h2>
                             )
                         })}
                     </div>
@@ -64,7 +64,7 @@ export const AllCategories = () => {
                     <div className='mt-[30px] pl-1'>
                         {WiFi_Networking.map(item => {
                             return (
-                                <h2 key={item} className='my-3 text-category text-[20px]'>{item}</h2>
+                                <h2 key={item} className='my-3 text-category text-[20px] hover:text-red-500 cursor-pointer'>{item}</h2>
                             )
                         })}
                     </div>
@@ -78,7 +78,7 @@ export const AllCategories = () => {
                     <div className='mt-[30px] pl-1'>
                         {Mobiles_SoftWare.map(item => {
                             return (
-                                <h2 key={item} className='my-3 text-category text-[20px]'>{item}</h2>
+                                <h2 key={item} className='my-3 text-category text-[20px] hover:text-red-500 cursor-pointer'>{item}</h2>
                             )
                         })}
                     </div>
@@ -86,7 +86,7 @@ export const AllCategories = () => {
                     <div className='mt-[30px] pl-1'>
                         {Mobiles_Hardware.map(item => {
                             return (
-                                <h2 key={item} className='my-3 text-category text-[20px]'>{item}</h2>
+                                <h2 key={item} className='my-3 text-category text-[20px] hover:text-red-500 cursor-pointer'>{item}</h2>
                             )
                         })}
                     </div>
@@ -99,7 +99,7 @@ export const AllCategories = () => {
                     <div className='mt-[30px] pl-1'>
                         {Audio_Video.map(item => {
                             return (
-                                <h2 key={item} className='my-3 text-category text-[20px]'>{item}</h2>
+                                <h2 key={item} className='my-3 text-category text-[20px] hover:text-red-500 cursor-pointer'>{item}</h2>
                             )
                         })}
                     </div>
@@ -117,7 +117,7 @@ export const AllCategories = () => {
                     <div className='mt-[30px] pl-1'>
                         {Smart_Home.map(item => {
                             return (
-                                <h2 key={item} className='my-3 text-category text-[20px]'>{item}</h2>
+                                <h2 key={item} className='my-3 text-category text-[20px] hover:text-red-500 cursor-pointer'>{item}</h2>
                             )
                         })}
                     </div>
@@ -132,7 +132,7 @@ export const AllCategories = () => {
                     <div className='mt-[30px] pl-1'>
                         {TV_Mounting.map(item => {
                             return (
-                                <h2 key={item} className='my-3 text-category text-[20px]'>{item}</h2>
+                                <h2 key={item} className='my-3 text-category text-[20px] hover:text-red-500 cursor-pointer'>{item}</h2>
                             )
                         })}
                     </div>
@@ -147,7 +147,7 @@ export const AllCategories = () => {
                     <div className='mt-[30px] pl-1'>
                         {Home_Security.map(item => {
                             return (
-                                <h2 key={item} className='my-3 text-category text-[20px]'>{item}</h2>
+                                <h2 key={item} className='my-3 text-category text-[20px] hover:text-red-500 cursor-pointer'>{item}</h2>
                             )
                         })}
                     </div>
