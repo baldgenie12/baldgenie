@@ -217,7 +217,7 @@ const MerchantSignUP = () => {
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>*Alternate Contact Email</h1>
                 <input className="placeholder-gray-600 shadow-lg  w-[250px]  p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => set_alternate_email(e.target.value)} type="email" required placeholder="Enter Email" />
-                <CheckIcon className={`${validateEmail(alternate_email) ? "" : "hidden"} icon ml-2 text-green-500`} />
+                <CheckIcon className={`${ validateEmail(alternate_email) ? "" : "hidden"} icon ml-2 text-green-500`} />
                 <XIcon className={`${validateEmail(alternate_email) ? "hidden" : alternate_email.length > 8 ? "" : "hidden"} icon ml-2 text-red-500`} />
 
                 <p className='ml-2 text-sm text-gray-600'>(for us to contact you and will not be made public)</p>
@@ -423,12 +423,12 @@ const MerchantSignUP = () => {
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>Remote Service</h1>
                 <div className='flex items-center   space-x-1'>
-                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="Remote_Service" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                     <label className='' htmlFor="html">Yes</label>
                 </div>
 
                 <div className='ml-6 flex items-center   space-x-1'>
-                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="Remote_Service" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                     <label className='' htmlFor="html">No</label>
                 </div>
             </div>
@@ -437,12 +437,12 @@ const MerchantSignUP = () => {
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>In Store Service</h1>
                 <div className='flex items-center   space-x-1'>
-                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="In_Store_Service" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                     <label className='' htmlFor="html">Yes</label>
                 </div>
 
                 <div className='ml-6 flex items-center   space-x-1'>
-                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="In_Store_Service" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                     <label className='' htmlFor="html">No</label>
                 </div>
             </div>
@@ -452,12 +452,12 @@ const MerchantSignUP = () => {
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>House Call</h1>
                 <div className='flex items-center   space-x-1'>
-                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="House Call" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                     <label className='' htmlFor="html">Yes</label>
                 </div>
 
                 <div className='ml-6 flex items-center   space-x-1'>
-                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="House Call" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                     <label className='' htmlFor="html">No</label>
                 </div>
             </div>
@@ -467,12 +467,12 @@ const MerchantSignUP = () => {
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>Pick Up & Drop</h1>
                 <div className='flex items-center   space-x-1'>
-                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="Pick Up & Drop" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                     <label className='' htmlFor="html">Yes</label>
                 </div>
 
                 <div className='ml-6 flex items-center   space-x-1'>
-                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="Pick Up & Drop" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                     <label className='' htmlFor="html">No</label>
                 </div>
             </div>
@@ -481,12 +481,12 @@ const MerchantSignUP = () => {
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>Bussiness Service</h1>
                 <div className='flex items-center   space-x-1'>
-                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="Bussiness Service" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                     <label className='' htmlFor="html">Yes</label>
                 </div>
 
                 <div className='ml-6 flex items-center   space-x-1'>
-                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="fav_language" value="JavaScript" placeholder='dsfasdfsadfdasf' />
+                    <input className='bg-theme text-theme ' type="radio" id="javascript" name="Bussiness Service" value="JavaScript" placeholder='dsfasdfsadfdasf' />
                     <label className='' htmlFor="html">No</label>
                 </div>
             </div>

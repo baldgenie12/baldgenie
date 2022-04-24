@@ -49,6 +49,7 @@ export function isUrlValid(userInput) {
 
 
  export const validateEmail = (email) => {
+     
     return String(email)
         .toLowerCase()
         .match(
