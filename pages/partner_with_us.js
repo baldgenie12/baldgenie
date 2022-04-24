@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {
-    SearchIcon, LocationMarkerIcon, PrinterIcon, WifiIcon, DeviceMobileIcon, HomeIcon
+    SearchIcon, LocationMarkerIcon, CheckIcon, XIcon, DeviceMobileIcon, HomeIcon
 } from '@heroicons/react/solid';
 import Head from 'next/head'
 import { serviceRadiusMenu } from '../utils/MerchantSignUp'
@@ -9,6 +9,9 @@ import { timezoneMenu } from '../utils/MerchantSignUp'
 import { yearsinBussinessMenu } from '../utils/MerchantSignUp'
 import { monthsinBussinessMenu } from '../utils/MerchantSignUp'
 import { employeeStrengthMenu } from '../utils/MerchantSignUp'
+import { tollfreeMenu } from '../utils/MerchantSignUp'
+import { isUrlValid } from '../utils/MerchantSignUp'
+import { validateEmail } from '../utils/MerchantSignUp'
 
 
 const MerchantSignUP = () => {
@@ -171,6 +174,9 @@ const MerchantSignUP = () => {
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>*Primary Contact Email</h1>
                 <input className="placeholder-gray-600 shadow-lg  w-[250px]  p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => setemail(e.target.value)} type="email" required placeholder="Enter Email" />
+                <CheckIcon className={`${validateEmail(email) ? "" : "hidden"} icon ml-2 text-green-500`} />
+                <XIcon className={`${validateEmail(email) ? "hidden" : email.length > 8 ? "" : "hidden"} icon ml-2 text-red-500`} />
+
                 <p className='ml-2 text-sm text-gray-600'>(for us to contact you and will not be made public)</p>
             </div>
 
@@ -211,6 +217,9 @@ const MerchantSignUP = () => {
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>*Alternate Contact Email</h1>
                 <input className="placeholder-gray-600 shadow-lg  w-[250px]  p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => set_alternate_email(e.target.value)} type="email" required placeholder="Enter Email" />
+                <CheckIcon className={`${validateEmail(alternate_email) ? "" : "hidden"} icon ml-2 text-green-500`} />
+                <XIcon className={`${validateEmail(alternate_email) ? "hidden" : alternate_email.length > 8 ? "" : "hidden"} icon ml-2 text-red-500`} />
+
                 <p className='ml-2 text-sm text-gray-600'>(for us to contact you and will not be made public)</p>
             </div>
 
@@ -282,12 +291,35 @@ const MerchantSignUP = () => {
             <div className='flex items-center justify-start my-4 m-2 '>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>Website Address</h1>
-                <input className="placeholder-gray-600 shadow-lg w-[250px]  p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => setwebsite(e.target.value)} type="text" required placeholder="Enter Address" />
+                <input className="placeholder-gray-600 shadow-lg w-[250px]  p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => { setwebsite(e.target.value); console.log(website); }} type="text" required placeholder="Enter Address" />
+                <CheckIcon className={`${isUrlValid(website) ? "" : "hidden"} icon ml-2 text-green-500`} />
+                <XIcon className={`${isUrlValid(website) ? "hidden" : website.length > 5 ? "" : "hidden"} icon ml-2 text-red-500`} />
+            </div>
+            <div className='flex items-center justify-start my-4 m-2 '>
+                <span className="dot"></span>
+                <h1 className='w-[230px] mr-3'>Toll Free Number</h1>
+                <select className='shadow-lg p-1 px-2 text-sm w-22 rounded-lg   outline-none border-[0.5px]  border-gray-600 ' value={workingdays} onChange={e => { setworkingdays(e.target.value) }} >
+                    {tollfreeMenu.map(item => {
+                        return (
+
+                            <option key={item} className='px-2 py-4'>{item}</option>
+                        )
+                    })}
+                </select>
+                <span className='ml-2'>-</span>
+                <input className="placeholder-gray-600 shadow-lg w-[70px] ml-2  p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => setworkingHours(e.target.value)} type="number" required placeholder="456" />
+                <span className='ml-2'>-</span>
+                <input className="placeholder-gray-600 shadow-lg w-[70px] ml-2  p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => setworkingMinutes(e.target.value)} type="number" required placeholder="7890" />
+
             </div>
             <div className='flex items-center justify-start my-4 m-2 '>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>*Work Number</h1>
-                <input className="placeholder-gray-600 shadow-lg w-[250px]  p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => setworknumber(e.target.value)} type="number" required placeholder="123-899-8888" />
+                <input className="placeholder-gray-600 shadow-lg w-[70px]   p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => setworkingHours(e.target.value)} type="number" required placeholder="123" />
+                <span className='ml-2'>-</span>
+                <input className="placeholder-gray-600 shadow-lg w-[70px] ml-2  p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => setworkingHours(e.target.value)} type="number" required placeholder="456" />
+                <span className='ml-2'>-</span>
+                <input className="placeholder-gray-600 shadow-lg w-[70px] ml-2  p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => setworkingMinutes(e.target.value)} type="number" required placeholder="7890" />
             </div>
 
 

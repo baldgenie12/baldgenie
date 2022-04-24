@@ -32,6 +32,29 @@ export const monthsinBussinessMenu = ['1', '2', '3', '4', '5', '6',
 
 export const employeeStrengthMenu = ['Solo', '2-5', '6-10', '11-20', '20-50', '50+ ']
 
+
+export const tollfreeMenu = ['800', '888', '877', '866', '855', '844', '833']
+
+
+
+
+export function isUrlValid(userInput) {
+    var res = userInput.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+    if (res == null)
+        return false;
+
+    else
+        return true;
+}
+
+
+ export const validateEmail = (email) => {
+    return String(email)
+        .toLowerCase()
+        .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+};
 // for (let index = 0; index < 51; index++) {
 //     monthsinBussinessMenu.push(index.toString())
 // }
