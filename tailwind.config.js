@@ -23,13 +23,15 @@ module.exports = {
       },
       colors: {
         'github': '#24292F',
-        'theme':'#00AEEF'
+        'theme':'#00AEEF',
+        'category':'#525252'
 
       },
       fontFamily: {
         body: ['Pushster'],
         footer: ['Inter'],
         theme:['Poppins'],
+        category:['Arial']
 
       }
     },
