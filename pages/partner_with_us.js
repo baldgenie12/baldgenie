@@ -204,7 +204,7 @@ const MerchantSignUP = () => {
                     <span className='mx-1'>-</span>
                     <input className="placeholder-gray-400 shadow-lg w-[60px]   p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => setworkingHours(e.target.value)} type="number" required placeholder="456" />
                     <span className='mx-1'>-</span>
-                    <input className="placeholder-gray-400 shadow-lg w-[70px]   p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => setworkingMinutes(e.target.value)} type="number" required placeholder="7890" />                <p className='ml-2 text-sm text-gray-600'>(for us to contact you and will not be made public)</p>
+                    <input className="placeholder-gray-400 shadow-lg w-[70px]   p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600 " onChange={e => setworkingMinutes(e.target.value)} type="number" required placeholder="7890" />
                     <p className='ml-2 text-sm text-gray-600'>(for us to contact you and will not be made public)</p>
                 </div>
 

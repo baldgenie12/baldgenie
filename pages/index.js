@@ -18,15 +18,6 @@ import { getSession } from "next-auth/react"
 export default function Home() {
 
 
-  const hoursMenu = []
-
-
-  for (let index = 0; index < 25; index++) {
-    hoursMenu.push(`${index < 10 ? "0" : ""}${index.toString()}:00`)
-  }
-  console.log(hoursMenu);
-
-
   const router = useRouter();
 
 
