@@ -7,7 +7,7 @@ export const Mobile_Support_Hardware = () => {
 
             {/* ServiceItems */}
 
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="New Mobile/Tablet Screen Replacement" name="New Mobile/Tablet Screen Replacement" />
                 <h1 className=' w-[250px] mr-3'>New Mobile/Tablet Screen Replacement</h1>
                 <div className='flex items-center space-x-5 text-sm'>
@@ -29,7 +29,7 @@ export const Mobile_Support_Hardware = () => {
                 </div>
 
             </div>
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="New Mobile/Tablet Others" name="New Mobile/Tablet Others" />
                 <h1 className=' w-[250px] mr-3'>New Mobile/Tablet Others</h1>
                 <div className='flex items-center space-x-5 text-sm'>

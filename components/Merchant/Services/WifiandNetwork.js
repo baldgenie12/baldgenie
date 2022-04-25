@@ -8,7 +8,7 @@ export const WifiandNetwork = () => {
 
             {/* ServiceItems */}
 
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="New Wifi Connection Setup" name="New Wifi Connection Setup" />
                 <h1 className=' w-[250px] mr-3'>New Wifi Connection Setup</h1>
                 <div className='flex items-center space-x-5 text-sm'>
@@ -30,7 +30,7 @@ export const WifiandNetwork = () => {
                 </div>
 
             </div>
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="Wifi & network support" name="Wifi & network support" />
                 <h1 className=' w-[250px] mr-3'>Wifi & network support</h1>
                 <div className='flex items-center space-x-5 text-sm'>
@@ -52,7 +52,7 @@ export const WifiandNetwork = () => {
                 </div>
 
             </div>
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="Wifi Signal Extension" name="Wifi Signal Extension" />
                 <h1 className=' w-[250px] mr-3'>Wifi Signal Extension</h1>
                 <div className='flex items-center space-x-5 text-sm'>

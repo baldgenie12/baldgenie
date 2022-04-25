@@ -7,7 +7,7 @@ export const Home_Security_Alarms = () => {
 
       {/* ServiceItems */}
 
-      <div className='flex items-center space-x-2 mb-4'>
+      <div className='flex items-center space-x-4 mb-4'>
         <input className='scale-150 mr-2' type="checkbox" id="Alarm System Installation & Setup" name="Alarm System Installation & Setup" />
         <h1 className=' w-[250px] mr-3'>Alarm System Installation & Setup</h1>
         <div className='flex items-center space-x-5 text-sm'>
@@ -29,7 +29,7 @@ export const Home_Security_Alarms = () => {
         </div>
 
       </div>
-      <div className='flex items-center space-x-2 mb-4'>
+      <div className='flex items-center space-x-4 mb-4'>
         <input className='scale-150 mr-2' type="checkbox" id="Alarm System Support" name="Alarm System Support" />
         <h1 className=' w-[250px] mr-3'>Alarm System Support</h1>
         <div className='flex items-center space-x-5 text-sm'>

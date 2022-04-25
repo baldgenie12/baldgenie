@@ -7,7 +7,7 @@ export const Smarthome_VideoDoorbells = () => {
 
             {/* ServiceItems */}
 
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="Video Doorbell Installation" name="Video Doorbell Installation" />
                 <h1 className=' w-[250px] mr-3'>Video Doorbell Installation</h1>
                 <div className='flex items-center space-x-5 text-sm'>
@@ -29,7 +29,7 @@ export const Smarthome_VideoDoorbells = () => {
                 </div>
 
             </div>
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="Video Doorbell Support" name="Video Doorbell Support" />
                 <h1 className=' w-[250px] mr-3'>Video Doorbell Support</h1>
                 <div className='flex items-center space-x-5 text-sm'>

@@ -7,7 +7,7 @@ export const Smarthome_GarageDoors = () => {
 
             {/* ServiceItems */}
 
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="Smart Garage Installation" name="Smart Garage Installation" />
                 <h1 className=' w-[250px] mr-3'>Smart Garage Installation</h1>
                 <div className='flex items-center space-x-5 text-sm'>
@@ -29,7 +29,7 @@ export const Smarthome_GarageDoors = () => {
                 </div>
 
             </div>
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="Smart Garage Support" name="Smart Garage Support" />
                 <h1 className=' w-[250px] mr-3'>Smart Garage Support</h1>
                 <div className='flex items-center space-x-5 text-sm'>
@@ -51,7 +51,7 @@ export const Smarthome_GarageDoors = () => {
                 </div>
 
             </div>
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="Smart Hub or Speaker Setup" name="Smart Hub or Speaker Setup" />
                 <h1 className=' w-[250px] mr-3'>Smart Hub or Speaker Setup</h1>
                 <div className='flex items-center space-x-5 text-sm'>
@@ -73,7 +73,7 @@ export const Smarthome_GarageDoors = () => {
                 </div>
 
             </div>
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="Smart Hub or Speaker Support" name="Smart Hub or Speaker Support" />
                 <h1 className=' w-[250px] mr-3'>Smart Hub or Speaker Support</h1>
                 <div className='flex items-center space-x-5 text-sm'>

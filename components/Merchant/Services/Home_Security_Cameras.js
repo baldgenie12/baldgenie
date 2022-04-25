@@ -8,7 +8,7 @@ export const Home_Security_Cameras = () => {
 
             {/* ServiceItems */}
 
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="Smart Security Camera Installation" name="Smart Security Camera Installation" />
                 <h1 className=' w-[250px] mr-3'>Smart Security Camera Installation</h1>
                 <div className='flex items-center space-x-5 text-sm'>
@@ -30,7 +30,7 @@ export const Home_Security_Cameras = () => {
                 </div>
 
             </div>
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="Smart Security Camera Support" name="Smart Security Camera Support" />
                 <h1 className=' w-[250px] mr-3'>Smart Security Camera Support</h1>
                 <div className='flex items-center space-x-5 text-sm'>
@@ -52,7 +52,7 @@ export const Home_Security_Cameras = () => {
                 </div>
 
             </div>
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="Smart Security Lock Installation" name="Smart Security Lock Installation" />
                 <h1 className=' w-[250px] mr-3'>Smart Security Lock Installation</h1>
                 <div className='flex items-center space-x-5 text-sm'>
@@ -74,7 +74,7 @@ export const Home_Security_Cameras = () => {
                 </div>
 
             </div>
-            <div className='flex items-center space-x-2 mb-4'>
+            <div className='flex items-center space-x-4 mb-4'>
                 <input className='scale-150 mr-2' type="checkbox" id="Smart Security Lock Support" name="Smart Security Lock Support" />
                 <h1 className=' w-[250px] mr-3'>Smart Security Lock Support</h1>
                 <div className='flex items-center space-x-5 text-sm'>

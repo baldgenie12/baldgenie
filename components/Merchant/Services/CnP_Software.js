@@ -11,7 +11,7 @@ export const CnP_Software = () => {
 
                 {/* ServiceItems */}
 
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="Computer Diagnosis" name="Computer Diagnosis" />
                     <h1 className=' w-[250px] mr-3'>Computer Diagnosis</h1>
                     <div className='flex items-center space-x-5 text-sm'>
@@ -35,7 +35,7 @@ export const CnP_Software = () => {
                 </div>
 
 
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="Computer Repair & Help" name="Computer Repair & Help" />
                     <h1 className=' w-[250px] mr-3'>Computer Repair & Help</h1>
                     <div className='flex items-center space-x-5 text-sm'>
@@ -59,7 +59,7 @@ export const CnP_Software = () => {
                 </div>
 
 
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="Slow Computer Fix/Computer Tune-up" name="Slow Computer Fix/Computer Tune-up" />
                     <h1 className=' w-[250px] mr-3'>Slow Computer Fix/Computer Tune-up</h1>
                     <div className='flex items-center space-x-5 text-sm'>
@@ -82,7 +82,7 @@ export const CnP_Software = () => {
 
                 </div>
 
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="Virus Removal" name="Virus Removal" />
                     <h1 className=' w-[250px] mr-3'>Virus Removal</h1>
                     <div className='flex items-center space-x-5 text-sm'>
@@ -106,7 +106,7 @@ export const CnP_Software = () => {
                 </div>
 
 
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="Email Support" name="Email Support" />
                     <h1 className=' w-[250px] mr-3'>Email Support</h1>
                     <div className='flex items-center space-x-5 text-sm'>
@@ -130,7 +130,7 @@ export const CnP_Software = () => {
                 </div>
 
 
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="No Boot" name="No Boot" />
                     <h1 className=' w-[250px] mr-3'>No Boot</h1>
                     <div className='flex items-center space-x-5 text-sm'>
@@ -154,7 +154,7 @@ export const CnP_Software = () => {
                 </div>
 
 
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="New Computer Setup" name="New Computer Setup" />
                     <h1 className=' w-[250px] mr-3'>New Computer Setup</h1>
                     <div className='flex items-center space-x-5 text-sm'>
@@ -178,7 +178,7 @@ export const CnP_Software = () => {
                 </div>
 
 
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="OS Upgrade/Reinstall" name="OS Upgrade/Reinstall" />
                     <h1 className=' w-[250px] mr-3'>OS Upgrade/Reinstall</h1>
                     <div className='flex items-center space-x-5 text-sm'>
@@ -202,7 +202,7 @@ export const CnP_Software = () => {
                 </div>
 
 
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="Browser Support" name="Browser Support" />
                     <h1 className=' w-[250px] mr-3'>Browser Support</h1>
                     <div className='flex items-center space-x-5 text-sm'>
@@ -226,7 +226,7 @@ export const CnP_Software = () => {
                 </div>
 
 
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="Software Uninstall/Reinstall" name="Software Uninstall/Reinstall" />
                     <h1 className=' w-[250px] mr-3'>Software Uninstall/Reinstall</h1>
                     <div className='flex items-center space-x-5 text-sm'>
@@ -249,7 +249,7 @@ export const CnP_Software = () => {
 
                 </div>
 
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="No Sound" name="No Sound" />
                     <h1 className=' w-[250px] mr-3'>No Sound</h1>
                     <div className='flex items-center space-x-5 text-sm'>
@@ -272,7 +272,7 @@ export const CnP_Software = () => {
 
                 </div>
 
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="Data Backup or Transfer" name="Data Backup or Transfer" />
                     <h1 className=' w-[250px] mr-3'>Data Backup or Transfer</h1>
                     <div className='flex items-center space-x-5 text-sm'>
@@ -296,7 +296,7 @@ export const CnP_Software = () => {
                 </div>
 
 
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="Computer Training" name="Computer Training" />
                     <h1 className=' w-[250px] mr-3'>Computer Training</h1>
                     <div className='flex items-center space-x-5 text-sm'>
@@ -320,7 +320,7 @@ export const CnP_Software = () => {
                 </div>
 
 
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="Printer Setup" name="Printer Setup" />
                     <h1 className=' w-[250px] mr-3'>Printer Setup</h1>
                     <div className='flex items-center space-x-5 text-sm'>
@@ -342,7 +342,7 @@ export const CnP_Software = () => {
                     </div>
 
                 </div>
-                <div className='flex items-center space-x-2 mb-4'>
+                <div className='flex items-center space-x-4 mb-4'>
                     <input className='scale-150 mr-2' type="checkbox" id="Printer Troubleshooting" name="Printer Troubleshooting" />
                     <h1 className=' w-[250px] mr-3'>Printer Troubleshooting</h1>
                     <div className='flex items-center space-x-5 text-sm'>
