@@ -45,6 +45,21 @@
         @apply w-3 h-3 bg-gray-600 rounded-full mr-4
 
     }
+
+
+    .inputtext{
+        @apply placeholder-gray-400 shadow-lg p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600
+
+    }
+     
+    .select{
+        @apply rounded-lg outline-none border-[0.5px]  border-gray-600 shadow-lg p-1 
+
+    }
+
+    .radio{
+        @apply bg-theme text-theme  scale-150  
+    }
      
  
 
