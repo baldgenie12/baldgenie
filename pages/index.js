@@ -22,7 +22,7 @@ export default function Home() {
 
 
   for (let index = 0; index < 25; index++) {
-    hoursMenu.push(`${index<10 ? "0":""}${index.toString()}:00`)
+    hoursMenu.push(`${index < 10 ? "0" : ""}${index.toString()}:00`)
   }
   console.log(hoursMenu);
 
@@ -30,9 +30,14 @@ export default function Home() {
   const router = useRouter();
 
 
-  useEffect(async () => {
-    const session = await getSession()
-    console.log(session);
+  useEffect(() => {
+
+    async function fetchData() {
+      const session = await getSession()
+      console.log(session);
+    }
+    fetchData();
+
 
   }, [])
 
