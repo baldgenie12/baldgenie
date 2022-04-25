@@ -4,10 +4,10 @@ export const CnP_Software = () => {
     return (
         <div>
 
-            <h1 className='text-xl'>Computers & Printers:</h1>
+            <h1 className='text-xl font-semibold mt-10'>Computers & Printers:</h1>
             <div>
 
-                <h1 className='my-4 text-lg'>Software Support</h1>
+                <h1 className='my-4 text-lg font-semibold'>Software Support</h1>
 
                 {/* ServiceItems */}
 

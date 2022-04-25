@@ -4,7 +4,7 @@ export const WifiandNetwork = () => {
     return (
         <div>
            
-           <h1 className='my-6 mt-10 text-lg font-semibold'>Wifi and Network:</h1>
+           <h1 className='my-6 mt-14 text-lg font-semibold'>Wifi and Network:</h1>
 
             {/* ServiceItems */}
 

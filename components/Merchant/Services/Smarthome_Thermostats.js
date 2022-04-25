@@ -3,7 +3,7 @@ import React from 'react'
 export const Smarthome_Thermostats = () => {
   return (
     <div>
-            <h1 className='my-6 mt-10 text-lg font-semibold'>Smart Home:</h1>
+            <h1 className='my-6 mt-14 text-lg font-semibold'>Smart Home:</h1>
             <h1 className='my-6 text-lg font-semibold'>Thermostats</h1>
 
             {/* ServiceItems */}

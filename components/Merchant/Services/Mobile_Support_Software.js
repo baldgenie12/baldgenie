@@ -4,7 +4,7 @@ export const Mobile_Support_Software = () => {
     return (
         <div>
 
-            <h1 className='my-6 mt-10 text-lg font-semibold'>Mobile Support:</h1>
+            <h1 className='my-6 mt-14 text-lg font-semibold'>Mobile Support:</h1>
             <h1 className='my-6 text-lg font-semibold'>Software Support</h1>
 
             {/* ServiceItems */}

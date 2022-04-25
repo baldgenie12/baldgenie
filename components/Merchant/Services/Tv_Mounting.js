@@ -3,7 +3,7 @@ import React from 'react'
 export const Tv_Mounting = () => {
     return (
         <div>
-            <h1 className='my-6 mt-10 text-lg font-semibold'>TV Mounting:</h1>
+            <h1 className='my-6 mt-14 text-lg font-semibold'>TV Mounting:</h1>
 
             {/* ServiceItems */}
 

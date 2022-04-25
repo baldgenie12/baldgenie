@@ -3,7 +3,7 @@ import React from 'react'
 export const Home_Security_Cameras = () => {
     return (
         <div>
-            <h1 className='my-6 mt-10 text-lg font-semibold'>Home Security:</h1>
+            <h1 className='my-6 mt-14 text-lg font-semibold'>Home Security:</h1>
             <h1 className='my-6 text-lg font-semibold'>Cameras</h1>
 
             {/* ServiceItems */}
