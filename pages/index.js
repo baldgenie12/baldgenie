@@ -25,7 +25,9 @@ export default function Home() {
 
     async function fetchData() {
       const session = await getSession()
-      console.log(session);
+      if (session) {
+        console.log(session);
+      }
     }
     fetchData();
 

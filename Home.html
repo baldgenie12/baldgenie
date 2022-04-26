@@ -1,57 +1,14 @@
-{% extends "layout.html" %}
-{% block body %}
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <h3>Search Results by: {% if type == '1' %} Keyword {{keyword}} {% elif type == '2' %} PostalCode {{keyword}} {%
-        elif type == '3' %} Within {{keyword}} Miles {% else %} In MyPostalCode {% endif %}</h3>
-    <title>Search Result</title>
-    <style>
-        th,
-        td {
-            border: 1px solid orange;
-            padding: 10px;
-            text-align: left;
-        }
-
-        table {
-            border-collapse: collapse;
-            font-size: 12px;
-            text-align: left;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-    <div class="home">
-        <br><br><br>
-
-        <table>
-            <tr>
-                <th>Item#</th>
-                <th>Game Type</th>
-                <th>Title</th>
-                <th>Condition</th>
-                <th>Description</th>
-                <th>Distance</th>
-            </tr>
-
-            {% for item in data %}
-            <tr>
-                <td>{{item[0]}}</td>
-                <td>{{item[1]}}</td>
-                <td>{{item[2]}}</td>
-                <td>{{item[3]}}</td>
-                <td>{{item[4]}}</td>
-                <td>{{item[5]}}</td>
-                <td><a href='/viewitems/{{item}}'>Details</a></td>
-            </tr>
-            {% endfor %}
-        </table>
-    </div>
-
+    <input type="number" maxlength="6">
+    <input type="text" pattern="\d*" maxlength="4">
 
 </body>
-
 </html>
-{% endblock %}

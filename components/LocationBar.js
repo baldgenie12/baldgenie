@@ -20,83 +20,81 @@ export const LocationBar = () => {
 
     const [loading, setloading] = useState(false)
 
-    const [coordinates, setCoordinates] = useState({})
     const [zipcodeState, setzipcodeState] = useState(1)
     const [locationErrorMsg, setlocationErrorMsg] = useState('')
 
     useEffect(() => {
-        navigator.geolocation.getCurrentPosition(position => {
-            setCoordinates({ latitude: position.coords.latitude, longitude: position.coords.longitude })
-        }, showError)
+        const localStorage_location = JSON.parse(localStorage.getItem("location"))
+        if (localStorage_location.plus_code) {
+            const part = localStorage_location.plus_code.compound_code.trim()
+            const index = part.indexOf(" ")
+            const part2 = part.substring(index, part.length)
+            setlocationstate(part2)
+            setlocation(part2)
+            setloading(false)
+            return
+        }
 
+
+    }, [])
+
+
+
+    const getLocationHnadler = () => {
+
+
+        async function fetchData(latitude, longitude) {
+
+            setloading(true)
+            var location = {}
+            try {
+                const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`)
+                // const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=40.20197127507498,-100.66331257139588&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`)
+                location = await response.json()
+                console.log(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`);
+                setlocation(location)
+
+                const part = location.plus_code.compound_code.trim()
+                const index = part.indexOf(" ")
+                const part2 = part.substring(index, part.length)
+
+                setlocationstate(`${part2}`)
+                setloading(false)
+            } catch (error) {
+                locationErrorMsg ? alert(locationErrorMsg) : alert(error)
+                setloading(false)
+            }
+            localStorage.setItem("location", JSON.stringify(location))
+
+        }
+
+        navigator.geolocation.getCurrentPosition(position => {
+            fetchData(position.coords.latitude, position.coords.longitude)
+        }, showError)
 
         function showError(error) {
             switch (error.code) {
                 case error.PERMISSION_DENIED:
-                    setlocationErrorMsg("User denied the request for Geolocation.")
+                    alert("User denied the request for Geolocation.")
                     break;
                 case error.POSITION_UNAVAILABLE:
-                    setlocationErrorMsg("Location information is unavailable.")
+                    alert("Location information is unavailable.")
 
                     break;
                 case error.TIMEOUT:
-                    setlocationErrorMsg("The request to get user location timed out.")
+                    alert("The request to get user location timed out.")
 
                     break;
                 case error.UNKNOWN_ERROR:
-                    setlocationErrorMsg("An unknown error occurred.")
+                    alert("An unknown error occurred.")
 
                     break;
                 default:
-                    setlocationErrorMsg("An unknown error occurred.")
+                    alert("An unknown error occurred.")
 
 
             }
         }
-    }, [])
-
-
-    const getLocationHnadler = () => {
-        async function fetchData() {
-
-            if (location) {
-                return
-            }
-
-            if (!coordinates) {
-                alert('Refresh Page')
-            }
-
-            if (!location) {
-                setloading(true)
-
-                var location = {}
-                try {
-                    const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${coordinates.latitude},${coordinates.longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`)
-                    // const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=40.20197127507498,-100.66331257139588&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`)
-                    location = await response.json()
-                    console.log(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${coordinates.latitude},${coordinates.longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`);
-                    setlocation(location)
-                
-                    const part=location.plus_code.compound_code.trim()
-                    const index= part.indexOf(" ")
-                    const part2 = part.substring(index,part.length)
-
-                    setlocationstate(`${part2}`)
-
-                    setloading(false)
-
-                } catch (error) {
-                    locationErrorMsg ? alert(locationErrorMsg) : alert(error)
-                    setloading(false)
-
-                }
-                localStorage.setItem("location", JSON.stringify(location))
-            }
-
-
-        }
-        fetchData()
     }
 
     const zipcodeHandler = (zipcode) => {
@@ -125,7 +123,6 @@ export const LocationBar = () => {
 
                     setlocation(location)
                     setlocationstate(`${location.name.city}, ${location.name.state} `)
-                    console.log(JSON.stringify(location));
                     setloading(false)
 
                 } catch (error) {
