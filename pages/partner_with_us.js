@@ -24,11 +24,11 @@ const MerchantSignUP = () => {
             <h1 className=' mr-3 font-semibold text-xl m-6 ml-4'>{`{* symbol --> Mandatory}`}</h1>
 
             <Gen_info_PART1 />
-            {/* <Gen_info_PART2 /> */}
+            <Gen_info_PART2 />
 
 
             <div className='mt-16'>
-                {/* <Services /> */}
+                <Services />
             </div>
         </div>
     )
