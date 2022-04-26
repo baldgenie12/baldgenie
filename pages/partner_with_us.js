@@ -310,7 +310,7 @@ const MerchantSignUP = () => {
 
             </div>
 
-            <div className='hidden'>
+            <div className=''>
 
 
                 <div className='flex items-center justify-start my-4 m-2'>
