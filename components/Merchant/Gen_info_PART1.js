@@ -14,7 +14,29 @@ import { isUrlValid } from '../../utils/MerchantSignUp'
 import { validateEmail } from '../../utils/MerchantSignUp'
 import { hoursMenu } from '../../utils/MerchantSignUp'
 import Services from '../../components/Merchant/ServiceSignUp';
+function showError(error) {
+    switch (error.code) {
+        case error.PERMISSION_DENIED:
+            alert("User denied the request for Geolocation.")
+            break;
+        case error.POSITION_UNAVAILABLE:
+            alert("Location information is unavailable.")
 
+            break;
+        case error.TIMEOUT:
+            alert("The request to get user location timed out.")
+
+            break;
+        case error.UNKNOWN_ERROR:
+            alert("An unknown error occurred.")
+
+            break;
+        default:
+            alert("An unknown error occurred.")
+
+
+    }
+}
 
 export const Gen_info_PART1 = () => {
 
@@ -60,59 +82,19 @@ export const Gen_info_PART1 = () => {
     const [location, setlocation] = useState('Find my Location')
     const [loading, setloading] = useState(false)
 
-    useEffect(() => {
-        // const localStorage_location = JSON.parse(localStorage.getItem("location"))
-        // if (localStorage_location.plus_code) {
-        //     const part = localStorage_location.plus_code.compound_code.trim()
-        //     const index = part.indexOf(" ")
-        //     const part2 = part.substring(index, part.length)
-        //     setlocation(part2)
-        //     return
-        // }
-    }, [])
+
 
 
     const getLocationHnadler = () => {
 
-        navigator.geolocation.getCurrentPosition(position => {
-            fetchData(position.coords.latitude, position.coords.longitude)
-        }, showError)
 
-
-        function showError(error) {
-            switch (error.code) {
-                case error.PERMISSION_DENIED:
-                    alert("User denied the request for Geolocation.")
-                    break;
-                case error.POSITION_UNAVAILABLE:
-                    alert("Location information is unavailable.")
-
-                    break;
-                case error.TIMEOUT:
-                    alert("The request to get user location timed out.")
-
-                    break;
-                case error.UNKNOWN_ERROR:
-                    alert("An unknown error occurred.")
-
-                    break;
-                default:
-                    alert("An unknown error occurred.")
-
-
-            }
-        }
-
-        async function fetchData(latitude, longitude) {
-
-            setloading(true)
-
+        async function fetchData(coordinates) {
             var location = {}
             try {
-                const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`)
+                const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${coordinates.latitude},${coordinates.longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`)
                 // const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=40.20197127507498,-100.66331257139588&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`)
                 location = await response.json()
-                console.log(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`);
+                console.log(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${coordinates.latitude},${coordinates.longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`);
 
 
                 const part = location.plus_code.compound_code.trim()
@@ -120,18 +102,18 @@ export const Gen_info_PART1 = () => {
                 const part2 = part.substring(index, part.length)
 
                 setlocation(`${part2}`)
-                setloading(false)
 
             } catch (error) {
-                locationErrorMsg ? alert(locationErrorMsg) : alert(error)
-                setloading(false)
 
             }
             localStorage.setItem("location", JSON.stringify(location))
 
-
-
         }
+
+        navigator.geolocation.getCurrentPosition(position => {
+            const coordinates = { latitude: position.coords.latitude, longitude: position.coords.longitude }
+            fetchData(coordinates)
+        }, showError)
     }
 
 

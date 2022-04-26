@@ -14,7 +14,7 @@ import videosContext from '../context/videos/videosContext'
 
 export const LocationBar = () => {
 
-    const { location, setlocation } = useContext(videosContext);
+    // const { location, setlocation } = useContext(videosContext);
     const [locationstate, setlocationstate] = useState('')
 
 
@@ -22,37 +22,59 @@ export const LocationBar = () => {
 
     const [zipcodeState, setzipcodeState] = useState(1)
     const [locationErrorMsg, setlocationErrorMsg] = useState('')
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                alert("User denied the request for Geolocation.")
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert("Location information is unavailable.")
+
+                break;
+            case error.TIMEOUT:
+                alert("The request to get user location timed out.")
+
+                break;
+            case error.UNKNOWN_ERROR:
+                alert("An unknown error occurred.")
+
+                break;
+            default:
+                alert("An unknown error occurred.")
+
+
+        }
+    }
 
     useEffect(() => {
+    
         const localStorage_location = JSON.parse(localStorage.getItem("location"))
-        if (localStorage_location) {
-            const part = localStorage_location.plus_code.compound_code.trim()
-            const index = part.indexOf(" ")
-            const part2 = part.substring(index, part.length)
-            setlocationstate(part2)
-            setlocation(part2)
-            setloading(false)
-            return
-        }
+        try {
+            if (localStorage_location) {
+                const part = localStorage_location.plus_code.compound_code.trim()
+                const index = part.indexOf(" ")
+                const part2 = part.substring(index, part.length)
+                setlocationstate(part2)
+                setloading(false)
+                return
+            }
+        } catch (error) {
 
+        }
 
     }, [])
 
 
 
     const getLocationHnadler = () => {
-
-
-        async function fetchData(latitude, longitude) {
-
+        async function fetchData(coordinates) {
             setloading(true)
             var location = {}
             try {
-                const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`)
+                const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${coordinates.latitude},${coordinates.longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`)
                 // const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=40.20197127507498,-100.66331257139588&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`)
                 location = await response.json()
-                console.log(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`);
-                setlocation(location)
+                console.log(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${coordinates.latitude},${coordinates.longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`);
 
                 const part = location.plus_code.compound_code.trim()
                 const index = part.indexOf(" ")
@@ -69,32 +91,12 @@ export const LocationBar = () => {
         }
 
         navigator.geolocation.getCurrentPosition(position => {
-            fetchData(position.coords.latitude, position.coords.longitude)
+            const coordinates ={ latitude: position.coords.latitude, longitude: position.coords.longitude }
+            fetchData(coordinates)
+
         }, showError)
 
-        function showError(error) {
-            switch (error.code) {
-                case error.PERMISSION_DENIED:
-                    alert("User denied the request for Geolocation.")
-                    break;
-                case error.POSITION_UNAVAILABLE:
-                    alert("Location information is unavailable.")
 
-                    break;
-                case error.TIMEOUT:
-                    alert("The request to get user location timed out.")
-
-                    break;
-                case error.UNKNOWN_ERROR:
-                    alert("An unknown error occurred.")
-
-                    break;
-                default:
-                    alert("An unknown error occurred.")
-
-
-            }
-        }
     }
 
     const zipcodeHandler = (zipcode) => {
@@ -148,10 +150,10 @@ export const LocationBar = () => {
 
                 <div className=' h-6 flex items-center  space-x-1  p-1  my-2 md:border-r-2 border-gray-400 pr-2  '>
                     <LocationMarkerIcon className='h-6 text-red-600' />
-                    {location &&
+                    {locationstate &&
                         <div className=' flex w-full justify-between md:justify-start items-center '>
                             <p className='overflow-hidden  whitespace-nowrap font-semibold text-xs'>{locationstate}</p>
-                            <button onClick={() => { setlocation(null) }} className={` text-xs p-1 px-4 bg-theme border-2 rounded-lg  hover:bg-blue-600 text-white ${loading ? "hidden" : ""} ml-4 `}>Change</button>
+                            <button onClick={() => { setlocationstate(null) }} className={` text-xs p-1 px-4 bg-theme border-2 rounded-lg  hover:bg-blue-600 text-white ${loading ? "hidden" : ""} ml-4 `}>Change</button>
                         </div>
                     }
 
@@ -161,7 +163,7 @@ export const LocationBar = () => {
                         <BeatLoader loading size={10} color={'red'} />
                     </div>
 
-                    {!location &&
+                    {!locationstate &&
                         <div className='grow md:grow-0 flex items-center space-x-1  justify-between md:justify-start  '>
                             <p onClick={getLocationHnadler} className={`whitespace-nowrap    hover:text-red-400 font-semibold text-xs ${loading ? "hidden" : ''} cursor-pointer border-r-2 border-gray-400 pr-2 `}>Detect my location </p>
 
