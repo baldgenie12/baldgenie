@@ -2,7 +2,7 @@
 //Drop down Menu items
 
 export const serviceRadiusMenu = [
-    '<1','1-5','6-10','10-15','16-20','21-25','26-30',
+    '<1', '1-5', '6-10', '10-15', '16-20', '21-25', '26-30',
 ]
 
 
@@ -64,6 +64,11 @@ export const validateEmail = (email) => {
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
 };
+export const maxLengthCheck = (e) => {
+    if (e.target.value.length > e.target.maxLength) {
+        e.target.value = e.target.value.slice(0, e.target.maxLength)
+    }
+}
 // for (let index = 0; index < 51; index++) {
 //     monthsinBussinessMenu.push(index.toString())
 // }

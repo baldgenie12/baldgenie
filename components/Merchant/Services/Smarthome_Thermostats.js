@@ -8,19 +8,19 @@ export const Smarthome_Thermostats = () => {
 
             {/* ServiceItems */}
 
-            <div className='flex items-center space-x-4 mb-4'>
-                <input className='scale-150 mr-2' type="checkbox" id="Smart Thermostat Setup & Installation" name="Smart Thermostat Setup & Installation" />
+            <div className='category'>
+                <input className='scale-150' type="checkbox" id="Smart Thermostat Setup & Installation" name="Smart Thermostat Setup & Installation" />
                 <h1 className=' w-[250px] mr-3'>Smart Thermostat Setup & Installation</h1>
-                <div className='flex items-center space-x-5 text-sm'>
+                <div className='subcategory'>
                     <div className='flex items-center space-x-2'>
                         <input type="radio" className='radio' name="Smart Thermostat Setup & Installation" />
                         <p>Flat Fee </p>
-                        <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+                        <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
                     </div>
                     <div className='flex items-center space-x-2'>
                         <input type="radio" className='radio ' name="Smart Thermostat Setup & Installation" />
                         <p>Hourly Fee </p>
-                        <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+                        <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
 
                     </div>
                     <div className='flex items-center space-x-2'>
@@ -30,19 +30,19 @@ export const Smarthome_Thermostats = () => {
                 </div>
 
             </div>
-            <div className='flex items-center space-x-4 mb-4'>
-                <input className='scale-150 mr-2' type="checkbox" id="Smart Thermostat Support" name="Smart Thermostat Support" />
+            <div className='category'>
+                <input className='scale-150' type="checkbox" id="Smart Thermostat Support" name="Smart Thermostat Support" />
                 <h1 className=' w-[250px] mr-3'>Smart Thermostat Support</h1>
-                <div className='flex items-center space-x-5 text-sm'>
+                <div className='subcategory'>
                     <div className='flex items-center space-x-2'>
                         <input type="radio" className='radio' name="Smart Thermostat Support" />
                         <p>Flat Fee </p>
-                        <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+                        <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
                     </div>
                     <div className='flex items-center space-x-2'>
                         <input type="radio" className='radio ' name="Smart Thermostat Support" />
                         <p>Hourly Fee </p>
-                        <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+                        <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
 
                     </div>
                     <div className='flex items-center space-x-2'>

@@ -7,24 +7,24 @@ export const Tv_Mounting = () => {
 
             {/* ServiceItems */}
 
-            <div className='flex items-center space-x-4 mb-4'>
-                <input className='scale-150 mr-2' type="checkbox" id="TV  Mounting up to 32”" name="TV  Mounting up to 32”" />
+            <div className='category'>
+                <input className='scale-150' type="checkbox" id="TV  Mounting up to 32”" name="TV  Mounting up to 32”" />
                 <h1 className=' w-[250px] mr-3'>TV  Mounting up to 32”</h1>
             </div>
-            <div className='flex items-center space-x-4 mb-4'>
-                <input className='scale-150 mr-2' type="checkbox" id="TV  Mounting up to 33” – 60”" name="TV  Mounting up to 33” – 60”" />
+            <div className='category'>
+                <input className='scale-150' type="checkbox" id="TV  Mounting up to 33” – 60”" name="TV  Mounting up to 33” – 60”" />
                 <h1 className=' w-[250px] mr-3'>TV  Mounting up to 33” – 60”</h1>
             </div>
-            <div className='flex items-center space-x-4 mb-4'>
-                <input className='scale-150 mr-2' type="checkbox" id="TV  Mounting up to 33” – 60”" name="TV  Mounting up to 33” – 60”" />
+            <div className='category'>
+                <input className='scale-150' type="checkbox" id="TV  Mounting up to 33” – 60”" name="TV  Mounting up to 33” – 60”" />
                 <h1 className=' w-[250px] mr-3'>TV  Mounting up to 33” – 60”</h1>
             </div>
-            <div className='flex items-center space-x-4 mb-4'>
-                <input className='scale-150 mr-2' type="checkbox" id="TV  Mounting more than 61”" name="TV  Mounting more than 61”" />
+            <div className='category'>
+                <input className='scale-150' type="checkbox" id="TV  Mounting more than 61”" name="TV  Mounting more than 61”" />
                 <h1 className=' w-[250px] mr-3'>TV  Mounting more than 61”</h1>
             </div>
-            <div className='flex items-center space-x-4 mb-4'>
-                <input className='scale-150 mr-2' type="checkbox" id="TV Dismount or Remount" name="TV Dismount or Remount" />
+            <div className='category'>
+                <input className='scale-150' type="checkbox" id="TV Dismount or Remount" name="TV Dismount or Remount" />
                 <h1 className=' w-[250px] mr-3'>TV Dismount or Remount</h1>
             </div>
 

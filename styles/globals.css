@@ -60,6 +60,17 @@
     .radio{
         @apply bg-theme text-theme  scale-150  
     }
+
+     
+
+    .category{
+        @apply flex items-center space-x-4 mb-4  
+    }
+
+     
+    .subcategory{
+        @apply flex items-center space-x-8 text-sm 
+    }
      
  
 

@@ -20,11 +20,13 @@ const MerchantSignUP = () => {
 
 
 
-    const [bussinessHoursCreated, setbussinessHoursCreated] = useState([])
 
     const [loading, setloading] = useState(false)
 
+    const [bussinessHoursCreated, setbussinessHoursCreated] = useState([])
+    const [bussinessHours_AddbtnShow, setbussinessHours_AddbtnShow] = useState(true)
     const removeBussinessHoursCreatedOnclick = (index) => {
+        setbussinessHours_AddbtnShow(true)
         bussinessHoursCreated.splice(index, 1); // 2nd parameter means remove one item only
         setbussinessHoursCreated([...bussinessHoursCreated])
 
@@ -201,11 +203,11 @@ const MerchantSignUP = () => {
                     <h1 className='w-[230px] mr-3'>*Primary Person Phone</h1>
                     <input className="inputtext w-[50px]" value="+1" type="text" />
                     <span className='mx-1'>-</span>
-                    <input className="inputtext w-[60px]" onChange={e => setworkingHours(e.target.value)} type="number" placeholder="123" />
+                    <input className="inputtext w-[60px]"  type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="123" maxLength="3" />
                     <span className='mx-1'>-</span>
-                    <input className="inputtext w-[60px]" onChange={e => setworkingHours(e.target.value)} type="number" placeholder="456" />
+                    <input className="inputtext w-[60px]"  type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="456" maxLength="4" />
                     <span className='mx-1'>-</span>
-                    <input className="inputtext w-[70px]" onChange={e => setworkingMinutes(e.target.value)} type="number" placeholder="7890" />
+                    <input className="inputtext w-[70px]"  type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="7890" maxLength="4" />
                     <p className='ml-2 text-sm text-gray-600'>(for us to contact you and will not be made public)</p>
                 </div>
 
@@ -250,11 +252,11 @@ const MerchantSignUP = () => {
                     <h1 className='w-[230px] mr-3'>Alternate Person Phone</h1>
                     <input className="inputtext w-[50px]" value="+1" type="text" />
                     <span className='mx-1'>-</span>
-                    <input className="inputtext w-[60px]" onChange={e => setworkingHours(e.target.value)} type="number" placeholder="123" />
+                    <input className="inputtext w-[60px]" onChange={e => setworkingHours(e.target.value)} type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="123" />
                     <span className='mx-1'>-</span>
-                    <input className="inputtext w-[60px]" onChange={e => setworkingHours(e.target.value)} type="number" placeholder="456" />
+                    <input className="inputtext w-[60px]" onChange={e => setworkingHours(e.target.value)} type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="456" />
                     <span className='mx-1'>-</span>
-                    <input className="inputtext w-[70px]" onChange={e => setworkingMinutes(e.target.value)} type="number" placeholder="7890" /> <p className='ml-2 text-sm text-gray-600'>(for us to contact you and will not be made public)</p>
+                    <input className="inputtext w-[70px]" onChange={e => setworkingMinutes(e.target.value)} type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="7890" /> <p className='ml-2 text-sm text-gray-600'>(for us to contact you and will not be made public)</p>
                 </div>
 
 
@@ -293,7 +295,7 @@ const MerchantSignUP = () => {
 
                     <input className="inputtext w-[200px]  " onChange={e => setstreet(e.target.value)} type="text" placeholder="Street" />
                     <input className="inputtext w-[100px] ml-2 " onChange={e => setcity(e.target.value)} type="text" placeholder="City" />
-                    <input className="inputtext w-[100px] ml-2 " onChange={e => setzipcode(e.target.value)} type="number" placeholder="Zip Code" />
+                    <input className="inputtext w-[100px] ml-2 " onChange={e => setzipcode(e.target.value)} type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="Zip Code" />
                     <input className="inputtext w-[100px] ml-2 " onChange={e => setstate(e.target.value)} type="text" placeholder="State" />
                     <input className="inputtext w-[100px] ml-2 " onChange={e => setcountry(e.target.value)} type="text" placeholder="Country" />
                 </div>
@@ -351,19 +353,19 @@ const MerchantSignUP = () => {
                         })}
                     </select>
                     <span className='ml-2'>-</span>
-                    <input className="inputtext w-[70px] ml-2  " onChange={e => setworkingHours(e.target.value)} type="number" placeholder="456" />
+                    <input className="inputtext w-[70px] ml-2  " onChange={e => setworkingHours(e.target.value)} type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="456" />
                     <span className='ml-2'>-</span>
-                    <input className="inputtext w-[70px] ml-2  " onChange={e => setworkingMinutes(e.target.value)} type="number" placeholder="7890" />
+                    <input className="inputtext w-[70px] ml-2  " onChange={e => setworkingMinutes(e.target.value)} type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="7890" />
 
                 </div>
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3'>*Work Number</h1>
-                    <input className="inputtext w-[70px]" onChange={e => setworkingHours(e.target.value)} type="number" placeholder="123" />
+                    <input className="inputtext w-[70px]" onChange={e => setworkingHours(e.target.value)} type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="123" />
                     <span className='ml-2'>-</span>
-                    <input className="inputtext w-[70px] ml-2  " onChange={e => setworkingHours(e.target.value)} type="number" placeholder="456" />
+                    <input className="inputtext w-[70px] ml-2  " onChange={e => setworkingHours(e.target.value)} type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="456" />
                     <span className='ml-2'>-</span>
-                    <input className="inputtext w-[70px] ml-2  " onChange={e => setworkingMinutes(e.target.value)} type="number" placeholder="7890" />
+                    <input className="inputtext w-[70px] ml-2  " onChange={e => setworkingMinutes(e.target.value)} type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="7890" />
                 </div>
 
 
@@ -374,13 +376,13 @@ const MerchantSignUP = () => {
                         <div>
                             {bussinessHoursCreated.map((obj, index) => {
                                 return (
-                                    <div className='flex mb-2' key={obj.days}>
+                                    <div className='flex  mb-2' key={obj.days}>
                                         <input className="inputtext p-1 px-2 text-sm w-[167px]  text-center  select" type="text" value={obj.days} />
                                         <span className='mx-1'>-</span>
                                         <input className="inputtext w-[90px] ml-2  " type="text" value={obj.from_hours} />
                                         <span className='mx-1'>-</span>
                                         <input className="inputtext w-[90px] ml-2  " type="text" value={obj.to_hours} />
-                                        <XIcon onClick={() => { removeBussinessHoursCreatedOnclick(index) }} className='h-6 text-red-500 ml-2 cursor-pointer' />
+                                        <XIcon onClick={() => { removeBussinessHoursCreatedOnclick(index) }} className='h-6 ml-2 cursor-pointer' />
                                     </div>
                                 )
                             })}
@@ -388,7 +390,7 @@ const MerchantSignUP = () => {
 
                         </div>
                         <div className='flex flex-col space-y-2'>
-                            <div>
+                            <div className={`${bussinessHours_AddbtnShow ? "" : "hidden"}`}>
 
                                 <select className=' px-2 text-sm w-22 select' value={workingdays} onChange={e => { setworkingdays(e.target.value) }} >
                                     {bussinessHoursMenu.map(item => {
@@ -420,12 +422,21 @@ const MerchantSignUP = () => {
                                     })}
                                 </select>
                             </div>
-
-                            <button onClick={() => {
-                                var array = [];
-                                array.push({ days: workingdays, from_hours: workingHoursFrom, to_hours: workingHoursTO })
-                                setbussinessHoursCreated([...bussinessHoursCreated, ...array])
-                            }} className='text-blue-500 font-bold text-left w-fit '>ADD</button>
+                            <div className='flex space-x-3'>
+                                <button onClick={() => {
+                                    var array = [];
+                                    array.push({ days: workingdays, from_hours: workingHoursFrom, to_hours: workingHoursTO })
+                                    setbussinessHoursCreated([...bussinessHoursCreated, ...array])
+                                }} className={`${bussinessHours_AddbtnShow ? "" : "hidden"} text-blue-500 font-bold text-left w-fit `}>ADD</button>
+                                <button onClick={() => {
+                                    if (bussinessHoursCreated.length < 1) {
+                                        var array = [];
+                                        array.push({ days: workingdays, from_hours: workingHoursFrom, to_hours: workingHoursTO })
+                                        setbussinessHoursCreated([...bussinessHoursCreated, ...array])
+                                    }
+                                    setbussinessHours_AddbtnShow(false)
+                                }} className='text-blue-500 font-bold text-left w-fit '>{bussinessHours_AddbtnShow ? "SAVE" : "SAVED"}</button>
+                            </div>
                         </div>
                     </div>
 

@@ -7,19 +7,19 @@ export const Smarthome_GarageDoors = () => {
 
             {/* ServiceItems */}
 
-            <div className='flex items-center space-x-4 mb-4'>
-                <input className='scale-150 mr-2' type="checkbox" id="Smart Garage Installation" name="Smart Garage Installation" />
+            <div className='category'>
+                <input className='scale-150' type="checkbox" id="Smart Garage Installation" name="Smart Garage Installation" />
                 <h1 className=' w-[250px] mr-3'>Smart Garage Installation</h1>
-                <div className='flex items-center space-x-5 text-sm'>
+                <div className='subcategory'>
                     <div className='flex items-center space-x-2'>
                         <input type="radio" className='radio' name="Smart Garage Installation" />
                         <p>Flat Fee </p>
-                        <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+                        <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
                     </div>
                     <div className='flex items-center space-x-2'>
                         <input type="radio" className='radio ' name="Smart Garage Installation" />
                         <p>Hourly Fee </p>
-                        <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+                        <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
 
                     </div>
                     <div className='flex items-center space-x-2'>
@@ -29,19 +29,19 @@ export const Smarthome_GarageDoors = () => {
                 </div>
 
             </div>
-            <div className='flex items-center space-x-4 mb-4'>
-                <input className='scale-150 mr-2' type="checkbox" id="Smart Garage Support" name="Smart Garage Support" />
+            <div className='category'>
+                <input className='scale-150' type="checkbox" id="Smart Garage Support" name="Smart Garage Support" />
                 <h1 className=' w-[250px] mr-3'>Smart Garage Support</h1>
-                <div className='flex items-center space-x-5 text-sm'>
+                <div className='subcategory'>
                     <div className='flex items-center space-x-2'>
                         <input type="radio" className='radio' name="Smart Garage Support" />
                         <p>Flat Fee </p>
-                        <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+                        <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
                     </div>
                     <div className='flex items-center space-x-2'>
                         <input type="radio" className='radio ' name="Smart Garage Support" />
                         <p>Hourly Fee </p>
-                        <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+                        <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
 
                     </div>
                     <div className='flex items-center space-x-2'>
@@ -51,19 +51,19 @@ export const Smarthome_GarageDoors = () => {
                 </div>
 
             </div>
-            <div className='flex items-center space-x-4 mb-4'>
-                <input className='scale-150 mr-2' type="checkbox" id="Smart Hub or Speaker Setup" name="Smart Hub or Speaker Setup" />
+            <div className='category'>
+                <input className='scale-150' type="checkbox" id="Smart Hub or Speaker Setup" name="Smart Hub or Speaker Setup" />
                 <h1 className=' w-[250px] mr-3'>Smart Hub or Speaker Setup</h1>
-                <div className='flex items-center space-x-5 text-sm'>
+                <div className='subcategory'>
                     <div className='flex items-center space-x-2'>
                         <input type="radio" className='radio' name="Smart Hub or Speaker Setup" />
                         <p>Flat Fee </p>
-                        <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+                        <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
                     </div>
                     <div className='flex items-center space-x-2'>
                         <input type="radio" className='radio ' name="Smart Hub or Speaker Setup" />
                         <p>Hourly Fee </p>
-                        <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+                        <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
 
                     </div>
                     <div className='flex items-center space-x-2'>
@@ -73,19 +73,19 @@ export const Smarthome_GarageDoors = () => {
                 </div>
 
             </div>
-            <div className='flex items-center space-x-4 mb-4'>
-                <input className='scale-150 mr-2' type="checkbox" id="Smart Hub or Speaker Support" name="Smart Hub or Speaker Support" />
+            <div className='category'>
+                <input className='scale-150' type="checkbox" id="Smart Hub or Speaker Support" name="Smart Hub or Speaker Support" />
                 <h1 className=' w-[250px] mr-3'>Smart Hub or Speaker Support</h1>
-                <div className='flex items-center space-x-5 text-sm'>
+                <div className='subcategory'>
                     <div className='flex items-center space-x-2'>
                         <input type="radio" className='radio' name="Smart Hub or Speaker Support" />
                         <p>Flat Fee </p>
-                        <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+                        <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
                     </div>
                     <div className='flex items-center space-x-2'>
                         <input type="radio" className='radio ' name="Smart Hub or Speaker Support" />
                         <p>Hourly Fee </p>
-                        <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+                        <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
 
                     </div>
                     <div className='flex items-center space-x-2'>

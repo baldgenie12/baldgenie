@@ -7,19 +7,19 @@ export const Home_Security_Alarms = () => {
 
       {/* ServiceItems */}
 
-      <div className='flex items-center space-x-4 mb-4'>
-        <input className='scale-150 mr-2' type="checkbox" id="Alarm System Installation & Setup" name="Alarm System Installation & Setup" />
+      <div className='category'>
+        <input className='scale-150' type="checkbox" id="Alarm System Installation & Setup" name="Alarm System Installation & Setup" />
         <h1 className=' w-[250px] mr-3'>Alarm System Installation & Setup</h1>
-        <div className='flex items-center space-x-5 text-sm'>
+        <div className='subcategory'>
           <div className='flex items-center space-x-2'>
             <input type="radio" className='radio' name="Alarm System Installation & Setup" />
             <p>Flat Fee </p>
-            <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+            <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
           </div>
           <div className='flex items-center space-x-2'>
             <input type="radio" className='radio ' name="Alarm System Installation & Setup" />
             <p>Hourly Fee </p>
-            <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+            <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
 
           </div>
           <div className='flex items-center space-x-2'>
@@ -29,19 +29,19 @@ export const Home_Security_Alarms = () => {
         </div>
 
       </div>
-      <div className='flex items-center space-x-4 mb-4'>
-        <input className='scale-150 mr-2' type="checkbox" id="Alarm System Support" name="Alarm System Support" />
+      <div className='category'>
+        <input className='scale-150' type="checkbox" id="Alarm System Support" name="Alarm System Support" />
         <h1 className=' w-[250px] mr-3'>Alarm System Support</h1>
-        <div className='flex items-center space-x-5 text-sm'>
+        <div className='subcategory'>
           <div className='flex items-center space-x-2'>
             <input type="radio" className='radio' name="Alarm System Support" />
             <p>Flat Fee </p>
-            <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+            <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
           </div>
           <div className='flex items-center space-x-2'>
             <input type="radio" className='radio ' name="Alarm System Support" />
             <p>Hourly Fee </p>
-            <input type="number" className="inputtext w-[120px]" placeholder="Enter Amount" />
+            <input type="number" onKeyDown={(e) =>["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className="inputtext w-[120px]" placeholder="Enter Amount" />
 
           </div>
           <div className='flex items-center space-x-2'>
