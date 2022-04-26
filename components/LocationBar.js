@@ -25,7 +25,7 @@ export const LocationBar = () => {
 
     useEffect(() => {
         const localStorage_location = JSON.parse(localStorage.getItem("location"))
-        if (localStorage_location.plus_code) {
+        if (localStorage_location) {
             const part = localStorage_location.plus_code.compound_code.trim()
             const index = part.indexOf(" ")
             const part2 = part.substring(index, part.length)
