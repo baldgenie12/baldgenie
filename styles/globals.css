@@ -46,7 +46,6 @@
 
     }
 
-
     .inputtext{
         @apply placeholder-gray-400 shadow-lg p-1 text-sm text-center  rounded-lg   outline-none border-[0.5px]  border-gray-600
 
@@ -61,15 +60,13 @@
         @apply bg-theme text-theme  scale-150  
     }
 
-     
-
-    .category{
-        @apply flex items-center space-x-4 mb-4  
+    .category {
+        @apply flex items-center space-x-4 mb-4
     }
 
-     
-    .subcategory{
-        @apply flex items-center space-x-8 text-sm 
+
+    .subcategory {
+        @apply flex items-center space-x-8 text-sm
     }
      
  
