@@ -17,7 +17,7 @@ import Services from '../../components/Merchant/ServiceSignUp';
 
 
 export const Gen_info_PART2 = () => {
-    
+
 
 
     const [bussinessHoursCreated, setbussinessHoursCreated] = useState([])
@@ -31,13 +31,21 @@ export const Gen_info_PART2 = () => {
 
 
     // Location
-
-    const [location, setlocation] = useState('Find my Location')
-    const [serviceRadiusFrom, setserviceRadiusFrom] = useState('')
-    const [serviceRadiusTo, setserviceRadiusTo] = useState('')
-    const [zipcodesCovered, setzipcodesCovered] = useState('')
+    const [serviceRadius, setserviceRadius] = useState('')
     const [website, setwebsite] = useState('')
-    const [worknumber, setworknumber] = useState('')
+
+
+    // Toll free number
+    const [tollfreenumber_firstblock, settollfreenumber_firstblock] = useState('800')
+    const [tollfreenumberr_secondblock, settollfreenumber_secondblock] = useState('')
+    const [tollfreenumberr_thirdblock, settollfreenumber_thirdblock] = useState('')
+
+
+
+    //Work number
+    const [workNumber_firstblock, setworkNumber_firstblock] = useState('')
+    const [workNumber_secondblock, setworkNumber_secondblock] = useState('')
+    const [workNumber_thirdblock, setworkNumber_thirdblock] = useState('')
 
     //Timing
 
@@ -48,18 +56,29 @@ export const Gen_info_PART2 = () => {
     const [yearsinbusuiness, setyearsinbusuiness] = useState('')
     const [monthsinbusiness, setmonthsinbusiness] = useState('')
     const [employees, setemployees] = useState('')
+    const [timezone, settimezone] = useState('')
 
+    // Radio Buttons
 
+    const [remoteService, setremoteService] = useState(null)
+    const [inStoreService, setinStoreService] = useState(null)
+    const [houseCall, sethouseCall] = useState(null)
+    const [pickNdrop, setpickNdrop] = useState(null)
+    const [bussinessService, setbussinessService] = useState(null)
 
- 
+    const maxLengthCheck = (object) => {
+        if (object.target.value.length > object.target.maxLength) {
+            object.target.value = object.target.value.slice(0, object.target.maxLength)
+        }
+    }
+
     return (
-        <div> <div className=''>
-
+        <div>
 
             <div className='flex items-center justify-start my-4 m-2'>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>*Service Radius</h1>
-                <select className=' px-2 text-sm w-[90px] select' value={serviceRadiusFrom} onChange={e => { setserviceRadiusFrom(e.target.value) }} >
+                <select className=' px-2 text-sm w-[90px] select' value={serviceRadius} onChange={e => { setserviceRadius(e.target.value) }} >
                     {serviceRadiusMenu.map(item => {
                         return (
 
@@ -78,14 +97,16 @@ export const Gen_info_PART2 = () => {
             <div className='flex items-center justify-start my-4 m-2 '>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>Website Address</h1>
-                <input className="inputtext w-[250px]  " onChange={e => { setwebsite(e.target.value); console.log(website); }} type="text" placeholder="Enter Address" />
+                <input required className="inputtext w-[250px]  " onChange={e => { setwebsite(e.target.value); console.log(website); }} type="text" placeholder="Enter Address" />
                 <CheckIcon className={`${isUrlValid(website) ? "" : "hidden"} icon ml-2 text-green-500`} />
                 <XIcon className={`${isUrlValid(website) ? "hidden" : website.length > 5 ? "" : "hidden"} icon ml-2 text-red-500`} />
             </div>
+
+
             <div className='flex items-center justify-start my-4 m-2 '>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>Toll Free Number</h1>
-                <select className=' px-2 text-sm w-22 select' value={workingdays} onChange={e => { setworkingdays(e.target.value) }} >
+                <select className=' px-2 text-sm w-22 select' onChange={e => { settollfreenumber_firstblock(e.target.value) }} >
                     {tollfreeMenu.map(item => {
                         return (
 
@@ -94,19 +115,65 @@ export const Gen_info_PART2 = () => {
                     })}
                 </select>
                 <span className='ml-2'>-</span>
-                <input className="inputtext w-[70px] ml-2  " onChange={e => setworkingHours(e.target.value)} type="number" onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="456" />
-                <span className='ml-2'>-</span>
-                <input className="inputtext w-[70px] ml-2  " onChange={e => setworkingMinutes(e.target.value)} type="number" onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="7890" />
-
+                <input
+                    required className="inputtext w-[60px]"
+                    type="number"
+                    onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
+                    placeholder="456"
+                    maxLength="3"
+                    onInput={maxLengthCheck}
+                    onChange={e => settollfreenumber_secondblock(e.target.value)
+                    }
+                />
+                <span className='mx-1'>-</span>
+                <input
+                    required className="inputtext w-[70px]"
+                    type="number"
+                    onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
+                    placeholder="7890"
+                    maxLength="4"
+                    onInput={maxLengthCheck}
+                    onChange={e => settollfreenumber_thirdblock(e.target.value)
+                    }
+                />
             </div>
+
+
             <div className='flex items-center justify-start my-4 m-2 '>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>*Work Number</h1>
-                <input className="inputtext w-[70px]" onChange={e => setworkingHours(e.target.value)} type="number" onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="123" />
-                <span className='ml-2'>-</span>
-                <input className="inputtext w-[70px] ml-2  " onChange={e => setworkingHours(e.target.value)} type="number" onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="456" />
-                <span className='ml-2'>-</span>
-                <input className="inputtext w-[70px] ml-2  " onChange={e => setworkingMinutes(e.target.value)} type="number" onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="7890" />
+                <input
+                    required className="inputtext w-[60px]"
+                    type="number"
+                    onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
+                    placeholder="123"
+                    maxLength="3"
+                    onInput={maxLengthCheck}
+                    onChange={e => setworkNumber_firstblock(e.target.value)
+                    }
+                />
+                <span className='mx-1'>-</span>
+                <input
+                    required className="inputtext w-[60px]"
+                    type="number"
+                    onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
+                    placeholder="456"
+                    maxLength="3"
+                    onInput={maxLengthCheck}
+                    onChange={e => setworkNumber_secondblock(e.target.value)
+                    }
+                />
+                <span className='mx-1'>-</span>
+                <input
+                    required className="inputtext w-[70px]"
+                    type="number"
+                    onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
+                    placeholder="7890"
+                    maxLength="4"
+                    onInput={maxLengthCheck}
+                    onChange={e => setworkNumber_thirdblock(e.target.value)
+                    }
+                />
             </div>
 
 
@@ -118,11 +185,11 @@ export const Gen_info_PART2 = () => {
                         {bussinessHoursCreated.map((obj, index) => {
                             return (
                                 <div className='flex  mb-2' key={obj.days}>
-                                    <input className="inputtext p-1 px-2 text-sm w-[167px]  text-center  select" type="text" value={obj.days} />
+                                    <input required className="inputtext p-1 px-2 text-sm w-[167px]  text-center  select" type="text" value={obj.days} />
                                     <span className='mx-1'>-</span>
-                                    <input className="inputtext w-[90px] ml-2  " type="text" value={obj.from_hours} />
+                                    <input required className="inputtext w-[90px] ml-2  " type="text" value={obj.from_hours} />
                                     <span className='mx-1'>-</span>
-                                    <input className="inputtext w-[90px] ml-2  " type="text" value={obj.to_hours} />
+                                    <input required className="inputtext w-[90px] ml-2  " type="text" value={obj.to_hours} />
                                     <XIcon onClick={() => { removeBussinessHoursCreatedOnclick(index) }} className='h-6 ml-2 cursor-pointer' />
                                 </div>
                             )
@@ -187,7 +254,7 @@ export const Gen_info_PART2 = () => {
             <div className='flex items-center justify-start my-4 m-2'>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>Time Zone</h1>
-                <select className=' px-3 text-sm w-22 select' value={serviceRadiusFrom} onChange={e => { setserviceRadiusFrom(e.target.value) }} >
+                <select className=' px-3 text-sm w-22 select' value={timezone} onChange={e => { settimezone(e.target.value) }} >
                     {timezoneMenu.map(item => {
                         return (
 
@@ -236,31 +303,33 @@ export const Gen_info_PART2 = () => {
 
             </div>
 
+            {/* Radio buttons */}
+
             <div className='flex items-center justify-start my-4 m-2'>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>Remote Service</h1>
-                <div className='flex items-centerspace-x-1'>
-                    <input className='bg-theme text-theme  scale-150 mr-2 ' type="radio" id="javascript" name="Remote_Service" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                    <label className='' htmlFor="html">Yes</label>
+                <div className='flex items-center space-x-1'>
+                    <input className='bg-theme text-theme  scale-150 mr-2' value={true} onChange={(e) => { setremoteService(e.target.value) }} type="radio" name="Remote_Service" />
+                    Yes
                 </div>
 
-                <div className='ml-6 flex items-centerspace-x-1'>
-                    <input className='bg-theme text-theme  scale-150 mr-2 ' type="radio" id="javascript" name="Remote_Service" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                    <label className='' htmlFor="html">No</label>
+                <div className='ml-6 flex items-center space-x-1'>
+                    <input className='bg-theme text-theme  scale-150 mr-2' value={false} onChange={(e) => { setremoteService(e.target.value) }} type="radio" name="Remote_Service" />
+                    No
                 </div>
             </div>
 
             <div className='flex items-center justify-start my-4 m-2'>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>In Store Service</h1>
-                <div className='flex items-centerspace-x-1'>
-                    <input className='bg-theme text-theme  scale-150 mr-2 ' type="radio" id="javascript" name="In_Store_Service" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                    <label className='' htmlFor="html">Yes</label>
+                <div className='flex items-center space-x-1'>
+                    <input className='bg-theme text-theme  scale-150 mr-2 ' value={true} onChange={(e) => { setinStoreService(e.target.value) }} type="radio" name="In_Store_Service" />
+                    Yes
                 </div>
 
-                <div className='ml-6 flex items-centerspace-x-1'>
-                    <input className='bg-theme text-theme  scale-150 mr-2 ' type="radio" id="javascript" name="In_Store_Service" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                    <label className='' htmlFor="html">No</label>
+                <div className='ml-6 flex items-center space-x-1'>
+                    <input className='bg-theme text-theme  scale-150 mr-2 ' value={false} onChange={(e) => { setinStoreService(e.target.value) }} type="radio" name="In_Store_Service" />
+                    No
                 </div>
             </div>
 
@@ -268,14 +337,14 @@ export const Gen_info_PART2 = () => {
             <div className='flex items-center justify-start my-4 m-2'>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>House Call</h1>
-                <div className='flex items-centerspace-x-1'>
-                    <input className='bg-theme text-theme  scale-150 mr-2 ' type="radio" id="javascript" name="House Call" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                    <label className='' htmlFor="html">Yes</label>
+                <div className='flex items-center space-x-1'>
+                    <input className='bg-theme text-theme  scale-150 mr-2 ' value={true} onChange={(e) => { sethouseCall(e.target.value) }} type="radio" name="House Call" />
+                    Yes
                 </div>
 
-                <div className='ml-6 flex items-centerspace-x-1'>
-                    <input className='bg-theme text-theme  scale-150 mr-2 ' type="radio" id="javascript" name="House Call" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                    <label className='' htmlFor="html">No</label>
+                <div className='ml-6 flex items-center space-x-1'>
+                    <input className='bg-theme text-theme  scale-150 mr-2 ' value={false} onChange={(e) => { sethouseCall(e.target.value) }} type="radio" name="House Call" />
+                    No
                 </div>
             </div>
 
@@ -283,32 +352,31 @@ export const Gen_info_PART2 = () => {
             <div className='flex items-center justify-start my-4 m-2'>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>Pick Up & Drop</h1>
-                <div className='flex items-centerspace-x-1'>
-                    <input className='bg-theme text-theme  scale-150 mr-2 ' type="radio" id="javascript" name="Pick Up & Drop" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                    <label className='' htmlFor="html">Yes</label>
+                <div className='flex items-center space-x-1'>
+                    <input className='bg-theme text-theme  scale-150 mr-2 ' value={true} onChange={(e) => { setpickNdrop(e.target.value) }} type="radio" name="Pick Up & Drop" />
+                    Yes
                 </div>
 
-                <div className='ml-6 flex items-centerspace-x-1'>
-                    <input className='bg-theme text-theme  scale-150 mr-2 ' type="radio" id="javascript" name="Pick Up & Drop" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                    <label className='' htmlFor="html">No</label>
+                <div className='ml-6 flex items-center space-x-1'>
+                    <input className='bg-theme text-theme  scale-150 mr-2 ' value={false} onChange={(e) => { setpickNdrop(e.target.value) }} type="radio" name="Pick Up & Drop" />
+                    No
                 </div>
             </div>
 
             <div className='flex items-center justify-start my-4 m-2'>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>Bussiness Service</h1>
-                <div className='flex items-centerspace-x-1'>
-                    <input className='bg-theme text-theme  scale-150 mr-2 ' type="radio" id="javascript" name="Bussiness Service" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                    <label className='' htmlFor="html">Yes</label>
+                <div className='flex items-center space-x-1'>
+                    <input className='bg-theme text-theme  scale-150 mr-2 ' value={true} onChange={(e) => { setbussinessService(e.target.value) }} type="radio" name="Bussiness Service" />
+                    Yes
                 </div>
 
-                <div className='ml-6 flex items-centerspace-x-1'>
-                    <input className='bg-theme text-theme  scale-150 mr-2  ' type="radio" id="javascript" name="Bussiness Service" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                    <label className='' htmlFor="html">No</label>
+                <div className='ml-6 flex items-center space-x-1'>
+                    <input className='bg-theme text-theme  scale-150 mr-2' value={false} onChange={(e) => { setbussinessService(e.target.value) }} type="radio" name="Bussiness Service" />
+                    No
                 </div>
             </div>
 
-
-        </div></div>
+        </div>
     )
 }

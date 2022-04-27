@@ -23,9 +23,11 @@ const MerchantSignUP = () => {
             </Head>
             <h1 className=' mr-3 font-semibold text-xl m-6 ml-4'>{`{* symbol --> Mandatory}`}</h1>
 
-            <Gen_info_PART1 />
-            <Gen_info_PART2 />
-
+            <form className="" action="#" method="POST">
+                <Gen_info_PART1 />
+                <Gen_info_PART2 />
+                <button type="submit" className="group mx-auto relative text-lg  flex justify-center py-2 px-8 border border-transparent  font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-14">Submit</button>
+            </form>
 
             <div className='mt-16'>
                 <Services />

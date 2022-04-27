@@ -136,9 +136,9 @@ export const Gen_info_PART1 = () => {
                         <option className='px-2 py-4'>Mrs.</option>
                         <option className='px-2 py-4'>Ms.</option>
                     </select>
-                    <input className="inputtext ml-2 " onChange={e => setfirstName(e.target.value)} type="text" placeholder="First Name" />
-                    <input className="inputtext ml-2 " onChange={e => setmiddleName(e.target.value)} type="text" placeholder="Middle Name" />
-                    <input className="inputtext ml-2 " onChange={e => setlastName(e.target.value)} type="text" placeholder="Last Name" />
+                    <input required className="inputtext ml-2 " onChange={e => setfirstName(e.target.value)} type="text" placeholder="First Name" />
+                    <input required className="inputtext ml-2 " onChange={e => setmiddleName(e.target.value)} type="text" placeholder="Middle Name" />
+                    <input required className="inputtext ml-2 " onChange={e => setlastName(e.target.value)} type="text" placeholder="Last Name" />
                 </div>
 
 
@@ -154,7 +154,7 @@ export const Gen_info_PART1 = () => {
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3'>*Primary Contact Email</h1>
-                    <input className="inputtext  w-[250px]  " onChange={e => setemail(e.target.value)} type="email" placeholder="Enter Email" />
+                    <input required className="inputtext  w-[250px]  " onChange={e => setemail(e.target.value)} type="email" placeholder="Enter Email" />
                     <CheckIcon className={`${validateEmail(email) ? "" : "hidden"} icon ml-2 text-green-500`} />
                     <XIcon className={`${validateEmail(email) ? "hidden" : email.length > 8 ? "" : "hidden"} icon ml-2 text-red-500`} />
 
@@ -164,11 +164,11 @@ export const Gen_info_PART1 = () => {
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3'>*Primary Person Phone</h1>
-                    <input className="inputtext w-[50px]" value="+1" type="text" />
+                    <input required className="inputtext w-[50px]" value="+1" type="text" />
                     <span className='mx-1'>-</span>
                     <input
-                        className="inputtext w-[60px]"
-                        type="text"
+                        required className="inputtext w-[60px]"
+                        type="number"
                         onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
                         placeholder="123"
                         maxLength="3"
@@ -178,8 +178,8 @@ export const Gen_info_PART1 = () => {
                     />
                     <span className='mx-1'>-</span>
                     <input
-                        className="inputtext w-[60px]"
-                        type="text"
+                        required className="inputtext w-[60px]"
+                        type="number"
                         onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
                         placeholder="456"
                         maxLength="3"
@@ -189,8 +189,8 @@ export const Gen_info_PART1 = () => {
                     />
                     <span className='mx-1'>-</span>
                     <input
-                        className="inputtext w-[70px]"
-                        type="text"
+                        required className="inputtext w-[70px]"
+                        type="number"
                         onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
                         placeholder="7890"
                         maxLength="4"
@@ -211,9 +211,9 @@ export const Gen_info_PART1 = () => {
                         <option className='px-2 py-4'>Mrs.</option>
                         <option className='px-2 py-4'>Ms.</option>
                     </select>
-                    <input className="inputtext ml-2 " onChange={e => set_alternate__firstName(e.target.value)} type="text" placeholder="First Name" />
-                    <input className="inputtext ml-2 " onChange={e => set_alternate__middleName(e.target.value)} type="text" placeholder="Middle Name" />
-                    <input className="inputtext ml-2 " onChange={e => set_alternate__lastName(e.target.value)} type="text" placeholder="Last Name" />
+                    <input required className="inputtext ml-2 " onChange={e => set_alternate__firstName(e.target.value)} type="text" placeholder="First Name" />
+                    <input required className="inputtext ml-2 " onChange={e => set_alternate__middleName(e.target.value)} type="text" placeholder="Middle Name" />
+                    <input required className="inputtext ml-2 " onChange={e => set_alternate__lastName(e.target.value)} type="text" placeholder="Last Name" />
                 </div>
 
 
@@ -230,7 +230,7 @@ export const Gen_info_PART1 = () => {
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3'>Alternate Contact Email</h1>
-                    <input className="inputtext w-[250px]  " onChange={e => set_alternate_email(e.target.value)} type="email" placeholder="Enter Email" />
+                    <input required className="inputtext w-[250px]  " onChange={e => set_alternate_email(e.target.value)} type="email" placeholder="Enter Email" />
                     <CheckIcon className={`${validateEmail(alternate_email) ? "" : "hidden"} icon ml-2 text-green-500`} />
                     <XIcon className={`${validateEmail(alternate_email) ? "hidden" : alternate_email.length > 8 ? "" : "hidden"} icon ml-2 text-red-500`} />
 
@@ -240,11 +240,11 @@ export const Gen_info_PART1 = () => {
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3'>Alternate Person Phone</h1>
-                    <input className="inputtext w-[50px]" value="+1" type="text" />
+                    <input required className="inputtext w-[50px]" value="+1" type="text" />
                     <span className='mx-1'>-</span>
                     <input
-                        className="inputtext w-[60px]"
-                        type="text"
+                        required className="inputtext w-[60px]"
+                        type="number"
                         onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
                         placeholder="123"
                         maxLength="3"
@@ -254,8 +254,8 @@ export const Gen_info_PART1 = () => {
                     />
                     <span className='mx-1'>-</span>
                     <input
-                        className="inputtext w-[60px]"
-                        type="text"
+                        required className="inputtext w-[60px]"
+                        type="number"
                         onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
                         placeholder="456"
                         maxLength="3"
@@ -265,8 +265,8 @@ export const Gen_info_PART1 = () => {
                     />
                     <span className='mx-1'>-</span>
                     <input
-                        className="inputtext w-[70px]"
-                        type="text"
+                        required className="inputtext w-[70px]"
+                        type="number"
                         onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
                         placeholder="7890"
                         maxLength="4"
@@ -283,13 +283,13 @@ export const Gen_info_PART1 = () => {
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3'>*Business Name</h1>
-                    <input className="inputtext w-[250px]  " onChange={e => setbussinessName(e.target.value)} type="text" placeholder="Enter Name" />
+                    <input required className="inputtext w-[250px]  " onChange={e => setbussinessName(e.target.value)} type="text" placeholder="Enter Name" />
                 </div>
 
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3'>*Business Logo</h1>
-                    <input className="inputtext w-[250px]  " type="file" accept="image/*" />
+                    <input required className="inputtext w-[250px]  " type="file" accept="image/*" />
 
                     <p className='ml-2 text-sm text-gray-600'>(200px x 200px logo image size  )</p>
 
@@ -297,7 +297,7 @@ export const Gen_info_PART1 = () => {
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3'>*Business Images</h1>
-                    <input className="inputtext w-[250px]  " type="file" multiple accept="image/*" />
+                    <input required className="inputtext w-[250px]  " type="file" multiple accept="image/*" />
 
                     <p className='ml-2 text-sm text-gray-600'>(Upto 20 Images)</p>
 
@@ -308,11 +308,11 @@ export const Gen_info_PART1 = () => {
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3'>*Business Physical Address</h1>
 
-                    <input className="inputtext w-[200px]  " onChange={e => setstreet(e.target.value)} type="text" placeholder="Street" />
-                    <input className="inputtext w-[100px] ml-2 " onChange={e => setcity(e.target.value)} type="text" placeholder="City" />
-                    <input className="inputtext w-[100px] ml-2 " onChange={e => setzipcode(e.target.value)} type="number" onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="Zip Code" />
-                    <input className="inputtext w-[100px] ml-2 " onChange={e => setstate(e.target.value)} type="text" placeholder="State" />
-                    <input className="inputtext w-[100px] ml-2 " onChange={e => setcountry(e.target.value)} type="text" placeholder="Country" />
+                    <input required className="inputtext w-[200px]  " onChange={e => setstreet(e.target.value)} type="text" placeholder="Street" />
+                    <input required className="inputtext w-[100px] ml-2 " onChange={e => setcity(e.target.value)} type="text" placeholder="City" />
+                    <input required className="inputtext w-[100px] ml-2 " onChange={e => setzipcode(e.target.value)} type="number" onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="Zip Code" />
+                    <input required className="inputtext w-[100px] ml-2 " onChange={e => setstate(e.target.value)} type="text" placeholder="State" />
+                    <input required className="inputtext w-[100px] ml-2 " onChange={e => setcountry(e.target.value)} type="text" placeholder="Country" />
                 </div>
 
 
