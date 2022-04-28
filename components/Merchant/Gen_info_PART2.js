@@ -231,12 +231,12 @@ export const Gen_info_PART2 = () => {
                             </select>
                         </div>
                         <div className='flex space-x-3'>
-                            <button onClick={() => {
+                            <button type='button' onClick={() => {
                                 var array = [];
                                 array.push({ days: workingdays, from_hours: workingHoursFrom, to_hours: workingHoursTO })
                                 setbussinessHoursCreated([...bussinessHoursCreated, ...array])
                             }} className={`${bussinessHours_AddbtnShow ? "" : "hidden"} text-blue-500 font-bold text-left w-fit `}>ADD</button>
-                            <button onClick={() => {
+                            <button type='button' onClick={() => {
                                 if (bussinessHoursCreated.length < 1) {
                                     var array = [];
                                     array.push({ days: workingdays, from_hours: workingHoursFrom, to_hours: workingHoursTO })

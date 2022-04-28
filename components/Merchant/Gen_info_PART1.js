@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {
     SearchIcon, LocationMarkerIcon, CheckIcon, XIcon, DeviceMobileIcon, HomeIcon
 } from '@heroicons/react/solid';
@@ -14,6 +14,9 @@ import { isUrlValid } from '../../utils/MerchantSignUp'
 import { validateEmail } from '../../utils/MerchantSignUp'
 import { hoursMenu } from '../../utils/MerchantSignUp'
 import Services from '../../components/Merchant/ServiceSignUp';
+import videosContext from '../../context/videos/videosContext';
+
+
 function showError(error) {
     switch (error.code) {
         case error.PERMISSION_DENIED:
@@ -40,49 +43,51 @@ function showError(error) {
 
 export const Gen_info_PART1 = () => {
 
-    const [nameTitle, setnameTitle] = useState('Mr.')
+    const {
+        nameTitle, setnameTitle,
+        fullname, setfullname,
+        gender, setgender,
+        email, setemail,
+        phone, setphone,
+        alternate_nameTitle, set_alternate__nameTitle,
+        alternate_fullname, setalternate_fullname,
+        alternate_gender, set_alternate_gender,
+        alternate_email, set_alternate_email,
+        alternatephone, setalternatephone,
+        bussinessName, setbussinessName,
+        street, setstreet,
+        city, setcity,
+        zipcode, setzipcode,
+        state, setstate,
+        country, setcountry,
+        location, setlocation,
+        latitude, setlatitude,
+        longitude, setlongitude
+    } = useContext(videosContext)
+
+    //Name
     const [firstName, setfirstName] = useState('')
     const [middleName, setmiddleName] = useState('')
     const [lastName, setlastName] = useState('')
-
-    const [gender, setgender] = useState('')
-    const [email, setemail] = useState('')
+    setfullname(firstName.toUpperCase())
 
     //Phone
     const [phone_firstblock, setphone_firstblock] = useState('')
     const [phone_secondblock, setphone_secondblock] = useState('')
     const [phone_thirdblock, setphone_thirdblock] = useState('')
+    setphone(phone_firstblock + phone_secondblock + phone_thirdblock)
 
-
-    const [alternate_nameTitle, set_alternate__nameTitle] = useState('Mr.')
+    // ALternateName
     const [alternate_firstName, set_alternate__firstName] = useState('')
     const [alternate_middleName, set_alternate__middleName] = useState('')
     const [alternate_lastName, set_alternate__lastName] = useState('')
-
-    const [alternate_gender, set_alternate_gender] = useState('')
-    const [alternate_email, set_alternate_email] = useState('')
+    setalternate_fullname(alternate_firstName + alternate_middleName + alternate_lastName)
 
     //AlternatePhone
     const [alternate_phone_firstblock, setalternate_phone_firstblock] = useState('')
     const [alternate_phone_secondblock, setalternate_phone_secondblock] = useState('')
     const [alternate_phone_thirdblock, setalternate_phone_thirdblock] = useState('')
-
-
-    // Bussiness Details
-    const [bussinessName, setbussinessName] = useState('')
-    const [street, setstreet] = useState('')
-    const [city, setcity] = useState('')
-    const [zipcode, setzipcode] = useState('')
-    const [state, setstate] = useState('')
-    const [country, setcountry] = useState('')
-
-
-    // Location
-
-    const [location, setlocation] = useState('Find my Location')
-    const [loading, setloading] = useState(false)
-
-
+    setalternatephone(alternate_phone_firstblock + alternate_phone_secondblock + alternate_phone_thirdblock)
 
 
     const getLocationHnadler = () => {
@@ -112,9 +117,15 @@ export const Gen_info_PART1 = () => {
 
         navigator.geolocation.getCurrentPosition(position => {
             const coordinates = { latitude: position.coords.latitude, longitude: position.coords.longitude }
+            setlatitude(position.coords.latitude)
+            setlongitude(position.coords.longitude)
             fetchData(coordinates)
         }, showError)
     }
+
+    useEffect(() => {
+        getLocationHnadler()
+    }, [])
 
 
     const maxLengthCheck = (object) => {
@@ -122,6 +133,8 @@ export const Gen_info_PART1 = () => {
             object.target.value = object.target.value.slice(0, object.target.maxLength)
         }
     }
+
+
 
     return (
         <div>
@@ -319,7 +332,7 @@ export const Gen_info_PART1 = () => {
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3 '>*Geo Location</h1>
-                    <button onClick={getLocationHnadler} className='hover:bg-gray-200 flex items-center justify-around pl-6 border-[0.5px]  border-black rounded-lg p-1 '>
+                    <button type="button" onClick={getLocationHnadler} className='hover:bg-gray-200 flex items-center justify-around pl-6 border-[0.5px]  border-black rounded-lg p-1 '>
                         <LocationMarkerIcon className='h-6 text-red-600' />
                         <h1 className="placeholder-gray-600 w-[200px] cursor-pointer  text-sm text-center outline-none "  >{location}</h1>
                     </button>
