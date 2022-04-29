@@ -43,6 +43,21 @@ function showError(error) {
 
 export const Gen_info_PART1 = () => {
 
+ 
+
+    const handleOnchangeImages = (e) => {
+        var array = []
+        for (let index = 0; index < e.target.files.length; index++) {
+            array.push(e.target.files[index])
+        }
+        setbussinessImagesArray(array)
+    }
+
+
+    
+
+
+
     const {
         nameTitle, setnameTitle,
         fullname, setfullname,
@@ -55,6 +70,8 @@ export const Gen_info_PART1 = () => {
         alternate_email, set_alternate_email,
         alternatephone, setalternatephone,
         bussinessName, setbussinessName,
+        businessLogo, setbusinessLogo,
+        bussinessImagesArray, setbussinessImagesArray,
         street, setstreet,
         city, setcity,
         zipcode, setzipcode,
@@ -99,7 +116,6 @@ export const Gen_info_PART1 = () => {
                 const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${coordinates.latitude},${coordinates.longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`)
                 // const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=40.20197127507498,-100.66331257139588&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`)
                 location = await response.json()
-                console.log(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${coordinates.latitude},${coordinates.longitude}&sensor=true&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`);
 
 
                 const part = location.plus_code.compound_code.trim()
@@ -149,7 +165,7 @@ export const Gen_info_PART1 = () => {
                         <option className='px-2 py-4'>Mrs.</option>
                         <option className='px-2 py-4'>Ms.</option>
                     </select>
-                    <input required className="inputtext ml-2 " onChange={e => setfirstName(e.target.value)} type="text" placeholder="First Name" />
+                    <input required className="inputtext ml-2 " name='firstname' onChange={e => setfirstName(e.target.value)} type="text" placeholder="First Name" />
                     <input required className="inputtext ml-2 " onChange={e => setmiddleName(e.target.value)} type="text" placeholder="Middle Name" />
                     <input required className="inputtext ml-2 " onChange={e => setlastName(e.target.value)} type="text" placeholder="Last Name" />
                 </div>
@@ -224,9 +240,9 @@ export const Gen_info_PART1 = () => {
                         <option className='px-2 py-4'>Mrs.</option>
                         <option className='px-2 py-4'>Ms.</option>
                     </select>
-                    <input required className="inputtext ml-2 " onChange={e => set_alternate__firstName(e.target.value)} type="text" placeholder="First Name" />
-                    <input required className="inputtext ml-2 " onChange={e => set_alternate__middleName(e.target.value)} type="text" placeholder="Middle Name" />
-                    <input required className="inputtext ml-2 " onChange={e => set_alternate__lastName(e.target.value)} type="text" placeholder="Last Name" />
+                    <input className="inputtext ml-2 " onChange={e => set_alternate__firstName(e.target.value)} type="text" placeholder="First Name" />
+                    <input className="inputtext ml-2 " onChange={e => set_alternate__middleName(e.target.value)} type="text" placeholder="Middle Name" />
+                    <input className="inputtext ml-2 " onChange={e => set_alternate__lastName(e.target.value)} type="text" placeholder="Last Name" />
                 </div>
 
 
@@ -243,7 +259,7 @@ export const Gen_info_PART1 = () => {
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3'>Alternate Contact Email</h1>
-                    <input required className="inputtext w-[250px]  " onChange={e => set_alternate_email(e.target.value)} type="email" placeholder="Enter Email" />
+                    <input className="inputtext w-[250px]  " onChange={e => set_alternate_email(e.target.value)} type="email" placeholder="Enter Email" />
                     <CheckIcon className={`${validateEmail(alternate_email) ? "" : "hidden"} icon ml-2 text-green-500`} />
                     <XIcon className={`${validateEmail(alternate_email) ? "hidden" : alternate_email.length > 8 ? "" : "hidden"} icon ml-2 text-red-500`} />
 
@@ -253,10 +269,10 @@ export const Gen_info_PART1 = () => {
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3'>Alternate Person Phone</h1>
-                    <input required className="inputtext w-[50px]" value="+1" type="text" />
+                    <input className="inputtext w-[50px]" value="+1" type="text" />
                     <span className='mx-1'>-</span>
                     <input
-                        required className="inputtext w-[60px]"
+                        className="inputtext w-[60px]"
                         type="number"
                         onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
                         placeholder="123"
@@ -267,7 +283,7 @@ export const Gen_info_PART1 = () => {
                     />
                     <span className='mx-1'>-</span>
                     <input
-                        required className="inputtext w-[60px]"
+                        className="inputtext w-[60px]"
                         type="number"
                         onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
                         placeholder="456"
@@ -278,7 +294,7 @@ export const Gen_info_PART1 = () => {
                     />
                     <span className='mx-1'>-</span>
                     <input
-                        required className="inputtext w-[70px]"
+                        className="inputtext w-[70px]"
                         type="number"
                         onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
                         placeholder="7890"
@@ -302,15 +318,15 @@ export const Gen_info_PART1 = () => {
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3'>*Business Logo</h1>
-                    <input required className="inputtext w-[250px]  " type="file" accept="image/*" />
+                    <input required onChange={(e) => setbusinessLogo(e.target.files[0])} className="inputtext w-[250px]" name='i' type="file" accept="image/*" />
 
                     <p className='ml-2 text-sm text-gray-600'>(200px x 200px logo image size  )</p>
 
                 </div>
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
-                    <h1 className='w-[230px] mr-3'>*Business Images</h1>
-                    <input required className="inputtext w-[250px]  " type="file" multiple accept="image/*" />
+                    <h1 className='w-[230px] mr-3'>Business Images</h1>
+                    <input name='images' onChange={handleOnchangeImages}  className="inputtext w-[250px]  " type="file" multiple accept="image/*" />
 
                     <p className='ml-2 text-sm text-gray-600'>(Upto 20 Images)</p>
 
@@ -334,7 +350,7 @@ export const Gen_info_PART1 = () => {
                     <h1 className='w-[230px] mr-3 '>*Geo Location</h1>
                     <button type="button" onClick={getLocationHnadler} className='hover:bg-gray-200 flex items-center justify-around pl-6 border-[0.5px]  border-black rounded-lg p-1 '>
                         <LocationMarkerIcon className='h-6 text-red-600' />
-                        <h1 className="placeholder-gray-600 w-[200px] cursor-pointer  text-sm text-center outline-none "  >{location}</h1>
+                        <h1 className="placeholder-gray-600 w-[200px] cursor-pointer  text-sm text-center outline-none " >{location}</h1>
                     </button>
                 </div>
 
@@ -343,3 +359,4 @@ export const Gen_info_PART1 = () => {
         </div>
     )
 }
+

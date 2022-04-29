@@ -14,7 +14,7 @@ const VideoState = (props) => {
     const [nameTitle, setnameTitle] = useState('Mr.')
     const [fullname, setfullname] = useState('')
 
-    const [gender, setgender] = useState('')
+    const [gender, setgender] = useState('Male')
     const [email, setemail] = useState('')
 
     //Phone
@@ -24,7 +24,7 @@ const VideoState = (props) => {
     const [alternate_nameTitle, set_alternate__nameTitle] = useState('Mr.')
     const [alternate_fullname, setalternate_fullname] = useState('')
 
-    const [alternate_gender, set_alternate_gender] = useState('')
+    const [alternate_gender, set_alternate_gender] = useState('Male')
     const [alternate_email, set_alternate_email] = useState('')
 
     //AlternatePhone
@@ -38,6 +38,8 @@ const VideoState = (props) => {
     const [zipcode, setzipcode] = useState('')
     const [state, setstate] = useState('')
     const [country, setcountry] = useState('')
+    const [businessLogo, setbusinessLogo] = useState('')
+    const [bussinessImagesArray, setbussinessImagesArray] = useState([])
 
 
     // Location
@@ -49,31 +51,23 @@ const VideoState = (props) => {
     // PART - 2 ----------------------------------------------------------------------------------------------------
 
     const [bussinessHoursCreated, setbussinessHoursCreated] = useState([])
-    const [bussinessHours_AddbtnShow, setbussinessHours_AddbtnShow] = useState(true)
 
-
-
-    // Location
-    const [serviceRadius, setserviceRadius] = useState('')
+    // Distance
+    const [serviceRadius, setserviceRadius] = useState('<1')
     const [website, setwebsite] = useState('')
-
-
     // Toll free number
     const [tollfreenumber, settollfreenumber] = useState('')
-
-
 
     //Work number
     const [worknumber, setworknumber] = useState('')
 
     //Timing
-    const [yearsinbusuiness, setyearsinbusuiness] = useState('')
-    const [monthsinbusiness, setmonthsinbusiness] = useState('')
-    const [employees, setemployees] = useState('')
-    const [timezone, settimezone] = useState('')
+    const [yearsinbusuiness, setyearsinbusuiness] = useState('0')
+    const [monthsinbusiness, setmonthsinbusiness] = useState('1')
+    const [employees, setemployees] = useState('Solo')
+    const [timezone, settimezone] = useState('Eastern Time')
 
     // Radio Buttons
-
     const [remoteService, setremoteService] = useState(null)
     const [inStoreService, setinStoreService] = useState(null)
     const [houseCall, sethouseCall] = useState(null)
@@ -81,7 +75,7 @@ const VideoState = (props) => {
     const [bussinessService, setbussinessService] = useState(null)
 
 
-
+    
 
     return (
         <videosContext.Provider value={{
@@ -96,6 +90,8 @@ const VideoState = (props) => {
             alternate_email, set_alternate_email,
             alternatephone, setalternatephone,
             bussinessName, setbussinessName,
+            businessLogo, setbusinessLogo,
+            bussinessImagesArray, setbussinessImagesArray,
             street, setstreet,
             city, setcity,
             zipcode, setzipcode,
@@ -105,6 +101,22 @@ const VideoState = (props) => {
             latitude, setlatitude,
             longitude, setlongitude,
 
+
+
+            bussinessHoursCreated, setbussinessHoursCreated,
+            serviceRadius, setserviceRadius,
+            website, setwebsite,
+            tollfreenumber, settollfreenumber,
+            worknumber, setworknumber,
+            yearsinbusuiness, setyearsinbusuiness,
+            monthsinbusiness, setmonthsinbusiness,
+            employees, setemployees,
+            timezone, settimezone,
+            remoteService, setremoteService,
+            inStoreService, setinStoreService,
+            houseCall, sethouseCall,
+            pickNdrop, setpickNdrop,
+            bussinessService, setbussinessService,
         }}>
             {props.children}
         </videosContext.Provider>

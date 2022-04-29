@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {
     SearchIcon, LocationMarkerIcon, CheckIcon, XIcon, DeviceMobileIcon, HomeIcon
 } from '@heroicons/react/solid';
@@ -14,13 +14,33 @@ import { isUrlValid } from '../../utils/MerchantSignUp'
 import { validateEmail } from '../../utils/MerchantSignUp'
 import { hoursMenu } from '../../utils/MerchantSignUp'
 import Services from '../../components/Merchant/ServiceSignUp';
+import videosContext from '../../context/videos/videosContext';
+
 
 
 export const Gen_info_PART2 = () => {
 
 
+    const {
+        bussinessHoursCreated, setbussinessHoursCreated,
+        serviceRadius, setserviceRadius,
+        website, setwebsite,
+        tollfreenumber, settollfreenumber,
+        worknumber, setworknumber,
+        yearsinbusuiness, setyearsinbusuiness,
+        monthsinbusiness, setmonthsinbusiness,
+        employees, setemployees,
+        timezone, settimezone,
+        remoteService, setremoteService,
+        inStoreService, setinStoreService,
+        houseCall, sethouseCall,
+        pickNdrop, setpickNdrop,
+        bussinessService, setbussinessService,
+    } = useContext(videosContext)
 
-    const [bussinessHoursCreated, setbussinessHoursCreated] = useState([])
+
+
+
     const [bussinessHours_AddbtnShow, setbussinessHours_AddbtnShow] = useState(true)
     const removeBussinessHoursCreatedOnclick = (index) => {
         setbussinessHours_AddbtnShow(true)
@@ -30,22 +50,20 @@ export const Gen_info_PART2 = () => {
     }
 
 
-    // Location
-    const [serviceRadius, setserviceRadius] = useState('')
-    const [website, setwebsite] = useState('')
 
 
     // Toll free number
     const [tollfreenumber_firstblock, settollfreenumber_firstblock] = useState('800')
     const [tollfreenumberr_secondblock, settollfreenumber_secondblock] = useState('')
     const [tollfreenumberr_thirdblock, settollfreenumber_thirdblock] = useState('')
-
+    settollfreenumber(tollfreenumber_firstblock + tollfreenumberr_secondblock + tollfreenumberr_thirdblock)
 
 
     //Work number
     const [workNumber_firstblock, setworkNumber_firstblock] = useState('')
     const [workNumber_secondblock, setworkNumber_secondblock] = useState('')
     const [workNumber_thirdblock, setworkNumber_thirdblock] = useState('')
+    setworknumber(workNumber_firstblock + workNumber_secondblock + workNumber_thirdblock)
 
     //Timing
 
@@ -53,18 +71,6 @@ export const Gen_info_PART2 = () => {
     const [workingHoursFrom, setworkingHoursFrom] = useState('00:00')
     const [workingHoursTO, setworkingHoursTO] = useState('00:00')
 
-    const [yearsinbusuiness, setyearsinbusuiness] = useState('')
-    const [monthsinbusiness, setmonthsinbusiness] = useState('')
-    const [employees, setemployees] = useState('')
-    const [timezone, settimezone] = useState('')
-
-    // Radio Buttons
-
-    const [remoteService, setremoteService] = useState(null)
-    const [inStoreService, setinStoreService] = useState(null)
-    const [houseCall, sethouseCall] = useState(null)
-    const [pickNdrop, setpickNdrop] = useState(null)
-    const [bussinessService, setbussinessService] = useState(null)
 
     const maxLengthCheck = (object) => {
         if (object.target.value.length > object.target.maxLength) {
@@ -97,7 +103,7 @@ export const Gen_info_PART2 = () => {
             <div className='flex items-center justify-start my-4 m-2 '>
                 <span className="dot"></span>
                 <h1 className='w-[230px] mr-3'>Website Address</h1>
-                <input required className="inputtext w-[250px]  " onChange={e => { setwebsite(e.target.value); console.log(website); }} type="text" placeholder="Enter Address" />
+                <input className="inputtext w-[250px]  " onChange={e => { setwebsite(e.target.value); }} type="text" placeholder="Enter Address" />
                 <CheckIcon className={`${isUrlValid(website) ? "" : "hidden"} icon ml-2 text-green-500`} />
                 <XIcon className={`${isUrlValid(website) ? "hidden" : website.length > 5 ? "" : "hidden"} icon ml-2 text-red-500`} />
             </div>
@@ -116,7 +122,7 @@ export const Gen_info_PART2 = () => {
                 </select>
                 <span className='ml-2'>-</span>
                 <input
-                    required className="inputtext w-[60px]"
+                    className="inputtext w-[60px]"
                     type="number"
                     onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
                     placeholder="456"
@@ -127,7 +133,7 @@ export const Gen_info_PART2 = () => {
                 />
                 <span className='mx-1'>-</span>
                 <input
-                    required className="inputtext w-[70px]"
+                    className="inputtext w-[70px]"
                     type="number"
                     onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()}
                     placeholder="7890"
