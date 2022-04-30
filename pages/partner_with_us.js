@@ -7,11 +7,12 @@ import Services from '../components/Merchant/ServiceSignUp';
 import { Gen_info_PART1 } from '../components/Merchant/Gen_info_PART1';
 import { Gen_info_PART2 } from '../components/Merchant/Gen_info_PART2';
 import videosContext from '../context/videos/videosContext';
-import { contains } from 'jquery';
-
+import { ref, getDownloadURL, uploadBytes, getMetadata } from "firebase/storage";
+import { storage } from '../firebase';
 
 const MerchantSignUP = () => {
 
+    const [submitmessage, setsubmitmessage] = useState('')
     const {
         nameTitle, setnameTitle,
         fullname, setfullname,
@@ -50,6 +51,7 @@ const MerchantSignUP = () => {
         pickNdrop, setpickNdrop,
         bussinessService, setbussinessService,
     } = useContext(videosContext)
+
 
     const dataObjReady = {
         nameTitle,
@@ -91,10 +93,8 @@ const MerchantSignUP = () => {
     }
 
 
-
-    const handleOnSubmit = async () => {
-
-        const rawResponse = await fetch('/api/UploadMerchantSignUp', {
+    const handleOnSubmit = async (e) => {
+        const rawResponse = await fetch('/api/MerchantSignUpValidator', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -104,12 +104,85 @@ const MerchantSignUP = () => {
         });
         const content = await rawResponse.json();
         if (content.error) {
-            alert(content.error)
-        }else{
-            alert(content.message)
+            return alert(content.error)
+        }
+        try {
+            const response = await uploadImagesFirebase(businessLogo, bussinessImagesArray, email)
+            if (response.error) {
+                return
+            }
+            await finallyUploadDatato_MongoDB(response)
+            console.log('Images Uploaded to firebase Sucessfully!');
+        } catch (error) {
+            alert(error)
         }
 
     }
+
+
+    async function uploadImagesFirebase(businessLogo, bussinessImagesArray, email) {
+        var array = []
+
+        // Only for LOGO
+        if (!businessLogo) {
+            alert('Upload Business Logo image')
+            return { error: "Upload Image" }
+        }
+        const imageref = ref(storage, `Baldgnie_Merchants/images/logo`)
+        const metadata = {
+            contentType: 'image/jpeg',
+        };
+        await uploadBytes(imageref, businessLogo, metadata)
+        const logourl = await getDownloadURL(imageref)
+
+        if (!bussinessImagesArray) {
+            return { logo: logourl }
+        }
+
+        // For more Business Images
+        async function runCode(index) {
+
+            if (index < bussinessImagesArray.length) {
+                const imageref = ref(storage, `Baldgnie_Merchants/images/${'Image' + (index + 1).toString()}`)
+
+                await uploadBytes(imageref, bussinessImagesArray[index], metadata)
+                const url = await getDownloadURL(imageref)
+                // console.log(`Images-${index}  : ${url} `);
+                array.push(url)
+                await runCode(index + 1)
+                if (index === bussinessImagesArray.length - 1) {
+                }
+            }
+
+        }
+
+        await runCode(0)
+        return { logo: logourl, images: array }
+
+    }
+
+
+    const finallyUploadDatato_MongoDB = async (imageObj) => {
+        const Response = await fetch('/api/MerchantSignUpUpload', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ data: dataObjReady, images: imageObj })
+        });
+        const dataa = await Response.json();
+        if (dataa.error) {
+            return alert(dataa.error)
+        }
+        alert(dataa.message)
+
+       
+    }
+
+
+
+
 
 
 
@@ -130,7 +203,7 @@ const MerchantSignUP = () => {
 
             <Gen_info_PART1 />
             <Gen_info_PART2 />
-            <button onClick={handleOnSubmit} className="group mx-auto relative text-lg  flex justify-center py-2 px-8 border border-transparent  font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-14">Submit</button>
+            <button onClick={(e) => handleOnSubmit(e)} className="group mx-auto relative text-lg  flex justify-center py-2 px-8 border border-transparent  font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-14">Submit</button>
 
             <div className='mt-16'>
                 <Services />

@@ -6,18 +6,11 @@ const MerchantSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    firstName: {
+    fullname: {
         type: String,
         required: true
     },
-    middleName: {
-        type: String,
-        required: true
-    },
-    lastName: {
-        type: String,
-        required: true
-    },
+
     gender: {
         type: String,
         required: true
@@ -28,29 +21,22 @@ const MerchantSchema = new mongoose.Schema({
         unique: true
     },
     phone: {
-        type: Number,
+        type: String,
         required: true,
-        integer: true
     },
 
     //Alternate_Contact_details
 
     alternate_nameTitle: {
         type: String,
-        required: true
     },
-    alternate_firstName: {
+    alternate_fullname: {
         type: String,
-        required: true
     },
     alternate_middleName: {
         type: String,
-        required: true
     },
-    alternate_lastName: {
-        type: String,
-        required: true
-    },
+
     alternate_gender: {
         type: String,
         required: true
@@ -59,14 +45,25 @@ const MerchantSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    alternate_phone: {
-        type: Number,
+    alternatephone: {
+        type: String,
         required: true,
-        integer: true
     },
 
     // Bussiness Details
 
+    bussinessName: {
+        type: String,
+        required: true
+    },
+    businessLogo: {
+        type: String,
+        required: true
+    },
+    bussinessImagesArray: [{
+        type: String,
+        required: true
+    }],
     street: {
         type: String,
         required: true
@@ -76,9 +73,8 @@ const MerchantSchema = new mongoose.Schema({
         required: true
     },
     zipcode: {
-        type: Number,
+        type: String,
         required: true,
-        integer: true
     },
     state: {
         type: String,
@@ -88,10 +84,7 @@ const MerchantSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    alternate_phone: {
-        type: String,
-        required: true
-    },
+
 
     // Location
     latitude: {
@@ -108,36 +101,36 @@ const MerchantSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    serviceRadiusFrom: {
+    serviceRadius: {
         type: String,
         required: true
     },
-    zipcodesCovered: {
-        type: Number,
-        required: true,
-        integer: true
-    },
+
+    //Bussiness Hours Created
+
+    bussinessHoursCreated: [{
+        days: { type: String, required: true },
+        from_hours: { type: String, required: true },
+        to_hours: { type: String, required: true },
+    }],
+
     website: {
         type: String,
         required: true
     },
-    worknumber: {
-        type: Number,
+
+    tollfreenumber: {
+        type: String,
         required: true,
-        integer: true
+    },
+    worknumber: {
+        type: String,
+        required: true,
     },
 
     // Timing
 
-    workingdays: {
-        type: String,
-        required: true
-    },
-    workingHours: {
-        type: String,
-        required: true
-    },
-    workingMinutes: {
+    worknumber: {
         type: String,
         required: true
     },
@@ -153,9 +146,37 @@ const MerchantSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    timezone: {
+        type: String,
+        required: true
+    },
+
+
+    //Radio Buttons
+    remoteService: {
+        type: Boolean,
+        required: true
+    },
+    inStoreService: {
+        type: Boolean,
+        required: true
+    },
+    houseCall: {
+        type: Boolean,
+        required: true
+    },
+    pickNdrop: {
+        type: Boolean,
+        required: true
+    },
+    bussinessService: {
+        type: Boolean,
+        required: true
+    },
+
 
 }, { timestamps: true })
 
-let Dataset = mongoose.models.merchants || mongoose.model('merchants', MerchantSchema)
+let Merchants = mongoose.models.merchants || mongoose.model('merchants', MerchantSchema)
 
-export default Dataset;
+export default Merchants;

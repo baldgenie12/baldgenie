@@ -1,7 +1,7 @@
-import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
-import { storage } from '../../firebase';
+
 
 export default async function handler(req, res) {
+
 
     const {
         nameTitle,
@@ -15,8 +15,6 @@ export default async function handler(req, res) {
         alternate_email,  //Not Mandatory
         alternatephone,   //Not Mandatory
         bussinessName,
-        businessLogo,
-        bussinessImagesArray,
         street,
         city,
         zipcode,
@@ -42,6 +40,8 @@ export default async function handler(req, res) {
         bussinessService
     } = req.body;
 
+
+
     if (!fullname) {
         return res.status(400).json({ error: 'Enter Primary Name..' })
     }
@@ -63,10 +63,7 @@ export default async function handler(req, res) {
     if (!bussinessName) {
         return res.status(400).json({ error: 'Enter Business Name..' })
     }
-    if (!businessLogo) {
-        return res.status(400).json({ error: 'Add Logo for your bussiness' })
-    }
-
+   
     if (!street) {
         return res.status(400).json({ error: 'Enter Street name in address' })
     }
@@ -118,55 +115,6 @@ export default async function handler(req, res) {
     }
 
 
-    uploadImagesFirebase(businessLogo, bussinessImagesArray, email)
-
-
-
     return res.status(200).json({ message: "Sucessfull" })
 
-}
-
-
-
-const uploadImagesFirebase = (businessLogo, bussinessImagesArray, email ,) => {
-    var array = []
-    
-    // Only for LOGO
-    const imageref = ref(storage, `Baldgnie_Merchants/${email}/logo`)
-    uploadBytes(imageref, businessLogo).then(() => {
-        getDownloadURL(imageref).then((url_link) => {
-            setbusinessLogo(url_link)
-        }).catch(error => {
-            console.log(error);
-        })
-
-    }).catch(error => {
-        console.log(error);
-    })
-
-    // For more Business Images
-    function runCode(index) {
-        if (index < bussinessImagesArray.length) {
-            const imageref = ref(storage, `Baldgnie_Merchants/${email}/${'Image' + (index + 1).toString()}`)
-            uploadBytes(imageref, bussinessImagesArray[index]).then(() => {
-                getDownloadURL(imageref).then((url_link) => {
-                    array.push(url_link)
-                    runCode(index + 1)
-                    if (index === bussinessImagesArray.length - 1) {
-                        setbussinessImagesArray(array)
-                        console.log('Images Uploaded to firebase Sucessfully!');
-                    }
-
-                }).catch(error => {
-                    console.log(error);
-                })
-
-            }).catch(error => {
-                console.log(error);
-            })
-        }
-
-    }
-
-    runCode(0)
 }

@@ -43,21 +43,6 @@ function showError(error) {
 
 export const Gen_info_PART1 = () => {
 
- 
-
-    const handleOnchangeImages = (e) => {
-        var array = []
-        for (let index = 0; index < e.target.files.length; index++) {
-            array.push(e.target.files[index])
-        }
-        setbussinessImagesArray(array)
-    }
-
-
-    
-
-
-
     const {
         nameTitle, setnameTitle,
         fullname, setfullname,
@@ -82,6 +67,23 @@ export const Gen_info_PART1 = () => {
         longitude, setlongitude
     } = useContext(videosContext)
 
+
+    const handleOnchangeImages = (e) => {
+        var array = []
+        for (let index = 0; index < e.target.files.length; index++) {
+            array.push(e.target.files[index])
+        }
+        setbussinessImagesArray(array)
+
+    }
+
+
+
+    
+
+
+
+   
     //Name
     const [firstName, setfirstName] = useState('')
     const [middleName, setmiddleName] = useState('')
