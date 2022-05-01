@@ -1,3 +1,4 @@
+import Merchants from "../../MongoDatabaseModels/MerchantModel";
 
 
 export default async function handler(req, res) {
@@ -37,9 +38,53 @@ export default async function handler(req, res) {
         inStoreService,
         houseCall,
         pickNdrop,
-        bussinessService
+        bussinessService,
+
+        Computer_Hardware_Support_Context,
+        Computer_Software_Support_Context,
+        Printers_Context,
+        WiFi_Networking_Context,
+        Mobiles_SoftWare_Context,
+        Mobiles_Hardware_Context,
+        Audio_Video_Context,
+
+        Smart_Home_Thermostats_Context,
+        Smart_Home_Video_Doorbells_Context,
+        Smart_Home_Garage_Doors_Context,
+
+        TV_Mounting_Context,
+
+        Home_Security_Cameras_Context,
+        Home_Security_Locks_Context,
+        Home_Security_Alarms_Context,
     } = req.body;
 
+
+
+    const rough = [Computer_Hardware_Support_Context,
+        Computer_Software_Support_Context,
+        Printers_Context,
+        WiFi_Networking_Context,
+        Mobiles_SoftWare_Context,
+        Mobiles_Hardware_Context,
+        Audio_Video_Context,
+
+        Smart_Home_Thermostats_Context,
+        Smart_Home_Video_Doorbells_Context,
+        Smart_Home_Garage_Doors_Context,
+
+        Home_Security_Cameras_Context,
+        Home_Security_Locks_Context,
+        Home_Security_Alarms_Context,]
+
+
+    let allServices = []
+
+    rough.forEach(item => {
+        if (item.length > 0) {
+            allServices.push(item)
+        }
+    })
 
 
     if (!fullname) {
@@ -63,7 +108,7 @@ export default async function handler(req, res) {
     if (!bussinessName) {
         return res.status(400).json({ error: 'Enter Business Name..' })
     }
-   
+
     if (!street) {
         return res.status(400).json({ error: 'Enter Street name in address' })
     }
@@ -115,6 +160,58 @@ export default async function handler(req, res) {
     }
 
 
+    servicesValidator(allServices, TV_Mounting_Context, res)
+
+
+
+    const alreadyRegistered = await Merchants.findOne({ email })
+    if (alreadyRegistered) {
+        res.status(400).json({ error: "Already registered with this E-Mail" })
+        return
+    }
+
+
+
     return res.status(200).json({ message: "Sucessfull" })
 
 }
+
+
+function servicesValidator(allServices, TV_Mounting_Context, res) {
+
+    let selectedServicesCategory = []
+
+    if (allServices.length < 1 && TV_Mounting_Context.length < 1) {
+        res.status(200).json({ error: "Atleast Select anyone services" })
+        return
+    }
+
+    allServices.forEach(subcategory => {
+        subcategory.forEach(item => {
+            selectedServicesCategory.push(item.category)
+            if (item.feeType.length < 1) {
+                res.status(400).json({ error: `Select Fee Type of ${item.servicename}` })
+                return
+            }
+            if (item.feeType != "custom") {
+                if (item.amount.length < 1) {
+                    res.status(400).json({ error: `Enter Fee Amount of ${item.servicename}` })
+                    return
+                }
+            }
+        })
+    });
+
+
+
+
+    // This is categories user Selected for service  all unique
+    let uniqueCategoriesSelected = [...new Set(selectedServicesCategory)];
+
+
+    //Beautify data for adding in database
+    var packedData = []
+
+    // console.log(uniqueCategoriesSelected);
+}
+

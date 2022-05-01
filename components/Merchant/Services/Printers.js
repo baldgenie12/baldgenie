@@ -1,37 +1,28 @@
 import React, { useContext, useState } from 'react'
-import { Smart_Home_Garage_Doors } from '../../../utils/ServicesCategories'
+import { Printers } from '../../../utils/ServicesCategories'
 import videosContext from '../../../context/videos/videosContext'
 
+export const Printer = () => {
+    const CATEGORY ='Printers_Context'
 
-export const Smarthome_GarageDoor = () => {
-    const CATEGORY ='Smart_Home_Garage_Doors_Context'
-
-    const { setSmart_Home_Garage_Doors_Context } = useContext(videosContext)
+    const { setPrinters_Context } = useContext(videosContext)
     const [servicesArray, setservicesArray] = useState([])
 
 
     const stateObj = [
+        { category: "Printers_Context", servicename: 'New Printer Setup', selected: false, amount: '' },
         {
-            category: "Smart_Home_Garage_Doors_Context", servicename: 'Smart Garage Installation',
+            category: "Printers_Context", servicename: 'Wireless Printer Support',
             selected: false,
             amount: ''
         },
-        { category: "Smart_Home_Garage_Doors_Context", servicename: 'Smart Garage Support', selected: false, amount: '' },
+        { category: "Printers_Context", servicename: 'Printer Offline Fix', selected: false, amount: '' },
         {
-            category: "Smart_Home_Garage_Doors_Context", servicename: 'Smart Hub or Speaker Setup',
-            selected: false,
-            amount: ''
-        },
-        {
-            category: "Smart_Home_Garage_Doors_Context", servicename: 'Smart Hub or Speaker Support',
+            category: "Printers_Context", servicename: 'Printer Hardware Repair',
             selected: false,
             amount: ''
         }
     ]
-
-
-
-
 
     const [allState, setallState] = useState(stateObj)
 
@@ -125,40 +116,46 @@ export const Smarthome_GarageDoor = () => {
 
     const setDataToContext = () => {
 
-        setSmart_Home_Garage_Doors_Context([...servicesArray])
+        setPrinters_Context([...servicesArray])
     }
+
 
     return (
         <div>
-            <h1 className='my-6 text-lg font-semibold'>Garage Doors</h1>
 
-            {/* ServiceItems */}
-            {Smart_Home_Garage_Doors.map((subcategory, index) => {
-                return (
-                    <div key={subcategory} className='category'>
-                        <input onChange={e => { onChangeClick(e, index) }} className='scale-150' type="checkbox" id={subcategory} name={subcategory} />
-                        <h1 className=' w-[250px] mr-3'>{subcategory}</h1>
-                        <div className={`${allState[index].selected ? "" : "hidden"} subcategory`}>
-                            <div className='flex items-center space-x-2'>
-                                <input onChange={(e) => { inputRadioHandler_onChange(e) }} type="radio" className='radio' id="flat" name={subcategory} />
-                                <p>Flat Fee </p>
-                                <input onChange={(e) => { inputAmountHandler_onChange(e, index) }} value={allState[index].amount} id="flat" name={subcategory} type="number" onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className={`inputtext w-[120px] ${checkAmount(subcategory, "flat") ? "" : "hidden"}`} placeholder="Enter Amount" />
-                            </div>
-                            <div className='flex items-center space-x-2'>
-                                <input onChange={(e) => { inputRadioHandler_onChange(e) }} type="radio" className='radio' id="hourly" name={subcategory} />
-                                <p>Hourly Fee </p>
-                                <input onChange={(e) => { inputAmountHandler_onChange(e, index) }} value={allState[index].amount} id="hourly" name={subcategory} type="number" onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className={`inputtext w-[120px] ${checkAmount(subcategory, "hourly") ? "" : "hidden"}`} placeholder="Enter Amount" />
+            <h1 className='text-xl font-semibold mt-10 mb-8'>Printers:</h1>
+            <div>
 
+
+                {/* ServiceItems */}
+                {Printers.map((subcategory, index) => {
+                    return (
+                        <div key={subcategory} className='category'>
+                            <input onChange={e => { onChangeClick(e, index) }} className='scale-150' type="checkbox" id={subcategory} name={subcategory} />
+                            <h1 className=' w-[250px] mr-3'>{subcategory}</h1>
+                            <div className={`${allState[index].selected ? "" : "hidden"} subcategory`}>
+                                <div className='flex items-center space-x-2'>
+                                    <input onChange={(e) => { inputRadioHandler_onChange(e) }} type="radio" className='radio' id="flat" name={subcategory} />
+                                    <p>Flat Fee </p>
+                                    <input onChange={(e) => { inputAmountHandler_onChange(e, index) }} value={allState[index].amount} id="flat" name={subcategory} type="number" onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className={`inputtext w-[120px] ${checkAmount(subcategory, "flat") ? "" : "hidden"}`} placeholder="Enter Amount" />
+                                </div>
+                                <div className='flex items-center space-x-2'>
+                                    <input onChange={(e) => { inputRadioHandler_onChange(e) }} type="radio" className='radio' id="hourly" name={subcategory} />
+                                    <p>Hourly Fee </p>
+                                    <input onChange={(e) => { inputAmountHandler_onChange(e, index) }} value={allState[index].amount} id="hourly" name={subcategory} type="number" onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} className={`inputtext w-[120px] ${checkAmount(subcategory, "hourly") ? "" : "hidden"}`} placeholder="Enter Amount" />
+
+                                </div>
+                                <div className='flex items-center space-x-2'>
+                                    <input onChange={(e) => { inputRadioHandler_onChange(e) }} type="radio" className='radio' id="custom" name={subcategory} />
+                                    <p>Custom Fee </p>
+                                </div>
                             </div>
-                            <div className='flex items-center space-x-2'>
-                                <input onChange={(e) => { inputRadioHandler_onChange(e) }} type="radio" className='radio' id="custom" name={subcategory} />
-                                <p>Custom Fee </p>
-                            </div>
+
                         </div>
+                    )
+                })}
 
-                    </div>
-                )
-            })}
+            </div>
 
         </div>
     )

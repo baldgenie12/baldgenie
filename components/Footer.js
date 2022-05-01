@@ -21,7 +21,7 @@ function Footer() {
 
     return (
 
-        <footer className={``}>
+        <footer className={`hidden`}>
             <div className='flex bg-gray-800 p-6 flex-col md:flex-row items-center justify-center space-y-4 md:justify-around '>
 
                 <div>

@@ -1,31 +1,32 @@
-import React, { useState, useContext } from 'react'
-import { WiFi_Networking } from '../../../utils/ServicesCategories'
+import React, { useContext, useState } from 'react'
+import { Home_Security_Locks } from '../../../utils/ServicesCategories'
 import videosContext from '../../../context/videos/videosContext'
 
 
+export const Home_Security_Lock = () => {
 
+    const CATEGORY ='Home_Security_Locks_Context'
 
-
-export const WifiandNetwork = () => {
-
-    const CATEGORY = 'WiFi_Networking_Context'
-
-    const { setWiFi_Networking_Context } = useContext(videosContext)
+    const { setHome_Security_Locks_Context } = useContext(videosContext)
     const [servicesArray, setservicesArray] = useState([])
 
-    const stateObj = [
-        {
-            category: "WiFi_Networking_Context", servicename: 'New WiFi Connection Setup',
-            selected: false,
-            amount: ''
-        },
-        {
-            category: "WiFi_Networking_Context", servicename: 'WiFi & Network Support',
-            selected: false,
-            amount: ''
-        },
 
-    ]
+    const stateObj =[
+       { category:"Home_Security_Locks_Context", servicename: 'Smart Security Lock Installation',
+          selected: false,
+          amount: ''
+        },
+       { category:"Home_Security_Locks_Context", servicename: 'Smart Security Lock Support',
+          selected: false,
+          amount: ''
+        }
+      ]
+    
+
+
+
+
+
 
     const [allState, setallState] = useState(stateObj)
 
@@ -43,7 +44,7 @@ export const WifiandNetwork = () => {
 
         if (e.target.checked && !itemPresent) {
             servicesArray.push({
-                category: CATEGORY, servicename: e.target.name.trim(),
+                category:CATEGORY,servicename: e.target.name.trim(),
                 feeType: "",
                 amount: ""
             })
@@ -119,18 +120,15 @@ export const WifiandNetwork = () => {
 
     const setDataToContext = () => {
 
-        setWiFi_Networking_Context([...servicesArray])
+        setHome_Security_Locks_Context([...servicesArray])
     }
-
-
-
     return (
         <div>
-
-            <h1 className='my-6 mt-14 text-xl font-semibold'>Wifi and Network:</h1>
+            <h1 className='my-6 mt-14 text-lg font-semibold'>Home Security:</h1>
+            <h1 className='my-6 text-lg font-semibold'>Locks</h1>
 
             {/* ServiceItems */}
-            {WiFi_Networking.map((subcategory, index) => {
+            {Home_Security_Locks.map((subcategory, index) => {
                 return (
                     <div key={subcategory} className='category'>
                         <input onChange={e => { onChangeClick(e, index) }} className='scale-150' type="checkbox" id={subcategory} name={subcategory} />
@@ -157,6 +155,6 @@ export const WifiandNetwork = () => {
                 )
             })}
 
-        </div>
+        </div >
     )
 }

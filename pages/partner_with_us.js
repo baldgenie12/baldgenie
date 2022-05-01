@@ -9,10 +9,35 @@ import { Gen_info_PART2 } from '../components/Merchant/Gen_info_PART2';
 import videosContext from '../context/videos/videosContext';
 import { ref, getDownloadURL, uploadBytes, getMetadata } from "firebase/storage";
 import { storage } from '../firebase';
+import { BeatLoader } from 'react-spinners';
+
 
 const MerchantSignUP = () => {
 
-    const [submitmessage, setsubmitmessage] = useState('')
+    const [loading, setloading] = useState(false)
+
+    const {
+        Computer_Hardware_Support_Context,
+        Computer_Software_Support_Context,
+        Printers_Context,
+        WiFi_Networking_Context,
+        Mobiles_SoftWare_Context,
+        Mobiles_Hardware_Context,
+        Audio_Video_Context,
+
+        Smart_Home_Thermostats_Context,
+        Smart_Home_Video_Doorbells_Context,
+        Smart_Home_Garage_Doors_Context,
+
+        TV_Mounting_Context,
+
+        Home_Security_Cameras_Context,
+        Home_Security_Locks_Context,
+        Home_Security_Alarms_Context,
+
+    } = useContext(videosContext)
+
+
     const {
         nameTitle, setnameTitle,
         fullname, setfullname,
@@ -89,7 +114,25 @@ const MerchantSignUP = () => {
         inStoreService,
         houseCall,
         pickNdrop,
-        bussinessService
+        bussinessService,
+
+        Computer_Hardware_Support_Context,
+        Computer_Software_Support_Context,
+        Printers_Context,
+        WiFi_Networking_Context,
+        Mobiles_SoftWare_Context,
+        Mobiles_Hardware_Context,
+        Audio_Video_Context,
+
+        Smart_Home_Thermostats_Context,
+        Smart_Home_Video_Doorbells_Context,
+        Smart_Home_Garage_Doors_Context,
+
+        TV_Mounting_Context,
+
+        Home_Security_Cameras_Context,
+        Home_Security_Locks_Context,
+        Home_Security_Alarms_Context,
     }
 
 
@@ -106,6 +149,8 @@ const MerchantSignUP = () => {
         if (content.error) {
             return alert(content.error)
         }
+        setloading(true)
+
         try {
             const response = await uploadImagesFirebase(businessLogo, bussinessImagesArray, email)
             if (response.error) {
@@ -113,6 +158,8 @@ const MerchantSignUP = () => {
             }
             await finallyUploadDatato_MongoDB(response)
             console.log('Images Uploaded to firebase Sucessfully!');
+            setloading(false)
+
         } catch (error) {
             alert(error)
         }
@@ -163,13 +210,16 @@ const MerchantSignUP = () => {
 
 
     const finallyUploadDatato_MongoDB = async (imageObj) => {
+
+        const getServiceData = servicesDataProcessing()
+
         const Response = await fetch('/api/MerchantSignUpUpload', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ data: dataObjReady, images: imageObj })
+            body: JSON.stringify({ data: dataObjReady, images: imageObj, seviceData: getServiceData })
         });
         const dataa = await Response.json();
         if (dataa.error) {
@@ -177,11 +227,46 @@ const MerchantSignUP = () => {
         }
         alert(dataa.message)
 
-       
+
     }
 
 
+    function servicesDataProcessing() {
+        let rough = [Computer_Hardware_Support_Context,
+            Computer_Software_Support_Context,
+            Printers_Context,
+            WiFi_Networking_Context,
+            Mobiles_SoftWare_Context,
+            Mobiles_Hardware_Context,
+            Audio_Video_Context,
 
+            Smart_Home_Thermostats_Context,
+            Smart_Home_Video_Doorbells_Context,
+            Smart_Home_Garage_Doors_Context,
+
+            Home_Security_Cameras_Context,
+            Home_Security_Locks_Context,
+            Home_Security_Alarms_Context,]
+
+
+        let allServicess = []
+
+        rough.forEach(array => {
+            if (array.length > 0) {
+                allServicess.push(array)
+            }
+        })
+        let selectedServicesCategory = []
+        allServicess.forEach(subcategory => {
+            subcategory.forEach(item => {
+                selectedServicesCategory.push(item.category)
+            })
+        });
+        let uniqueCategoriesSelectedd = [...new Set(selectedServicesCategory)];
+
+
+        return { allServices: allServicess, uniqueCategoriesSelected: uniqueCategoriesSelectedd }
+    }
 
 
 
@@ -203,10 +288,17 @@ const MerchantSignUP = () => {
 
             <Gen_info_PART1 />
             <Gen_info_PART2 />
-            <button onClick={(e) => handleOnSubmit(e)} className="group mx-auto relative text-lg  flex justify-center py-2 px-8 border border-transparent  font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-14">Submit</button>
 
             <div className='mt-16'>
                 <Services />
+            </div>
+            <div className='flex items-center justify-center w-fit mx-auto space-x-3'>
+                <div className={`${loading ? "hidden" : ""}  `}>
+                    <button onClick={(e) => handleOnSubmit(e)} className="group mx-auto relative text-lg  flex justify-center py-2 px-8 border border-transparent  font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ">Submit</button>
+                </div>
+                <div className={`${loading ? "" : "hidden"} w-20 `}>
+                    <BeatLoader loading size={20} color={'blue'} />
+                </div>
             </div>
         </div>
     )

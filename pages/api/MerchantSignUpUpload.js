@@ -38,15 +38,18 @@ export default async function handler(req, res) {
         inStoreService,
         houseCall,
         pickNdrop,
-        bussinessService
+        bussinessService,
     } = req.body.data;
+
+
+    const { allServices, uniqueCategoriesSelected } = req.body.seviceData
 
 
     const { logo, images } = req.body.images;
     const businessLogo = logo;
     const bussinessImagesArray = images;
 
- 
+
 
     const packedData = {
         nameTitle: nameTitle,
@@ -60,8 +63,8 @@ export default async function handler(req, res) {
         alternate_email: alternate_email,
         alternatephone: alternatephone,
         bussinessName: bussinessName,
-        businessLogo:businessLogo,
-        bussinessImagesArray:bussinessImagesArray,
+        businessLogo: businessLogo,
+        bussinessImagesArray: bussinessImagesArray,
         street: street,
         city: city,
         zipcode: zipcode,
@@ -85,16 +88,19 @@ export default async function handler(req, res) {
         houseCall: houseCall,
         pickNdrop: pickNdrop,
         bussinessService: bussinessService,
+        uniqueCategoriesSelected: uniqueCategoriesSelected,
+        allServices: allServices,
+
     }
 
- 
 
+    console.log(packedData);
 
     const user = new Merchants(packedData)
     await user.save()
     console.log("Data Submitted");
 
 
-    return res.status(200).json({ message: "All good" })
+    return res.status(200).json({ message: "Data Uploaded" })
 
 }

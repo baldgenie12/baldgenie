@@ -1,31 +1,43 @@
-import React, { useState, useContext } from 'react'
-import { WiFi_Networking } from '../../../utils/ServicesCategories'
+import React, { useContext, useState } from 'react'
+import { Audio_Video } from '../../../utils/ServicesCategories'
 import videosContext from '../../../context/videos/videosContext'
 
 
+export const AudioVideo = () => {
+    const CATEGORY ='Home_Security_Alarms_Context'
 
-
-
-export const WifiandNetwork = () => {
-
-    const CATEGORY = 'WiFi_Networking_Context'
-
-    const { setWiFi_Networking_Context } = useContext(videosContext)
+    const { setAudio_Video_Context } = useContext(videosContext)
     const [servicesArray, setservicesArray] = useState([])
 
-    const stateObj = [
-        {
-            category: "WiFi_Networking_Context", servicename: 'New WiFi Connection Setup',
-            selected: false,
-            amount: ''
-        },
-        {
-            category: "WiFi_Networking_Context", servicename: 'WiFi & Network Support',
-            selected: false,
-            amount: ''
-        },
 
+    const stateObj = [
+        { category:"Home_Security_Alarms_Context", servicename: 'Home Theater Hook-up & Setup',
+            selected: false,
+            amount: ''
+        },
+        { category:"Home_Security_Alarms_Context", servicename: 'Surround Sound System Setup',
+            selected: false,
+            amount: ''
+        },
+     
+        { category:"Home_Security_Alarms_Context", servicename: 'Universal Remote Setup',
+            selected: false,
+            amount: ''
+        },
+        { category:"Home_Security_Alarms_Context", servicename: 'TV & Home Theater Support',
+            selected: false,
+            amount: ''
+        },
+        { category:"Home_Security_Alarms_Context", servicename: 'Home Stereo Connectivity Support',
+            selected: false,
+            amount: ''
+        }
     ]
+
+
+
+
+
 
     const [allState, setallState] = useState(stateObj)
 
@@ -43,7 +55,7 @@ export const WifiandNetwork = () => {
 
         if (e.target.checked && !itemPresent) {
             servicesArray.push({
-                category: CATEGORY, servicename: e.target.name.trim(),
+                category:CATEGORY,servicename: e.target.name.trim(),
                 feeType: "",
                 amount: ""
             })
@@ -119,18 +131,15 @@ export const WifiandNetwork = () => {
 
     const setDataToContext = () => {
 
-        setWiFi_Networking_Context([...servicesArray])
+        setAudio_Video_Context([...servicesArray])
     }
-
-
 
     return (
         <div>
-
-            <h1 className='my-6 mt-14 text-xl font-semibold'>Wifi and Network:</h1>
+            <h1 className='my-6 text-xl font-semibold'>Audio & Video:</h1>
 
             {/* ServiceItems */}
-            {WiFi_Networking.map((subcategory, index) => {
+            {Audio_Video.map((subcategory, index) => {
                 return (
                     <div key={subcategory} className='category'>
                         <input onChange={e => { onChangeClick(e, index) }} className='scale-150' type="checkbox" id={subcategory} name={subcategory} />

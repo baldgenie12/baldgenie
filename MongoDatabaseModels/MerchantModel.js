@@ -1,4 +1,6 @@
 import mongoose from 'mongoose'
+import connectDB from '../pages/api/auth/lib/connectDB'
+connectDB()
 
 
 const MerchantSchema = new mongoose.Schema({
@@ -43,11 +45,9 @@ const MerchantSchema = new mongoose.Schema({
     },
     alternate_email: {
         type: String,
-        required: true
     },
     alternatephone: {
         type: String,
-        required: true,
     },
 
     // Bussiness Details
@@ -116,7 +116,6 @@ const MerchantSchema = new mongoose.Schema({
 
     website: {
         type: String,
-        required: true
     },
 
     tollfreenumber: {
@@ -173,6 +172,28 @@ const MerchantSchema = new mongoose.Schema({
         type: Boolean,
         required: true
     },
+
+
+
+
+
+    //--------------------------------Serives-------------------------------------------------------//
+
+    uniqueCategoriesSelected: [{type: String}],
+
+
+    allServices: [
+        [
+            {
+                category: { type: String, },
+                servicename: { type: String, },
+                feeType: { type: String, },
+                amount: { type: String, },
+            },
+        ],
+    ]
+
+
 
 
 }, { timestamps: true })

@@ -79,11 +79,11 @@ export const Gen_info_PART1 = () => {
 
 
 
-    
 
 
 
-   
+
+
     //Name
     const [firstName, setfirstName] = useState('')
     const [middleName, setmiddleName] = useState('')
@@ -328,7 +328,7 @@ export const Gen_info_PART1 = () => {
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3'>Business Images</h1>
-                    <input name='images' onChange={handleOnchangeImages}  className="inputtext w-[250px]  " type="file" multiple accept="image/*" />
+                    <input name='images' onChange={handleOnchangeImages} className="inputtext w-[250px]  " type="file" multiple accept="image/*" />
 
                     <p className='ml-2 text-sm text-gray-600'>(Upto 20 Images)</p>
 
@@ -341,7 +341,8 @@ export const Gen_info_PART1 = () => {
 
                     <input required className="inputtext w-[200px]  " onChange={e => setstreet(e.target.value)} type="text" placeholder="Street" />
                     <input required className="inputtext w-[100px] ml-2 " onChange={e => setcity(e.target.value)} type="text" placeholder="City" />
-                    <input required className="inputtext w-[100px] ml-2 " onChange={e => setzipcode(e.target.value)} type="number" onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="Zip Code" />
+                    <input required maxLength='5' className="inputtext w-[100px] ml-2 " onChange={e => setzipcode(e.target.value)} type="number" onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} placeholder="Zip Code" onInput={maxLengthCheck}
+                    />
                     <input required className="inputtext w-[100px] ml-2 " onChange={e => setstate(e.target.value)} type="text" placeholder="State" />
                     <input required className="inputtext w-[100px] ml-2 " onChange={e => setcountry(e.target.value)} type="text" placeholder="Country" />
                 </div>
