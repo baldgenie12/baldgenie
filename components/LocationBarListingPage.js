@@ -11,17 +11,51 @@ import { useRouter } from 'next/router'
 import { LoremIpsum } from 'react-lorem-ipsum';
 import Navbar from '../components/Navbar';
 import videosContext from '../context/videos/videosContext'
+import { signIn, signOut, useSession } from "next-auth/react"
 
 export const LocationBar = () => {
 
-    // const { location, setlocation } = useContext(videosContext);
-    const [locationstate, setlocationstate] = useState('')
+    const router = useRouter()
+    const { data: session, status } = useSession()
+     // const { location, setlocation } = useContext(videosContext);
+     const [locationstate, setlocationstate] = useState('')
+     const [loading, setloading] = useState(false)
+     const [zipcodeState, setzipcodeState] = useState(1)
+     const [locationErrorMsg, setlocationErrorMsg] = useState('')
+     useEffect(() => {
+
+        const localStorage_location = JSON.parse(localStorage.getItem("location"))
+        try {
+            if (localStorage_location) {
+                const part = localStorage_location.plus_code.compound_code.trim()
+                const index = part.indexOf(" ")
+                const part2 = part.substring(index, part.length)
+                setlocationstate(part2)
+                setloading(false)
+                return
+            }
+        } catch (error) {
+
+        }
+
+    }, [])
 
 
-    const [loading, setloading] = useState(false)
+    if (status === "authenticated") {
+        return (
+            <div className='m-1 flex items-center justify-end text-white'>
+                <p className='p-1 px-4 font-semibold bg-theme border-2 rounded-lg text-xs md:text-md'  >
+                    {session.user.name}</p >
+                <Link href='/api/auth/signout'>
+                    <a className='p-1 px-4 font-semibold bg-theme border-2 rounded-lg  hover:bg-blue-600 text-xs md:text-md' onClick={(e) => { e.preventDefault(); signOut() }} >
+                        Sign Out
+                    </a>
+                </Link>
+            </div>
+        )
+    }
 
-    const [zipcodeState, setzipcodeState] = useState(1)
-    const [locationErrorMsg, setlocationErrorMsg] = useState('')
+   
     function showError(error) {
         switch (error.code) {
             case error.PERMISSION_DENIED:
@@ -46,23 +80,7 @@ export const LocationBar = () => {
         }
     }
 
-    useEffect(() => {
 
-        const localStorage_location = JSON.parse(localStorage.getItem("location"))
-        try {
-            if (localStorage_location) {
-                const part = localStorage_location.plus_code.compound_code.trim()
-                const index = part.indexOf(" ")
-                const part2 = part.substring(index, part.length)
-                setlocationstate(part2)
-                setloading(false)
-                return
-            }
-        } catch (error) {
-
-        }
-
-    }, [])
 
 
 
@@ -142,18 +160,18 @@ export const LocationBar = () => {
         fetchData()
     }
     return (
-        <div className='lg:w-4/5 lg:mx-auto font-theme  '>  {/* Location and Search Services  */}
+        <div className=' lg:mx-auto font-theme md:flex items-center justify-between  '>  {/* Location and Search Services  */}
 
+           
 
-
-            <div className='grow lg:w-[850px] bg-white py-1 md:py-0 pl-2 md:h-[46px] flex flex-col  md:flex-row    my-2  rounded-[8px] shadow-xl   md:mx-auto   md:justify-between text-xs  lg:items-center   '>
+            <div className='grow pl-2 py-1 md:py-0 lg:h-[46px]  flex flex-col  lg:flex-row    my-2  rounded-[8px] shadow-xl   mx-auto   md:justify-between text-xs '>
 
                 <div className=' h-6 flex items-center  space-x-1  p-1  my-2 md:border-r-2 border-gray-400 pr-2 lg:pr-4  '>
-                <img src='/location.png' className=' lg:mx-3 w-[17px] h-[24px] border-b-[3px] border-gray-200' />
+                    <img src='/location.png' className=' lg:mx-3 w-[17px] h-[24px] border-b-[3px] border-gray-200  ' />
                     {locationstate &&
-                        <div className=' flex w-full justify-between md:justify-start items-center '>
-                            <p className='overflow-hidden  whitespace-nowrap  text-[14px] font-footer pl-2'>{locationstate}</p>
-                            <button onClick={() => { setlocationstate(null) }} className={` text-[16px] font-footer p-1 px-4 bg-theme border-2 rounded-lg  hover:bg-blue-600 text-white ${loading ? "hidden" : ""} ml-4 `}>Change</button>
+                        <div className=' flex w-full justify-between lg:justify-start items-center '>
+                            <p className='overflow-hidden  whitespace-nowrap  text-[14px] font-footer pl-2 '>{locationstate}</p>
+                            <button onClick={() => { setlocationstate(null) }} className={` text-[12px] font-footer p-1 px-4 bg-theme border-2 rounded-lg  hover:bg-blue-600 text-white ${loading ? "hidden" : ""} ml-4 `}>Change</button>
                         </div>
                     }
 
@@ -183,6 +201,22 @@ export const LocationBar = () => {
                 </div>
             </div>
 
+            <div className='hidden xl:flex'>
+                {!session &&
+                    <div className=' m-1 mx-auto lg:ml-12  flex items-center justify-end text-white font-semibold' >
+
+                        <h2 onClick={() => router.push('/partner_with_us')} className='cursor-pointer p-1 px-2 bg-theme border-2 rounded-lg text-[12px] md:text-md font-extralight  hover:bg-blue-600'>
+                            List your bussiness
+                        </h2>
+                        <h2 onClick={() => signIn()} className='cursor-pointer p-1 px-2 bg-theme border-2 rounded-lg text-[12px] md:text-md font-extralight  hover:bg-blue-600'>
+                            Sign In
+                        </h2>
+
+
+                    </div>
+                }
+
+            </div>
         </div>
     )
 }

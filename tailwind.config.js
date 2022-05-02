@@ -24,14 +24,28 @@ module.exports = {
       colors: {
         'github': '#24292F',
         'theme':'#00AEEF',
-        'category':'#525252'
+        'category':'#525252',
+
+        //Filterbar
+        'color_filterSidebarHead':'#3F3F3F',
+        'color_filterSidebar':'#605F5F',
+        'color_filterSidebar_priceInput':'#636363',
+        'color_filterSidebar_InputBorder':'#8C8C8C',
+        'color_filterSidebar_GoTbtn':'#4E4E4E',
+        'starcolor':'#F8B84E',
+        'starcolorgrey':'#C9C9C9',
+
+        //Listing page scrollable category
+        
+        'scrollbaleitem':'#454444',
+
 
       },
       fontFamily: {
         body: ['Pushster'],
         footer: ['Inter'],
         theme:['Poppins'],
-        category:['Arial']
+        arial:['Arial']
 
       }
     },

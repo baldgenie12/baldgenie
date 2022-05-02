@@ -137,6 +137,8 @@ const MerchantSignUP = () => {
 
 
     const handleOnSubmit = async (e) => {
+        setloading(true)
+
         const rawResponse = await fetch('/api/MerchantSignUpValidator', {
             method: 'POST',
             headers: {
@@ -147,18 +149,19 @@ const MerchantSignUP = () => {
         });
         const content = await rawResponse.json();
         if (content.error) {
+            setloading(false)
             return alert(content.error)
         }
-        setloading(true)
 
         try {
             const response = await uploadImagesFirebase(businessLogo, bussinessImagesArray, email)
             if (response.error) {
+                setloading(false)
+                alert(response.error)
                 return
             }
             await finallyUploadDatato_MongoDB(response)
             console.log('Images Uploaded to firebase Sucessfully!');
-            setloading(false)
 
         } catch (error) {
             alert(error)
@@ -225,6 +228,7 @@ const MerchantSignUP = () => {
         if (dataa.error) {
             return alert(dataa.error)
         }
+        setloading(false)
         alert(dataa.message)
 
 

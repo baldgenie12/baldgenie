@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import {
-    StarIcon, ArrowCircleDownIcon, ArrowCircleUpIcon
+    ArrowCircleDownIcon, ArrowCircleUpIcon
 } from '@heroicons/react/outline';
+
+
+import {
+    StarIcon
+} from '@heroicons/react/solid';
+import { useRouter } from 'next/router';
 
 
 
@@ -24,6 +30,7 @@ const months = ['1', '2', '3', '4', '5', '5', '6', '7', '8', '9', '9']
 
 export const FilterSidebar = () => {
 
+    const router =useRouter()
     const [openFilterBar, setopenFilterBar] = useState(false)
 
     //Years in Business Dropdown menu
@@ -46,8 +53,16 @@ export const FilterSidebar = () => {
         <div className=' lg:mr-10 ml-4 lg:ml-16'>
 
 
-            <div onClick={() => openFilterBar ? setopenFilterBar(false) : setopenFilterBar(true)} 
-            className='flex  md:hidden px-4 p-1 items-center space-x-1 rounded text-sm m-1 justify-end w-full cursor-pointer  '>
+            <div onClick={() => router.push('/')} >
+                <img
+                    className='w-[208px] h-[42px] mx-auto lg:mr-[55px] md:mb-[50px] lg:mt-4'
+                    alt='loading'
+                    src='/baldgenie.png'>
+                </img>
+            </div>
+
+            <div onClick={() => openFilterBar ? setopenFilterBar(false) : setopenFilterBar(true)}
+                className='flex bg-slate-300 w-fit  md:hidden px-4 p-1 items-center space-x-1 rounded text-sm m-1 justify-end  cursor-pointer  '>
                 {/* <ArrowCircleUpIcon className='h-4 text-theme' /> */}
                 <button className=''  >Filters</button>
                 <ArrowCircleDownIcon className='h-4 text-theme' />
@@ -55,27 +70,27 @@ export const FilterSidebar = () => {
 
             {openFilterBar &&
 
-                <div className='h-2/5 right-0 left-0 fixed md:h-fit  md:relative  -bottom-5 md:bottom-0 overflow-y-scroll z-40   scrollbar-hide p-4  border-2 border-b-0 border-theme rounded-lg shadow-inner bg-blue-100 md:bg-white md:border-0  '>
+                <div className='h-2/5 right-0 left-0 fixed md:h-fit  md:relative  -bottom-5 md:bottom-0 overflow-y-scroll z-40   scrollbar-hide p-4  border-2 border-b-0 border-theme rounded-lg shadow-inner bg-blue-100 md:bg-white md:border-0   '>
 
                     <div className='  grid grid-cols-2     space-y-4  md:flex md:flex-col mb-4 '>
 
 
                         {/* Availability */}
                         <div className='flex flex-col  my-2  space-y-1 items-start justify-center '>
-                            <h1 className='font-semibold'>Availability</h1>
+                            <h1 className='font-category text-[17px] font-bold text-color_filterSidebarHead my-1'>Availability</h1>
 
                             <div className='flex items-center  space-x-1'>
                                 <input className='bg-theme text-theme ' type="radio" id="javascript" name="Availability" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                                <label className='text-sm ' htmlFor="html">Show Online</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="html">Show Online</label>
                             </div>
 
                             <div className='flex items-center  space-x-1'>
                                 <input className='bg-theme text-theme ' type="radio" id="javascript" name="Availability" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                                <label className='text-sm ' htmlFor="html">24/7 Support</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="html">24/7 Support</label>
                             </div>
                             <div className='flex items-center  space-x-1'>
                                 <input className='bg-theme text-theme ' type="radio" id="javascript" name="Availability" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                                <label className='text-sm ' htmlFor="html">By Appointment</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="html">By Appointment</label>
                             </div>
                         </div>
 
@@ -83,35 +98,35 @@ export const FilterSidebar = () => {
 
                         {/* Customer Review */}
                         <div className='flex flex-col my-2  space-y-1 items-start justify-center '>
-                            <h1 className='font-semibold'>Ratings</h1>
+                            <h1 className='font-category text-[17px] font-bold text-color_filterSidebarHead my-1'>Ratings</h1>
 
                             <div className='flex items-center  space-x-1 '>
-                                <StarIcon className='h-4 text-yellow-600 ' />
-                                <StarIcon className='h-4 text-yellow-600 ' />
-                                <StarIcon className='h-4 text-yellow-600 ' />
-                                <StarIcon className='h-4 text-yellow-600 ' />
-                                <StarIcon className='text-gray-400 h-4  ' />
+                                <StarIcon className=' w-[16px] text-starcolor ' />
+                                <StarIcon className=' w-[16px] text-starcolor ' />
+                                <StarIcon className=' w-[16px] text-starcolor ' />
+                                <StarIcon className=' w-[16px] text-starcolor ' />
+                                <StarIcon className='text-starcolorgrey w-[16px]  ' />
                             </div>
                             <div className='flex items-center  space-x-1 '>
-                                <StarIcon className='h-4 text-yellow-600 ' />
-                                <StarIcon className='h-4 text-yellow-600 ' />
-                                <StarIcon className='h-4 text-yellow-600 ' />
-                                <StarIcon className='text-gray-400 h-4  ' />
-                                <StarIcon className='text-gray-400 h-4  ' />
+                                <StarIcon className=' w-[16px] text-starcolor ' />
+                                <StarIcon className=' w-[16px] text-starcolor ' />
+                                <StarIcon className=' w-[16px] text-starcolor ' />
+                                <StarIcon className='text-starcolorgrey w-[16px]  ' />
+                                <StarIcon className='text-starcolorgrey w-[16px]  ' />
                             </div>
                             <div className='flex items-center  space-x-1 '>
-                                <StarIcon className='h-4 text-yellow-600 ' />
-                                <StarIcon className='h-4 text-yellow-600 ' />
-                                <StarIcon className='text-gray-400 h-4  ' />
-                                <StarIcon className='text-gray-400 h-4  ' />
-                                <StarIcon className='text-gray-400 h-4  ' />
+                                <StarIcon className=' w-[16px] text-starcolor ' />
+                                <StarIcon className=' w-[16px] text-starcolor ' />
+                                <StarIcon className='text-starcolorgrey w-[16px]  ' />
+                                <StarIcon className='text-starcolorgrey w-[16px]  ' />
+                                <StarIcon className='text-starcolorgrey w-[16px]  ' />
                             </div>
                             <div className='flex items-center  space-x-1 '>
-                                <StarIcon className='h-4 text-yellow-600 ' />
-                                <StarIcon className='text-gray-400 h-4  ' />
-                                <StarIcon className='text-gray-400 h-4  ' />
-                                <StarIcon className='text-gray-400 h-4  ' />
-                                <StarIcon className='text-gray-400 h-4  ' />
+                                <StarIcon className=' w-[16px] text-starcolor ' />
+                                <StarIcon className='text-starcolorgrey w-[16px]  ' />
+                                <StarIcon className='text-starcolorgrey w-[16px]  ' />
+                                <StarIcon className='text-starcolorgrey w-[16px]  ' />
+                                <StarIcon className='text-starcolorgrey w-[16px]  ' />
                             </div>
                         </div>
 
@@ -120,25 +135,25 @@ export const FilterSidebar = () => {
 
                         {/* Support Type */}
                         <div className='   flex flex-col my-2  space-y-1 items-start justify-center 	  '>
-                            <h1 className='font-semibold'>Support Type</h1>
+                            <h1 className='font-category text-[17px] font-bold text-color_filterSidebarHead my-1'>Support Type</h1>
 
 
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1"> Remote Support </label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1"> Remote Support </label>
                             </div>
 
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1"> Local Instore Support</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1"> Local Instore Support</label>
                             </div>
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1"> House Call</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1"> House Call</label>
                             </div>
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1"> Pickup & Drop</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1"> Pickup & Drop</label>
                             </div>
 
 
@@ -148,23 +163,26 @@ export const FilterSidebar = () => {
 
                         {/* Pricing  */}
                         <div className='   flex flex-col my-2  space-y-1 items-start justify-center 	  '>
-                            <h1 className='font-semibold'>Pricing</h1>
+                            <h1 className='font-category text-[17px] font-bold text-color_filterSidebarHead my-1'>Pricing</h1>
 
 
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Flat Fee</label>
-                                <input className='w-12 text-center text-xs border-2 border-gray-300 outline-none rounded' type="number" id="fname" name="fname" placeholder='max' />
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Flat Fee</label>
+                                <input className='w-12 text-center text-[12px] border-[0.5px] border-color_filterSidebar_InputBorder outline-none rounded text-color_filterSidebar_priceInput' type="number" id="fname" name="fname" placeholder='max' />
+                                <button className='w-[25px]  text-center text-[11px] border-[0.5px] border-color_filterSidebar_InputBorder outline-none rounded text-color_filterSidebar_GoTbtn'>Go</button>
                             </div>
 
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Hourly Fee</label>
-                                <input className='w-12 text-center text-xs border-2 border-gray-300 outline-none rounded' type="number" id="fname" name="fname" placeholder='max' />
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Hourly Fee</label>
+                                <input className='w-12 text-center text-[12px] border-[0.5px] border-color_filterSidebar_InputBorder outline-none rounded text-color_filterSidebar_priceInput' type="number" id="fname" name="fname" placeholder='max' />
+                                <button className='w-[25px]  text-center text-[11px] border-[0.5px] border-color_filterSidebar_InputBorder outline-none rounded text-color_filterSidebar_GoTbtn'>Go</button>
+
                             </div>
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Custom Price</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Custom Price</label>
                             </div>
 
 
@@ -175,19 +193,19 @@ export const FilterSidebar = () => {
                         {/* Plan Type */}
                         <div className='   flex flex-col my-2  space-y-1 items-start justify-center 	  '>
 
-                            <h1 className='font-semibold'>Plan Type</h1>
+                            <h1 className='font-category text-[17px] font-bold text-color_filterSidebarHead my-1'>Plan Type</h1>
 
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">One Time </label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">One Time </label>
                             </div>
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Monthly</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Monthly</label>
                             </div>
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Yearly Unlimited</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Yearly Unlimited</label>
                             </div>
 
 
@@ -197,19 +215,19 @@ export const FilterSidebar = () => {
                         {/* Usage Type */}
 
                         <div className='   flex flex-col my-2  space-y-1 items-start justify-center 	  '>
-                            <h1 className='font-semibold'>Usage Type</h1>
+                            <h1 className='font-category text-[17px] font-bold text-color_filterSidebarHead my-1'>Usage Type</h1>
 
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Personal Use </label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Personal Use </label>
                             </div>
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Business Use</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Business Use</label>
                             </div>
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Enterprise</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Enterprise</label>
                             </div>
                         </div>
 
@@ -217,11 +235,11 @@ export const FilterSidebar = () => {
 
                         {/* Years in Bussiness */}
                         <div>
-                            <h1 className='font-semibold'>Years In Business</h1>
-                            <div className='sm:flex  sm:space-x-1  items-center space-y-1'>
+                            <h1 className='font-category text-[17px] font-bold text-color_filterSidebarHead my-1'>Years In Business</h1>
+                            <div className='sm:flex  sm:space-x-1  items-center '>
 
                                 <div className='flex items-center space-x-1   '>
-                                    <select className='text-sm scrollbar-hide text-gray-800 outline-none border-2 border-gray-300 rounded' value={selectedYear} onChange={(event) =>
+                                    <select className='text-sm scrollbar-hide text-color_filterSidebar_priceInput outline-none border-[0.5px] border-color_filterSidebar_InputBorder rounded' value={selectedYear} onChange={(event) =>
                                         setselectedYear(event.target.value)}>
 
                                         {years.map(item => {
@@ -230,10 +248,10 @@ export const FilterSidebar = () => {
                                             )
                                         })}
                                     </select>
-                                    <h2 className='text-sm text-gray-700'> Years </h2>
+                                    <h2 className='text-sm text-color_filterSidebar'> Years </h2>
                                 </div>
                                 <div className='flex items-center space-x-1'>
-                                    <select className='text-sm scrollbar-hide text-gray-800 outline-none border-2 border-gray-300 rounded' value={selectedMonth} onChange={(event) =>
+                                    <select className='text-sm scrollbar-hide text-color_filterSidebar_priceInput outline-none border-[0.5px] border-color_filterSidebar_InputBorder rounded' value={selectedMonth} onChange={(event) =>
                                         setselectedMonth(event.target.value)}>
 
                                         {months.map(item => {
@@ -242,7 +260,7 @@ export const FilterSidebar = () => {
                                             )
                                         })}
                                     </select>
-                                    <h2 className='text-sm text-gray-700'> Months </h2>
+                                    <h2 className='text-sm text-color_filterSidebar'> Months </h2>
                                 </div>
                             </div>
                         </div>
@@ -252,32 +270,32 @@ export const FilterSidebar = () => {
 
                         {/* Employee Strength */}
                         <div className='   flex flex-col my-2  space-y-1 items-start justify-center 	  '>
-                            <h1 className='font-semibold'>Employee Strength</h1>
+                            <h1 className='font-category text-[17px] font-bold text-color_filterSidebarHead my-1'>Employee Strength</h1>
 
 
                             <div className='flex items-center  space-x-1 '>
                                 <input className='bg-theme text-theme ' type="radio" id="javascript" name="Employee Strength" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                                <label className='text-sm ' htmlFor="html">Solo</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="html">Solo</label>
                             </div>
                             <div className='flex items-center  space-x-1 '>
                                 <input className='bg-theme text-theme ' type="radio" id="javascript" name="Employee Strength" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                                <label className='text-sm ' htmlFor="html">2 - 5</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="html">2 - 5</label>
                             </div>
                             <div className='flex items-center  space-x-1 '>
                                 <input className='bg-theme text-theme ' type="radio" id="javascript" name="Employee Strength" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                                <label className='text-sm ' htmlFor="html">6 - 10</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="html">6 - 10</label>
                             </div>
                             <div className='flex items-center  space-x-1 '>
                                 <input className='bg-theme text-theme ' type="radio" id="javascript" name="Employee Strength" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                                <label className='text-sm ' htmlFor="html">11 - 20</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="html">11 - 20</label>
                             </div>
                             <div className='flex items-center  space-x-1 '>
                                 <input className='bg-theme text-theme ' type="radio" id="javascript" name="Employee Strength" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                                <label className='text-sm ' htmlFor="html">20 - 50</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="html">20 - 50</label>
                             </div>
                             <div className='flex items-center  space-x-1 '>
                                 <input className='bg-theme text-theme ' type="radio" id="javascript" name="Employee Strength" value="JavaScript" placeholder='dsfasdfsadfdasf' />
-                                <label className='text-sm ' htmlFor="html">50+</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="html">50+</label>
                             </div>
 
                         </div>
@@ -286,32 +304,32 @@ export const FilterSidebar = () => {
 
                         {/* Payment Method */}
                         <div className='   flex flex-col my-2  space-y-1 items-start justify-center 	  '>
-                            <h1 className='font-semibold'>Payment Method</h1>
+                            <h1 className='font-category text-[17px] font-bold text-color_filterSidebarHead my-1'>Payment Method</h1>
 
 
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Credit / Debit Card </label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Credit / Debit Card </label>
                             </div>
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">PayPal </label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">PayPal </label>
                             </div>
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Apple Pay </label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Apple Pay </label>
                             </div>
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Google Pay </label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Google Pay </label>
                             </div>
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Cash </label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Cash </label>
                             </div>
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Crypto Currency </label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Crypto Currency </label>
                             </div>
 
                         </div>
@@ -320,15 +338,15 @@ export const FilterSidebar = () => {
 
                         {/* miscellaneous Method */}
                         <div className='   flex flex-col my-2  space-y-1 items-start justify-center 	  '>
-                            <h1 className='font-semibold'>Miscellaneous:</h1>
+                            <h1 className='font-category text-[17px] font-bold text-color_filterSidebarHead my-1'>Miscellaneous:</h1>
 
                             <div className='flex items-center space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Free Car Parking </label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Free Car Parking </label>
                             </div>
                             <div className='flex items-center  space-x-1'>
                                 <input className='mt-0.5' type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label className='text-sm text-gray-700' htmlFor="vehicle1">Wheelchair Access</label>
+                                <label className='text-[15px] font-category text-color_filterSidebar  ' htmlFor="vehicle1">Wheelchair Access</label>
                             </div>
                         </div>
 

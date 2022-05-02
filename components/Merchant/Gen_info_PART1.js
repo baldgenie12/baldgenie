@@ -352,7 +352,7 @@ export const Gen_info_PART1 = () => {
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3 '>*Geo Location</h1>
                     <button type="button" onClick={getLocationHnadler} className='hover:bg-gray-200 flex items-center justify-around pl-6 border-[0.5px]  border-black rounded-lg p-1 '>
-                        <LocationMarkerIcon className='h-6 text-red-600' />
+                        <img src='/location.png' className='h-6 ' />
                         <h1 className="placeholder-gray-600 w-[200px] cursor-pointer  text-sm text-center outline-none " >{location}</h1>
                     </button>
                 </div>

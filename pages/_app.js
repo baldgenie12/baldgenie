@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <VideoState>
-        <div className='flex space-x-3 m-2'>
+        <div className='flex space-x-3 mx-2'>
           {/* <p className='sm:invisible visible  bg-red-500 h-10 rounded p-2'>smallScreen </p>
           <p className='sm:visible invisible md:invisible  bg-green-500 rounded p-2'>mediumScreen </p>
           <p className='md:visible invisible lg:invisible   bg-yellow-500 rounded p-2'>largeScreen </p>
