@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt'
-import UserModal from '../../../MongoDatabaseModels/UserModel'
-import MerchantsModal from '../../../MongoDatabaseModels/MerchantModel'
+import UserModal from '../MongoDatabaseModels/UserModel'
+import MerchantsModal from '../MongoDatabaseModels/MerchantModel'
 
 export default async function handler(req, res) {
 
