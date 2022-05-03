@@ -69,9 +69,20 @@ export const Gen_info_PART1 = () => {
 
 
     const handleOnchangeImages = (e) => {
+
+        var checked = false
         var array = []
         for (let index = 0; index < e.target.files.length; index++) {
+            if (e.target.files[index].size > 200000) {
+                checked = true
+
+            }
             array.push(e.target.files[index])
+        }
+        if (checked) {
+            e.target.value = null
+            alert("Use smaller size image for Logo. (Recommended size : < 1920x1080 Pixels)")
+            return
         }
         setbussinessImagesArray(array)
 
@@ -320,7 +331,10 @@ export const Gen_info_PART1 = () => {
                 <div className='flex items-center justify-start my-4 m-2 '>
                     <span className="dot"></span>
                     <h1 className='w-[230px] mr-3'>*Business Logo</h1>
-                    <input required onChange={(e) => setbusinessLogo(e.target.files[0])} className="inputtext w-[250px]" name='i' type="file" accept="image/*" />
+                    <input required onChange={(e) => {
+                        if (e.target.files[0].size < 20000) { setbusinessLogo(e.target.files[0]) }
+                        else { alert("Use smaller size image for Logo. (Recommended size : 150x150 Pixels)") }
+                    }} className="inputtext w-[250px]" name='i' type="file" accept="image/*" />
 
                     <p className='ml-2 text-sm text-gray-600'>(200px x 200px logo image size  )</p>
 
@@ -355,6 +369,10 @@ export const Gen_info_PART1 = () => {
                         <img src='/location.png' className='h-6 ' />
                         <h1 className="placeholder-gray-600 w-[200px] cursor-pointer  text-sm text-center outline-none " >{location}</h1>
                     </button>
+                    <input required className="inputtext w-[100px] ml-2 " onChange={e => setlatitude(e.target.value)} onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} type="number" placeholder="Latitude" />
+                    <input required className="inputtext w-[100px] ml-2 " onChange={e => setlongitude(e.target.value)} onKeyDown={(e) => ["e", "E", "+", "-"].includes(e.key) && e.preventDefault()} type="number" placeholder="Longitude" />
+                    <p className='ml-2 text-sm text-gray-600'>(optional : add longitude and latitude for better accuracy)</p>
+
                 </div>
 
             </div>

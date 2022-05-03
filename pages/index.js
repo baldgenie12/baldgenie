@@ -66,7 +66,7 @@ export default function Home() {
         src='/background.png'>
       </img>
 
-      <main className='mx-4 sm:w-4/5 md:mx-auto    sm:mx-auto  text-gray-600 '>
+      <main className='mx-4  md:mx-auto    sm:mx-auto  text-gray-600 '>
         <div className='absolute top-4 z-50 right-2'>
           <Navbar />
         </div>
@@ -91,7 +91,7 @@ export default function Home() {
 
         {/* All categories */}
 
-        <div className=' my-10   '>
+        <div className='sm:w-4/5 mx-auto my-10   '>
           <h1 className='font-theme text-[32px]'>All Categories</h1>
           <p className='text-[17px] font-footer mt-2'>
             {/* <LoremIpsum p={1} /> */}
@@ -196,24 +196,27 @@ export default function Home() {
         </div>
 
         {/* Popular Search terms */}
-        <div className='my-4 bg-[#F7F7F7] py-6'>
+        <div className=' bg-[#F7F7F7]'>
+          <div className='sm:w-4/5 mx-auto my-4 py-6'>
 
-          <h1 className='font-theme text-[28px]'>Popular Search Terms</h1>
-          <div className='flex flex-wrap my-4'>
-            {serachTerms.map(tag => {
-              return (
-                <div key={tag} className="flex items-center " >
-                  <p className='m-1 text-[15px] font-footer'>{`${tag}`}</p>
-                  <span className='bg-black rounded-full p-[3px] mx-3'></span>
-                </div>
-              )
-            })}
+            <h1 className='font-theme text-[28px]'>Popular Search Terms</h1>
+            <div className='flex flex-wrap my-4'>
+              {serachTerms.map(tag => {
+                return (
+                  <div key={tag} className="flex items-center " >
+                    <p className='m-1 text-[15px] font-footer'>{`${tag}`}</p>
+                    <span className='bg-black rounded-full p-[3px] mx-3'></span>
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
 
 
+
         {/* What our customer says */}
-        <div className='my-8'>
+        <div className='my-8 sm:w-4/5 mx-auto'>
           <h1 className='text-xl md:text-[32px] font-theme'>What our customer&apos; says</h1>
           <h2 className=' text-[17px] font-footer my-2'>Proin consequat integer venenatis maximus litora ornare integer penatibus. Natoque cras turpis iaculis ligula</h2>
 
@@ -225,28 +228,10 @@ export default function Home() {
 
         {/* Customer reviews  */}
 
-        <div className='md:flex font-footer mb-6 md:justify-between justify-center '>
+        <div className='sm:w-4/5 mx-auto md:flex font-footer mb-6 md:justify-between justify-center '>
 
 
-           <div className='my-4 p-6  w-[325px] mx-auto md:mx-0   rounded-[15px] shadow-xl border-2   border-gray-300 shadow-[#58BEFC]'>
-
-            <h1 className='text-[13px] font-theme pb-2'>&apos;&apos;Lorem ipsum odor amet, consectetuer adipiscing elit. Proin consequat integer venenatis maximus litora ornare&apos;&apos;</h1>
-
-            <div className='  flex items-center justify-start mt-2' >
-              <div className='w-[47px] h-[47px] relative '>
-                <img
-                  src='/profile.png'
-                ></img>
-
-              </div>
-              <div className='flex flex-col items-start ml-3'>
-                <h2 className='text-center text-[14px] font-theme'>John Smith</h2>
-                <h3 className='text-[13px] font-extralight'>{`Miami, FL`}</h3>
-              </div>
-
-            </div>
-          </div>
-           <div className='my-4 p-6  w-[325px] mx-auto md:mx-0   rounded-[15px] shadow-xl border-2   border-gray-300 shadow-[#58BEFC]'>
+          <div className='my-4 p-6  w-[325px] mx-auto md:mx-0   rounded-[15px] shadow-xl border-2   border-gray-300 shadow-[#58BEFC]'>
 
             <h1 className='text-[13px] font-theme pb-2'>&apos;&apos;Lorem ipsum odor amet, consectetuer adipiscing elit. Proin consequat integer venenatis maximus litora ornare&apos;&apos;</h1>
 
@@ -264,8 +249,26 @@ export default function Home() {
 
             </div>
           </div>
+          <div className='my-4 p-6  w-[325px] mx-auto md:mx-0   rounded-[15px] shadow-xl border-2   border-gray-300 shadow-[#58BEFC]'>
 
-           <div className='my-4 p-6  w-[325px] mx-auto md:mx-0   rounded-[15px] shadow-xl border-2   border-gray-300 shadow-[#58BEFC]'>
+            <h1 className='text-[13px] font-theme pb-2'>&apos;&apos;Lorem ipsum odor amet, consectetuer adipiscing elit. Proin consequat integer venenatis maximus litora ornare&apos;&apos;</h1>
+
+            <div className='  flex items-center justify-start mt-2' >
+              <div className='w-[47px] h-[47px] relative '>
+                <img
+                  src='/profile.png'
+                ></img>
+
+              </div>
+              <div className='flex flex-col items-start ml-3'>
+                <h2 className='text-center text-[14px] font-theme'>John Smith</h2>
+                <h3 className='text-[13px] font-extralight'>{`Miami, FL`}</h3>
+              </div>
+
+            </div>
+          </div>
+
+          <div className='my-4 p-6  w-[325px] mx-auto md:mx-0   rounded-[15px] shadow-xl border-2   border-gray-300 shadow-[#58BEFC]'>
 
             <h1 className='text-[13px] font-theme pb-2'>&apos;&apos;Lorem ipsum odor amet, consectetuer adipiscing elit. Proin consequat integer venenatis maximus litora ornare&apos;&apos;</h1>
 

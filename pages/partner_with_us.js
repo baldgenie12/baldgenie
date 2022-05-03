@@ -10,7 +10,7 @@ import videosContext from '../context/videos/videosContext';
 import { ref, getDownloadURL, uploadBytes, getMetadata } from "firebase/storage";
 import { storage } from '../firebase';
 import { BeatLoader } from 'react-spinners';
-
+import { validator } from '../utils/MerchantSignUpValidator';
 
 const MerchantSignUP = () => {
 
@@ -139,19 +139,31 @@ const MerchantSignUP = () => {
     const handleOnSubmit = async (e) => {
         setloading(true)
 
-        const rawResponse = await fetch('/api/MerchantSignUpValidator', {
+        const validatorResponse =  validator(dataObjReady)
+        if (validatorResponse.error) {
+            setloading(false)
+            return alert(validatorResponse.error)
+        }
+   
+
+        const rawResponse = await fetch('/api/CheckForRegisteredEmail', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(dataObjReady)
+            body: JSON.stringify(email)
         });
+
         const content = await rawResponse.json();
         if (content.error) {
             setloading(false)
             return alert(content.error)
         }
+
+
+
+
 
         try {
             const response = await uploadImagesFirebase(businessLogo, bussinessImagesArray, email)
@@ -269,7 +281,7 @@ const MerchantSignUP = () => {
         let uniqueCategoriesSelectedd = [...new Set(selectedServicesCategory)];
 
 
-        return { allServices: allServicess, uniqueCategoriesSelected: uniqueCategoriesSelectedd }
+        return { allServices: allServicess, uniqueCategoriesSelected: uniqueCategoriesSelectedd, TV_Mounting: TV_Mounting_Context }
     }
 
 
@@ -297,7 +309,7 @@ const MerchantSignUP = () => {
                 <Services />
             </div>
             <div className='flex items-center justify-center w-fit mx-auto space-x-3'>
-                <div className={`${loading ? "hidden" : ""}  `}>
+                <div className={`${loading ? "" : ""}  `}>
                     <button onClick={(e) => handleOnSubmit(e)} className="group mx-auto relative text-lg  flex justify-center py-2 px-8 border border-transparent  font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ">Submit</button>
                 </div>
                 <div className={`${loading ? "" : "hidden"} w-20 `}>

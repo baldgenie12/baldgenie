@@ -1,4 +1,5 @@
-import Merchants from "../../MongoDatabaseModels/MerchantModel";
+import Merchants from "../api/MongoDatabaseModels/MerchantModel";
+
 
 export default async function handler(req, res) {
 
@@ -42,7 +43,7 @@ export default async function handler(req, res) {
     } = req.body.data;
 
 
-    const { allServices, uniqueCategoriesSelected } = req.body.seviceData
+    const { allServices, uniqueCategoriesSelected, TV_Mounting } = req.body.seviceData
 
 
     const { logo, images } = req.body.images;
@@ -88,8 +89,11 @@ export default async function handler(req, res) {
         houseCall: houseCall,
         pickNdrop: pickNdrop,
         bussinessService: bussinessService,
+
+        //----------------------------------------Services------------------------------------
         uniqueCategoriesSelected: uniqueCategoriesSelected,
         allServices: allServices,
+        TV_Mounting: TV_Mounting ? TV_Mounting : []
 
     }
 

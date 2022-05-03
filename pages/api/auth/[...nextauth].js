@@ -7,8 +7,8 @@ import clientPromise from "../auth/lib/mongodb"
 import CredentialsProvider from "next-auth/providers/credentials";
 
 import connectDB from "./lib/connectDB";
-import User from '../../../MongoDatabaseModels/UserModel'
-import Merchants from '../../../MongoDatabaseModels/MerchantModel'
+import User from '../MongoDatabaseModels/UserModel'
+import Merchants from '../MongoDatabaseModels/MerchantModel'
 
 import { signIn } from "next-auth/react";
 import bcrypt from 'bcrypt'

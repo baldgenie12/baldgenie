@@ -30,7 +30,7 @@ const months = ['1', '2', '3', '4', '5', '5', '6', '7', '8', '9', '9']
 
 export const FilterSidebar = () => {
 
-    const router =useRouter()
+    const router = useRouter()
     const [openFilterBar, setopenFilterBar] = useState(false)
 
     //Years in Business Dropdown menu
@@ -50,7 +50,7 @@ export const FilterSidebar = () => {
 
 
     return (
-        <div className=' lg:mr-10 ml-4 lg:ml-16'>
+        <div className=' lg:mr-10 ml-4 lg:ml-16 relative'>
 
 
             <div onClick={() => router.push('/')} >
@@ -62,7 +62,7 @@ export const FilterSidebar = () => {
             </div>
 
             <div onClick={() => openFilterBar ? setopenFilterBar(false) : setopenFilterBar(true)}
-                className='flex bg-slate-300 w-fit  md:hidden px-4 p-1 items-center space-x-1 rounded text-sm m-1 justify-end  cursor-pointer  '>
+                className='flex absolute  right-5 top-[140px] bg-slate-300 w-fit  md:hidden px-4 p-1 items-center space-x-1 rounded text-sm m-1 justify-end  cursor-pointer  '>
                 {/* <ArrowCircleUpIcon className='h-4 text-theme' /> */}
                 <button className=''  >Filters</button>
                 <ArrowCircleDownIcon className='h-4 text-theme' />
@@ -70,8 +70,9 @@ export const FilterSidebar = () => {
 
             {openFilterBar &&
 
-                <div className='h-2/5 right-0 left-0 fixed md:h-fit  md:relative  -bottom-5 md:bottom-0 overflow-y-scroll z-40   scrollbar-hide p-4  border-2 border-b-0 border-theme rounded-lg shadow-inner bg-blue-100 md:bg-white md:border-0   '>
 
+                <div className='h-2/5 right-0 left-0 fixed md:h-fit  md:relative  -bottom-5 md:bottom-0 overflow-y-scroll z-40   scrollbar-hide p-4  border-2 border-b-0  rounded-lg shadow-inner bg-blue-100 md:bg-white md:border-0   '>
+                    
                     <div className='  grid grid-cols-2     space-y-4  md:flex md:flex-col mb-4 '>
 
 

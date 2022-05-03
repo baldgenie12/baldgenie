@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import connectDB from '../pages/api/auth/lib/connectDB'
+import connectDB from '../auth/lib/connectDB';
 connectDB()
 
 
@@ -179,7 +179,7 @@ const MerchantSchema = new mongoose.Schema({
 
     //--------------------------------Serives-------------------------------------------------------//
 
-    uniqueCategoriesSelected: [{type: String}],
+    uniqueCategoriesSelected: [{ type: String }],
 
 
     allServices: [
@@ -191,7 +191,11 @@ const MerchantSchema = new mongoose.Schema({
                 amount: { type: String, },
             },
         ],
-    ]
+    ],
+
+    TV_Mounting: [{
+        type: String,
+    }],
 
 
 

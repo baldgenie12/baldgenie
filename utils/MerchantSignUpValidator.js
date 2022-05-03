@@ -1,7 +1,5 @@
-import Merchants from "../../MongoDatabaseModels/MerchantModel";
 
-
-export default async function handler(req, res) {
+export const validator = (data) => {
 
 
     const {
@@ -57,7 +55,7 @@ export default async function handler(req, res) {
         Home_Security_Cameras_Context,
         Home_Security_Locks_Context,
         Home_Security_Alarms_Context,
-    } = req.body;
+    } = data;
 
 
 
@@ -88,119 +86,116 @@ export default async function handler(req, res) {
 
 
     if (!fullname) {
-        return res.status(400).json({ error: 'Enter Primary Name..' })
+        return { error: 'Enter Primary Name..' }
     }
 
     if (!email) {
-        return res.status(400).json({ error: 'Enter Primary Contact Email..' })
+        return { error: 'Enter Primary Contact Email..' }
     }
 
     if (!phone) {
 
-        return res.status(400).json({ error: 'Enter Primary Person Phone ..' })
+        return { error: 'Enter Primary Person Phone ..' }
     }
     if (phone && phone.length != 10) {
 
-        return res.status(400).json({ error: 'Enter 10 digit number in Primary Person Phone ..' })
+        return { error: 'Enter 10 digit number in Primary Person Phone ..' }
     }
 
 
     if (!bussinessName) {
-        return res.status(400).json({ error: 'Enter Business Name..' })
+        return { error: 'Enter Business Name..' }
     }
 
     if (!street) {
-        return res.status(400).json({ error: 'Enter Street name in address' })
+        return { error: 'Enter Street name in address' }
     }
     if (!city) {
-        return res.status(400).json({ error: 'Enter city name in address' })
+        return { error: 'Enter city name in address' }
     }
     if (!zipcode) {
-        return res.status(400).json({ error: 'Enter zipcode name in address' })
+        return { error: 'Enter zipcode name in address' }
     }
     if (!state) {
-        return res.status(400).json({ error: 'Enter state name in address' })
+        return { error: 'Enter state name in address' }
     }
     if (!country) {
-        return res.status(400).json({ error: 'Enter country name in address' })
+        return { error: 'Enter country name in address' }
     }
     if (!location) {
-        return res.status(400).json({ error: 'Location denied by user' })
+        return { error: 'Location denied by user' }
     }
 
     if (!bussinessHoursCreated) {
-        return res.status(400).json({ error: 'Add Bussiness hours..' })
+        return { error: 'Add Bussiness hours..' }
     }
     if (!worknumber) {
-        return res.status(400).json({ error: 'Enter Work Number..' })
+        return { error: 'Enter Work Number..' }
     }
     if (worknumber && worknumber.length != 10) {
 
-        return res.status(400).json({ error: 'Enter 10 digit number in Worknumber ..' })
+        return { error: 'Enter 10 digit number in Worknumber ..' }
     }
     if (!bussinessHoursCreated.length > 0) {
-        return res.status(400).json({ error: 'Add Bussiness hours..' })
+        return { error: 'Add Bussiness hours..' }
     }
 
 
     if (!remoteService) {
-        return res.status(400).json({ error: 'Select any option in Remote Service' })
+        return { error: 'Select any option in Remote Service' }
     }
     if (!inStoreService) {
-        return res.status(400).json({ error: 'Select any option in In Store Service' })
+        return { error: 'Select any option in In Store Service' }
     }
     if (!houseCall) {
-        return res.status(400).json({ error: 'Select any option in House Call' })
+        return { error: 'Select any option in House Call' }
     }
     if (!pickNdrop) {
-        return res.status(400).json({ error: 'Select any option in Pick Up & Drop' })
+        return { error: 'Select any option in Pick Up & Drop' }
     }
     if (!bussinessService) {
-        return res.status(400).json({ error: 'Select any option in Bussiness Service' })
+        return { error: 'Select any option in Bussiness Service' }
     }
 
-
-    servicesValidator(allServices, TV_Mounting_Context, res)
-
-
-
-    const alreadyRegistered = await Merchants.findOne({ email })
-    if (alreadyRegistered) {
-        res.status(400).json({ error: "Already registered with this E-Mail" })
-        return
-    }
-
-
-
-    return res.status(200).json({ message: "Sucessfull" })
-
-}
-
-
-function servicesValidator(allServices, TV_Mounting_Context, res) {
-
-    let selectedServicesCategory = []
+    //------------------------------SERVICES-VALIDATOR--------------------------//
 
     if (allServices.length < 1 && TV_Mounting_Context.length < 1) {
-        res.status(200).json({ error: "Atleast Select anyone services" })
-        return
-    }
 
+        return { error: "Atleast Select anyone services" }
+    }
+    const errorObj = {}
+    let selectedServicesCategory = []
     allServices.forEach(subcategory => {
         subcategory.forEach(item => {
             selectedServicesCategory.push(item.category)
             if (item.feeType.length < 1) {
-                res.status(400).json({ error: `Select Fee Type of ${item.servicename}` })
-                return
+                errorObj = { error: `Select Fee Type of ${item.servicename}` }
             }
             if (item.feeType != "custom") {
                 if (item.amount.length < 1) {
-                    res.status(400).json({ error: `Enter Fee Amount of ${item.servicename}` })
-                    return
+                    errorObj = { error: `Enter Fee Amount of ${item.servicename}` }
                 }
             }
         })
     });
+
+    
+
+    if (errorObj.error) {
+        return errorObj
+    } else {
+
+        return { message: "Sucessfull" }
+    }
+
+}
+
+
+function servicesValidator(allServices, TV_Mounting_Context) {
+    console.log('====================================');
+    console.log("INSIDE");
+    console.log('====================================');
+
 
 
 
