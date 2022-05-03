@@ -10,11 +10,9 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { LoremIpsum } from 'react-lorem-ipsum';
 import Navbar from '../components/Navbar';
-import videosContext from '../context/videos/videosContext'
 
 export const LocationBar = () => {
 
-    // const { location, setlocation } = useContext(videosContext);
     const [locationstate, setlocationstate] = useState('')
 
 
@@ -101,42 +99,30 @@ export const LocationBar = () => {
 
     const zipcodeHandler = (zipcode) => {
         async function fetchData() {
-
-            if (zipcode.length != 5) {
-                alert("Enter 5 digit Pincode")
-                return
-            }
-
-            if (!location) {
-                setloading(true)
-                var location = {}
-                try {
-
-
-
-                    const response = await fetch(`/api/zip/${zipcode}`)
-                    location = await response.json()
-                    if (location.name.error_msg) {
-                        alert(location.name.error_msg)
+            setloading(true)
+            var location = {}
+            try {
+                const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${zipcode}&sensor=false&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`)
+                location = await response.json()
+                if (location.results[0]) {
+                    const part = location.results[0].formatted_address
+                    if (!part.includes("USA")) {
                         setloading(false)
-                        setlocation(null)
+                        alert("Pincode not found, try something different")
                         return
                     }
-
-                    setlocation(location)
-                    setlocationstate(`${location.name.city}, ${location.name.state} `)
+                    setlocationstate(part)
                     setloading(false)
 
-                } catch (error) {
-                    alert(error)
+                } else {
                     setloading(false)
-                    setlocation(null)
-
+                    alert("Pincode not found, try something different")
                 }
-
-                localStorage.setItem("location", JSON.stringify(location))
+            } catch (error) {
+                locationErrorMsg ? alert(locationErrorMsg) : alert(error)
+                setloading(false)
             }
-
+            localStorage.setItem("location", JSON.stringify(location))
 
         }
         fetchData()
@@ -149,7 +135,7 @@ export const LocationBar = () => {
             <div className='grow lg:w-[850px] bg-white py-1 md:py-0 pl-2 md:h-[46px] flex flex-col  md:flex-row    my-2  rounded-[8px] shadow-xl   md:mx-auto   md:justify-between text-xs  lg:items-center   '>
 
                 <div className=' h-6 flex items-center  space-x-1  p-1  my-2 md:border-r-2 border-gray-400 pr-2 lg:pr-4  '>
-                <img src='/location.png' className=' lg:mx-3 w-[17px] h-[24px] border-b-[3px] border-gray-200' />
+                    <img src='/location.png' className=' lg:mx-3 w-[17px] h-[24px] border-b-[3px] border-gray-200' />
                     {locationstate &&
                         <div className=' flex w-full justify-between md:justify-start items-center '>
                             <p className='overflow-hidden  whitespace-nowrap  text-[14px] font-footer pl-2'>{locationstate}</p>

@@ -17,12 +17,12 @@ export const LocationBar = () => {
 
     const router = useRouter()
     const { data: session, status } = useSession()
-     // const { location, setlocation } = useContext(videosContext);
-     const [locationstate, setlocationstate] = useState('')
-     const [loading, setloading] = useState(false)
-     const [zipcodeState, setzipcodeState] = useState(1)
-     const [locationErrorMsg, setlocationErrorMsg] = useState('')
-     useEffect(() => {
+    // const { location, setlocation } = useContext(videosContext);
+    const [locationstate, setlocationstate] = useState('')
+    const [loading, setloading] = useState(false)
+    const [zipcodeState, setzipcodeState] = useState(1)
+    const [locationErrorMsg, setlocationErrorMsg] = useState('')
+    useEffect(() => {
 
         const localStorage_location = JSON.parse(localStorage.getItem("location"))
         try {
@@ -55,7 +55,7 @@ export const LocationBar = () => {
         )
     }
 
-   
+
     function showError(error) {
         switch (error.code) {
             case error.PERMISSION_DENIED:
@@ -119,42 +119,30 @@ export const LocationBar = () => {
 
     const zipcodeHandler = (zipcode) => {
         async function fetchData() {
-
-            if (zipcode.length != 5) {
-                alert("Enter 5 digit Pincode")
-                return
-            }
-
-            if (!location) {
-                setloading(true)
-                var location = {}
-                try {
-
-
-
-                    const response = await fetch(`/api/zip/${zipcode}`)
-                    location = await response.json()
-                    if (location.name.error_msg) {
-                        alert(location.name.error_msg)
+            setloading(true)
+            var location = {}
+            try {
+                const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${zipcode}&sensor=false&key=AIzaSyBq4_UrU1zgmlP2pmINbfbpu-O7MfY7F1c`)
+                location = await response.json()
+                if (location.results[0]) {
+                    const part = location.results[0].formatted_address
+                    if (!part.includes("USA")) {
                         setloading(false)
-                        setlocation(null)
+                        alert("Pincode not found, try something different")
                         return
                     }
-
-                    setlocation(location)
-                    setlocationstate(`${location.name.city}, ${location.name.state} `)
+                    setlocationstate(part)
                     setloading(false)
 
-                } catch (error) {
-                    alert(error)
+                } else {
                     setloading(false)
-                    setlocation(null)
-
+                    alert("Pincode not found, try something different")
                 }
-
-                localStorage.setItem("location", JSON.stringify(location))
+            } catch (error) {
+                locationErrorMsg ? alert(locationErrorMsg) : alert(error)
+                setloading(false)
             }
-
+            localStorage.setItem("location", JSON.stringify(location))
 
         }
         fetchData()
@@ -162,7 +150,7 @@ export const LocationBar = () => {
     return (
         <div className=' lg:mx-auto font-theme md:flex items-center justify-between  '>  {/* Location and Search Services  */}
 
-           
+
 
             <div className='grow pl-2 py-1 md:py-0 lg:h-[46px]  flex flex-col  lg:flex-row    my-2  rounded-[8px] shadow-xl   mx-auto   md:justify-between text-xs '>
 
