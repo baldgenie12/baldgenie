@@ -61,7 +61,7 @@ export default function Home() {
 
       <img
         onClick={() => router.push('/')}
-        className='w-full h-[521px] mx-auto '
+        className='w-full h-[350px]  md:h-[521px] mx-auto '
         alt='loading'
         src='/background.png'>
       </img>
@@ -71,15 +71,15 @@ export default function Home() {
           <Navbar />
         </div>
 
-        <div className='m-2  absolute z-50 top-[70px] left-0 right-0'>
+        <div className='m-2  absolute z-50 top-2 md:top-[70px] left-0 right-0'>
 
           <img
             onClick={() => router.push('/')}
-            className='w-[531px] h-[107px] mx-auto mt-[135px] '
+            className='w-[531px] h-[107px] mx-auto mt-16 md:mt-[135px] '
             alt='loading'
             src='/baldgenie2.png'>
           </img>
-          <div className='mb-[88px] mt-[80px]'>
+          <div className='mb-[88px] mt-8 md:mt-[80px]'>
             <LocationBar />
           </div>
 
