@@ -68,7 +68,19 @@ export default function Home() {
 
       <main className='mx-4  md:mx-auto    sm:mx-auto  text-gray-600 '>
         <div className='absolute top-4 z-50 right-2'>
-          <Navbar />
+          <div className='flex items-center justify-end text-[#454444] xl:ml-[137px]' >
+
+            <h2 onClick={() => router.push('/partner_with_us')} className='cursor-pointer p-1 text-white   rounded-lg text-xs md:text-[16px] font-theme mr-1  '>
+              List your bussiness
+            </h2>
+            |
+
+            <h2 onClick={() => signIn()} className='cursor-pointer p-1 text-white   rounded-lg text-xs md:text-[16px] font-theme  ml-1  '>
+              Sign In
+            </h2>
+
+
+          </div>
         </div>
 
         <div className='m-2  absolute z-50 top-2 md:top-[70px] left-0 right-0'>

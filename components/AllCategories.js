@@ -13,7 +13,7 @@ import { Home_Security } from '../utils/ServicesCategories'
 
 export const AllCategories = () => {
     return (
-        <div className='flex space-x-6 justify-around mx-auto lg:w-9/12 font-category font-normal'>
+        <div className='flex space-x-6 justify-around mx-auto lg:mx-[20px] font-category font-normal'>
             <div className=''>
                 <div className='flex items-center justify-center w-fit space-x-3 mt-8'>
                     <img src='./category/computer.png' alt='loading' className='w-[30px] h-[33px]' />

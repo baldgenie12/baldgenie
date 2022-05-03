@@ -148,11 +148,11 @@ export const LocationBar = () => {
         fetchData()
     }
     return (
-        <div className=' lg:mx-auto font-theme md:flex items-center justify-between  '>  {/* Location and Search Services  */}
+        <div className='grow lg:mx-auto font-theme md:flex items-center justify-between  '>  {/* Location and Search Services  */}
 
 
 
-            <div className='grow pl-2 py-1 md:py-0 lg:h-[46px]  flex flex-col  lg:flex-row    my-2  rounded-[8px] shadow-xl   mx-auto   md:justify-between text-xs '>
+            <div className='grow pl-2 py-1 xl:min-w-[750px] md:py-0 lg:h-[46px]  flex flex-col  lg:flex-row    my-2  rounded-[8px] shadow-xl   mx-auto   md:justify-between text-xs '>
 
                 <div className=' h-6 flex items-center  space-x-1  p-1  my-2 md:border-r-2 border-gray-400 pr-2 lg:pr-4  '>
                     <img src='/location.png' className=' lg:mx-3 w-[17px] h-[24px] border-b-[3px] border-gray-200  ' />
@@ -189,7 +189,7 @@ export const LocationBar = () => {
                 </div>
             </div>
 
-            <div className='hidden xl:flex'>
+            {/* <div className='hidden xl:flex'>
                 {!session &&
                     <div className=' m-1 mx-auto lg:ml-12  flex items-center justify-end text-white font-semibold' >
 
@@ -204,7 +204,7 @@ export const LocationBar = () => {
                     </div>
                 }
 
-            </div>
+            </div> */}
         </div>
     )
 }
