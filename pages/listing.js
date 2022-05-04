@@ -35,11 +35,11 @@ const Homepage = () => {
             <div className='mx-3 sm:mx-6'>
             </div>
 
+            <Navbar />
 
             <div className='w-full flex flex-col md:flex-row font-theme '>
                 <FilterSidebar />
-                <div className='grow mx-3 sm:mx-6'>
-                    <LocationBar />
+                <div className='grow mx-3 sm:mx-6 lg:ml-8'>
                     <ServicesLists />
                 </div>
             </div>

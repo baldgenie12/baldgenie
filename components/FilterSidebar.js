@@ -50,16 +50,10 @@ export const FilterSidebar = () => {
 
 
     return (
-        <div className=' lg:mr-10 ml-4 lg:ml-16 relative'>
+        <div className=' lg:mr-10 ml-4 lg:ml-10 relative'>
 
 
-            <div onClick={() => router.push('/')} >
-                <img
-                    className='w-[208px] h-[42px] mx-auto lg:mr-[55px] md:mb-[50px] lg:mt-4'
-                    alt='loading'
-                    src='/baldgenie.png'>
-                </img>
-            </div>
+         
 
             <div onClick={() => openFilterBar ? setopenFilterBar(false) : setopenFilterBar(true)}
                 className='flex absolute  right-5 top-[140px] bg-slate-300 w-fit  md:hidden px-4 p-1 items-center space-x-1 rounded text-sm m-1 justify-end  cursor-pointer  '>

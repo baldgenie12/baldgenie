@@ -83,11 +83,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='m-2  absolute z-50 top-2 md:top-[70px] left-0 right-0'>
+        <div className='m-2  absolute z-40 top-2 md:top-[70px] left-0 right-0'>
 
           <img
             onClick={() => router.push('/')}
-            className='w-[531px] h-[107px] mx-auto mt-16 md:mt-[135px] '
+            className='md:w-[531px] md:h-[107px] mx-auto mt-16 md:mt-[135px] w-[300px]  '
             alt='loading'
             src='/baldgenie2.png'>
           </img>
